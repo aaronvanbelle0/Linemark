@@ -478,7 +478,85 @@ section {
     box-shadow: var(--shadow);
 }
 
-.contact-form h3 {
+/* Enhanced Contact Form Styles */
+.contact-form-container {
+        background-color: var(--cream-white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 1.25rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--cream-white);
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #999;
+    font-weight: 400;
+}
+
+.contact-form input:hover,
+.contact-form select:hover,
+.contact-form textarea:hover {
+    border-color: var(--accent-color);
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(244, 208, 63, 0.15);
+    background-color: #fff;
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.contact-form button[type="submit"] {
+    width: 100%;
+    padding: 14px 24px;
+    background-color: var(--primary-color);
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);
+}
+
+.contact-form button[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(243, 156, 18, 0.2);
+}
+
+474 h3 {
     margin-bottom: 2rem;
     color: var(--text-dark);
 }
