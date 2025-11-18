@@ -395,3 +395,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Contact form AJAX submission
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const data = new FormData(form);
+            
+            try {
+                const response = await fetch('https://formspree.io/f/mnnwqakp', {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+                
+                if (response.ok) {
+                    showNotification('Thank you! Your form has been submitted successfully.', 'success');
+                    form.reset();
+                } else {
+                    const errorData = await response.json();
+                    showNotification(errorData.error || 'Submission failed. Please try again.', 'error');
+                }
+            } catch (error) {
+                showNotification('Submission failed. Please try again.', 'error');
+            }
+        });
+    }
+});
