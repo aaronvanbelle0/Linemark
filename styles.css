@@ -218,14 +218,14 @@ background-image: url('hero.jpg'); /* Warehouse striping background */
 }
 
 .hero-content h1 {
-    color: #000000; /* Black text */
+    color: #ffffff; /* Black text */
         font-weight: 700; /* Bold */
     margin-bottom: 1.5rem;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: #000000; /* Black text */
+    color: #ffffff; /* Black text */
         font-weight: 700; /* Bold */
     margin-bottom: 2rem;
 }
