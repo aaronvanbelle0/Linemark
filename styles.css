@@ -183,16 +183,34 @@ p {
 /* Hero Section */
 .hero {
     padding: 120px 0 80px;
-    background: linear-gradient(135deg, var(--cream-white) 0%, var(--beige) 100%);
+background-image: url('image6.jpg'); /* Warehouse striping background */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
 }
 
+/* Dark overlay for better text readability */
+.hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
+        z-index: 1;
+    }
+
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+        position: relative;
+        z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
