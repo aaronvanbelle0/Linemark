@@ -38,6 +38,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+        
+    <!-- Preload critical assets for LCP optimization -->
+    <link rel="preload" href="image6.jpg" as="image">
+    <link rel="preload" href="logo.png" as="image">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -152,6 +156,7 @@
     </nav>
 
     <!-- Home Section -->
+        <main>
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
@@ -409,11 +414,12 @@
         </div>
     </section>
 
+    </main>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+<div class="footer-section">
                     <div class="footer-logo">
                             <img src="logo.png" alt="LineMark Striping Logo" class="footer-logo-image">                        <div class="footer-logo-text">
                             <h3>LineMark Striping</h3>
