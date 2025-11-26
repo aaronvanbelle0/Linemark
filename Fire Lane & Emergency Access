@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse & Factory Markings Lynden WA | Professional Line Marking | LineMark Striping</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <meta name="description" content="Professional Warehouse & Factory Striping services in Lynden, Bellingham, and Whatcom County. Expert line marking for commercial properties, retail centers, and businesses. Licensed, insured, and bonded.">
+    <meta name="keywords" content="Warehouse Striping Lynden, industrial floor marking Bellingham, Whatcom County factory striping, warehouse floor marking, OSHA safety lines, forklift lane painting>
+    <meta name="author" content="LineMark Striping">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lmstriping.com/Warehouse-and-industrial.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Warehouse & Industrial Striping Services | LineMark Striping Lynden WA">
+    <meta property="og:description" content="Expert Warehouse & Industrial line marking for commercial properties in Whatcom County. Free quotes, professional results.">
+    <meta property="og:image" content="https://lmstriping.com/image5.jpg">
+    <meta property="og:url" content="https://lmstriping.com/Warehouse-and-industrial.html">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="image5.jpg" as="image">
+    <link rel="preload" href="logo.png" as="image">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Warehouse & Industrial Striping",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "LineMark Striping",
+            "telephone": "+1-360-739-9927",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Lynden",
+                "addressRegion": "WA",
+                "postalCode": "98264"
+            }
+        },
+        "areaServed": ["Lynden", "Bellingham", "Ferndale", "Whatcom County", "Skagit County"],
+        "description": "Professional Warehouse & Industrial Striping and line marking services for all types of commercial properties"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <img src="logo.png" alt="LineMark Striping Logo" class="company-logo" width="60" height="60">
+                    <div class="logo-text">
+                        <h2>LineMark Striping</h2>
+                        <span class="tagline">Professional Service. Professional Results.</span>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="index.html#service-areas" class="nav-link">Service Areas</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="service-hero" class="hero" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 120px 20px 80px;">
+            <div class="container">
+                <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto;">
+                    <h1 style="font-size: 3em; margin-bottom: 20px; color: #fff;">Professional Warehouse & Industrial Striping Services</h1>S
+                    <p class="hero-subtitle" style="font-size: 1.3em; color: #f4d03f; margin-bottom: 10px;">Durable Floor Markings for Safety Lanes, OSHA Compliance & Efficient Workflow</p>
+                    <p style="font-size: 1.1em; color: #ddd; margin-bottom: 30px;">Serving Lynden, Bellingham, Ferndale, Blaine, Everson, and Surrounding Areas</p>
+                    <div class="hero-buttons" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                        <a href="#contact" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.1em;">Get Free Quote</a>
+                        <a href="tel:360-739-9927" class="btn btn-secondary" style="padding: 15px 40px; font-size: 1.1em;"><i class="fas fa-phone"></i> Call Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Overview Section -->
+        <section id="service-overview" style="padding: 80px 20px; background: #fff;">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                    <h2 style="font-size: 2.5em; margin-bottom: 15px;">Expert Warehouse & Industrial Striping Services</h2>
+                    <p style="font-size: 1.2em; color: #666; max-width: 800px; margin: 0 auto;">Professional line marking solutions for businesses, retail centers, and commercial properties throughout Whatcom County</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                    <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f;">
+                        <div style="font-size: 2.5em; color: #f4d03f; margin-bottom: 15px;"><i class="fas fa-building"></i></div>
+                        <h3 style="margin-bottom: 15px;">Safety Lanes & Walkways</h3>
+                        <p style="color: #666;">Create clear separation between pedestrian traffic and forklifts with high-visibility safety lines that prevent accidents and ensure OSHA compliance.</p>
+                    </div>
+                    
+                    <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f;">
+                        <div style="font-size: 2.5em; color: #f4d03f; margin-bottom: 15px;"><i class="fas fa-shopping-cart"></i></div>
+                        <h3 style="margin-bottom: 15px;">Staging & 5S Organization</h3>
+                        <p style="color: #666;">Optimize your facility’s workflow with precise markings for pallet staging, inventory zones, and equipment storage to maximize efficiency.</p>
+                    </div>
+                    
+                    <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f;">
+                        <div style="font-size: 2.5em; color: #f4d03f; margin-bottom: 15px;"><i class="fas fa-hospital"></i></div>
+                        <h3 style="margin-bottom: 15px;">Restriping & Durable Coatings</h3>
+                        <p style="color: #666;">Refresh worn layout lines with industrial-grade paints or epoxies designed to withstand heavy machinery, tire tracking, and chemical spills.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Service Description -->
+        <section id="service-details" style="padding: 80px 20px; background: #f9f9f9;">
+            <div class="container" style="max-width: 1100px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                    <div>
+                        <img src="image5.jpg" alt="Professional Warehouse & Industrial Striping in Whatcom County" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" loading="lazy" width="600" height="400">
+                    </div>
+                    <div>
+                        <h2 style="font-size: 2.3em; margin-bottom: 20px;">Why Choose Our Industrial Floor Marking?</h2>
+                        <p style="font-size: 1.1em; color: #555; line-height: 1.8; margin-bottom: 20px;">At LineMark Striping, we specialize in professional warehouse and factory floor marking services for industrial and commercial properties throughout Lynden, Bellingham, and all of Whatcom County. Our expert team uses industrial-grade materials and precision equipment to deliver durable, high-visibility lines that improve facility safety and optimize operational workflow.</p>
+                        
+                        <div style="margin-top: 30px;">
+                            <div style="display: flex; align-items: start; margin-bottom: 20px;">
+                                <div style="background: #f4d03f; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0;"><i class="fas fa-check" style="color: #1a1a1a; font-size: 1.5em;"></i></div>
+                                <div>
+                                    <h3 style="margin-bottom: 8px; font-size: 1.3em;">Industrial-Grade Durability</h3>
+                                    <p style="color: #666;">We use heavy-duty traffic paints and epoxies designed specifically for concrete floors, ensuring they withstand constant forklift traffic, pallet dragging, and chemical cleaning without lifting or fading.</p>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: start; margin-bottom: 20px;">
+                                <div style="background: #f4d03f; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0;"><i class="fas fa-check" style="color: #1a1a1a; font-size: 1.5em;"></i></div>
+                                <div>
+                                    <h3 style="margin-bottom: 8px; font-size: 1.3em;">Minimal Operational Disruption</h3>
+                                    <p style="color: #666;">We understand that production cannot stop. We offer flexible scheduling (including nights and weekends) to complete your floor marking projects without interrupting your daily operations.</p>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: start;">
+                                <div style="background: #f4d03f; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0;"><i class="fas fa-check" style="color: #1a1a1a; font-size: 1.5em;"></i></div>
+                                <div>
+                                    <h3 style="margin-bottom: 8px; font-size: 1.3em;">Licensed & Safety Compliant</h3>
+                                    <p style="color: #666;">Fully licensed, bonded, and insured. We are knowledgeable in OSHA safety color codes to help keep your facility compliant and your employees safe.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" style="padding: 80px 20px; background: #fff;">
+            <div class="container" style="max-width: 900px; margin: 0 auto;">
+                <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                    <h2 style="font-size: 2.5em; margin-bottom: 15px;">Frequently Asked Questions</h2>
+                    <p style="font-size: 1.1em; color: #666;">Common questions about our Warehouse & Industrial Marking services in Whatcom County</p>
+                </div>
+                
+                <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px;">
+                    <h3 style="color: #1a1a1a; margin-bottom: 12px; font-size: 1.4em;">How durable are the floor markings?</h3>
+                    <p style="color: #666; line-height: 1.7;">Longevity depends heavily on traffic volume. In high-traffic industrial environments, forklift tires and pallet dragging cause wear over time. However, we use industrial-grade traffic paints and epoxies specifically formulated to resist tire tracking, abrasion, and chemicals, ensuring your lines last significantly longer than standard hardware store paint.</p>
+                </div>
+                
+                <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px;">
+                    <h3 style="color: #1a1a1a; margin-bottom: 12px; font-size: 1.4em;">How long until we can drive forklifts over the lines?</h3>
+                    <p style="color: #666; line-height: 1.7;">We prioritize minimizing downtime for your operations. Standard industrial traffic paint is typically dry to the touch in 30 minutes and ready for heavy forklift traffic in 1-2 hours. If we are applying specialized epoxy coatings, cure times may be longer. We also offer night and weekend scheduling to ensure zero disruption to your workflow.</p>
+                </div>
+                
+                <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; margin-bottom: 20px;">
+                    <h3 style="color: #1a1a1a; margin-bottom: 12px; font-size: 1.4em;">What areas do you serve for Industrial Striping?</h3>
+                    <p style="color: #666; line-height: 1.7;">We provide warehouse and factory floor marking services throughout Whatcom County, including Lynden, Bellingham, Ferndale, Blaine, Everson, and Nooksack. We also serve industrial clients in parts of Skagit, Snohomish, San Juan, and Island Counties. Contact us to discuss your facility's location and specific needs.</p>
+                </div>
+                
+                <div style="background: #f9f9f9; padding: 30px; border-radius: 10px;">
+                    <h3 style="color: #1a1a1a; margin-bottom: 12px; font-size: 1.4em;">How much does this service typically cost?</h3>
+                    <p style="color: #666; line-height: 1.7;">Pricing for industrial projects is typically calculated by linear footage and varies based on the type of material chosen (standard traffic paint vs. durable epoxy) and surface preparation requirements. We offer competitive rates for facilities in Lynden and Bellingham, ranging from small shop restriping to large distribution center layouts. Contact us for a free, on-site estimate tailored to your floor plan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section id="contact" style="padding: 100px 20px; background: linear-gradient(135deg, #f4d03f 0%, #e0bd2f 100%);">
+            <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 2.8em; margin-bottom: 20px; color: #1a1a1a;">Ready to Optimize Your Warehouse Safety?</h2>
+                <p style="font-size: 1.3em; color: #2d2d2d; margin-bottom: 40px; line-height: 1.6;">Get a free quote for professional industrial floor marking services in Lynden, Bellingham, and Whatcom County. Licensed, insured, and experienced in creating OSHA-compliant layouts that last.</p>
+                
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+                    <a href="tel:360-739-9927" class="btn" style="background: #1a1a1a; color: #fff; padding: 18px 40px; font-size: 1.2em; border-radius: 5px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;"><i class="fas fa-phone"></i> 360-739-9927</a>
+                    <a href="mailto:aaron@lmstriping.com" class="btn" style="background: #fff; color: #1a1a1a; padding: 18px 40px; font-size: 1.2em; border-radius: 5px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;"><i class="fas fa-envelope"></i> Get Quote</a>
+                </div>
+                
+                <p style="color: #2d2d2d; font-size: 1.1em;"><i class="fas fa-shield-alt"></i> Licensed, Insured & Bonded | <i class="fas fa-clock"></i> Fast Turnaround | <i class="fas fa-star"></i> Professional Results</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: #1a1a1a; color: #fff; padding: 60px 20px 30px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <img src="logo.png" alt="LineMark Striping Logo" width="40" height="40" style="margin-right: 15px;">
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.3em;">LineMark Striping</h3>
+                            <span style="color: #f4d03f; font-size: 0.9em;">Professional Service. Professional Results.</span>
+                        </div>
+                    </div>
+                    <p style="color: #aaa; line-height: 1.6;">Professional line striping services in Whatcom County, Washington.</p>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 20px; color: #f4d03f;">Contact Info</h4>
+                    <p style="color: #aaa; margin-bottom: 10px;"><i class="fas fa-phone" style="color: #f4d03f; margin-right: 10px;"></i> 360-739-9927</p>
+                    <p style="color: #aaa; margin-bottom: 10px;"><i class="fas fa-envelope" style="color: #f4d03f; margin-right: 10px;"></i> aaron@lmstriping.com</p>
+                    <p style="color: #aaa;"><i class="fas fa-map-marker-alt" style="color: #f4d03f; margin-right: 10px;"></i> Lynden, WA</p>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 20px; color: #f4d03f;">Quick Links</h4>
+                    <p style="margin-bottom: 8px;"><a href="index.html" style="color: #aaa; text-decoration: none;">Home</a></p>
+                    <p style="margin-bottom: 8px;"><a href="index.html#about" style="color: #aaa; text-decoration: none;">About Us</a></p>
+                    <p style="margin-bottom: 8px;"><a href="index.html#services" style="color: #aaa; text-decoration: none;">All Services</a></p>
+                    <p style="margin-bottom: 8px;"><a href="index.html#contact" style="color: #aaa; text-decoration: none;">Contact</a></p>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #333; padding-top: 30px; text-align: center;">
+                <p style="color: #888; margin: 0;">© 2025 LineMark Striping. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
