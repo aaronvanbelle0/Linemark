@@ -228,9 +228,8 @@ p {
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--text-dark);
-    border-color: var(--text-dark);
-}
+  color: #ffffff;
+  border-color: #ffffff;}
 
 .btn-secondary:hover {
     background-color: var(--text-dark);
