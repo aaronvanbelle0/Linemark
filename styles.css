@@ -680,7 +680,7 @@ section {
 682
 
 .footer {
-    background-color: var(--secondary-color);
+        background-color: #000000 !important;
     color: var(--text-light);
     padding: 3rem 0 1rem;
 }
@@ -960,10 +960,5 @@ textarea:focus {
     h1, h2, h3 {
         page-break-after: avoid;
     }
-
-/* Home page specific styles - black footer background */
-body .footer {
-    background-color: #000000 !important;
-}
 
 }
