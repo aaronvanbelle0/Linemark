@@ -680,7 +680,7 @@ section {
 682
 
 .footer {
-    background-color: #1a1a1a;710
+    background-color: #var(--secondary-color);710
     color: var(--text-light);
     padding: 3rem 0 1rem;
 }
@@ -713,9 +713,10 @@ section {
 }
 
 .footer-section h3,
-.footer-section h4 {
+718
+
     margin-bottom: 1rem;
-    color: #ffffff;}
+    color: #var(--primary-color);}
 
 .footer-tagline {
     color: var(--accent-color);
