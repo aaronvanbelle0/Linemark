@@ -960,4 +960,9 @@ textarea:focus {
     h1, h2, h3 {
         page-break-after: avoid;
     }
+
+/* Home page specific styles - black footer background */
+body .footer {
+    background-color: #000000;
+}
 }
