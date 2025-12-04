@@ -680,7 +680,7 @@ section {
 682
 
 .footer {
-    background-color: #var(--secondary-color);710
+    background-color: var(--secondary-color);
     color: var(--text-light);
     padding: 3rem 0 1rem;
 }
@@ -716,11 +716,11 @@ section {
 718
 
     margin-bottom: 1rem;
-    color: #var(--primary-color);}
+    color: var(--primary-color);}
 
 .footer-tagline {
     color: var(--accent-color);
-    font-weight: 500;
+    font-weiht: 500;
     margin: 2px 0 0 0;
     font-size: 0.85rem;
 }
