@@ -676,9 +676,11 @@ section {
     border-color: var(--primary-color);
 }
 
-/* Footer */
+679
+682
+
 .footer {
-    background-color: var(--secondary-color);
+    background-color: #1a1a1a;710
     color: var(--text-light);
     padding: 3rem 0 1rem;
 }
@@ -713,8 +715,7 @@ section {
 .footer-section h3,
 .footer-section h4 {
     margin-bottom: 1rem;
-    color: var(--primary-color);
-}
+    color: #ffffff;}
 
 .footer-tagline {
     color: var(--accent-color);
