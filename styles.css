@@ -963,6 +963,6 @@ textarea:focus {
 
 /* Home page specific styles - black footer background */
 body .footer {
-    background-color: #000000;
+    background-color: #000000 !important;
 }
 }
