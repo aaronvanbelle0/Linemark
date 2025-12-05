@@ -680,7 +680,7 @@ section {
 682
 
 .footer {
-        background-color: #000000 !important;
+        background-color: ##0a1628 !important;
     color: var(--text-light);
     padding: 3rem 0 1rem;
       color: #ffffff !important;
@@ -718,18 +718,17 @@ section {
 
 .footer-logo-text h3 {
     margin: 0;
-    color: var(--primary-color);
-    font-size: 1.2rem;
+    color: #ffffff;    font-size: 1.2rem;
 }
 
 .footer-section h3,
 718
 
     margin-bottom: 1rem;
-    color: var(--primary-color);}
+    color:  #ffffff;
 
 .footer-tagline {
-    color: var(--accent-color);
+    color:  #ffffff;
     font-weiht: 500;
     margin: 2px 0 0 0;
     font-size: 0.85rem;
@@ -739,7 +738,7 @@ section {
 .footer-areas li,
 .footer-services li {
     margin-bottom: 0.5rem;
-    color: #bdc3c7;
+    color: #ffffff;
 }
 
 .footer-areas,
@@ -748,7 +747,7 @@ section {
 }
 
 .footer-contact i {
-    color: var(--primary-color);
+    color:  #ffffff;
     margin-right: 0.5rem;
 }
 
@@ -756,7 +755,7 @@ section {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid #34495e;
-    color: #95a5a6;
+    color: #ffffff;
 }
 
 /* Modal */
