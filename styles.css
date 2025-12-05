@@ -683,6 +683,16 @@ section {
         background-color: #000000 !important;
     color: var(--text-light);
     padding: 3rem 0 1rem;
+      color: #ffffff !important;
+}
+
+/* Force all footer children to have transparent backgrounds */
+.footer *,
+.footer .footer-content,
+.footer .footer-section,
+.footer .footer-bottom,
+.footer .container {
+  background-color: transparent !important;
 }
 
 .footer-content {
