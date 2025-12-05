@@ -228,8 +228,8 @@ p {
 
 .btn-secondary {
     background-color: transparent;
-  color: #ffffff;
-  border-color: #ffffff;}
+  color: #000000;
+  border-color: #000000;}
 
 .btn-secondary:hover {
     background-color: var(--text-dark);
@@ -290,14 +290,14 @@ background-image: url('commercial_parking_lot.png'); /* Warehouse striping backg
 }
 
 .hero-content h1 {
-    color: #ffffff; /* Black text */
+    color: #000000; /* Black text */
         font-weight: 700; /* Bold */
     margin-bottom: 1.5rem;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: #ffffff; /* Black text */
+    color: #000000; /* Black text */
         font-weight: 700; /* Bold */
     margin-bottom: 2rem;
 }
@@ -681,9 +681,9 @@ section {
 
 .footer {
         background-color: #1a2947 !important;
-    color: var(--text-light);
+    color: #000000;
     padding: 3rem 0 1rem;
-      color: #ffffff !important;
+      color: #000000 !important;
 }
 
 /* Force all footer children to have transparent backgrounds */
@@ -718,17 +718,17 @@ section {
 
 .footer-logo-text h3 {
     margin: 0;
-    color: #ffffff;    font-size: 1.2rem;
+    color: #000000;    font-size: 1.2rem;
 }
 
 .footer-section h3,
 718
 
     margin-bottom: 1rem;
-    color:  #ffffff;
+    color:  #000000;
 
 .footer-tagline {
-    color:  #ffffff;
+    color:  #000000;
     font-weiht: 500;
     margin: 2px 0 0 0;
     font-size: 0.85rem;
@@ -738,7 +738,7 @@ section {
 .footer-areas li,
 .footer-services li {
     margin-bottom: 0.5rem;
-    color: #ffffff;
+    color: #000000;
 }
 
 .footer-areas,
@@ -747,7 +747,7 @@ section {
 }
 
 .footer-contact i {
-    color:  #ffffff;
+    color:  #000000;
     margin-right: 0.5rem;
 }
 
@@ -755,7 +755,7 @@ section {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid #34495e;
-    color: #ffffff;
+    color: #000000;
 }
 
 /* Modal */
