@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-</head>
-<body>
+<head>
+  <script>
+    function initApollo() {
+      var n = Math.random().toString(36).substring(7);
+      var o = document.createElement("script");
+      o.src = "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=" + n;
+      o.async = true;
+      o.defer = true;
+      o.onload = function () {
+        window.trackingFunctions.onLoad({ appId: "6937a849b46fcb00213f65a4" });
+      };
+      document.head.appendChild(o);
+    }
+    initApollo();
   </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LineMark Striping - Professional Service. Professional Results. | Lynden, WA</title>
 
-  <!-- Favicon for all browsers and devices -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="logo.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="logo.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="logo.png" />
@@ -19,7 +31,7 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://lmstriping.com/" />
 
-  <!-- Open Graph Meta Tags for Social Sharing -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Professional Line Striping Services | LineMark Striping Lynden, WA" />
   <meta property="og:description" content="Quality parking lot striping, ADA compliance, and commercial line marking in Whatcom County. Licensed, insured, and bonded." />
   <meta property="og:image" content="https://lmstriping.com/Screenshot 2025-12-02 145124.png" />
@@ -27,33 +39,35 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="LineMark Striping" />
 
-  <!-- Twitter Card Meta Tags -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Professional Line Striping Services | LineMark Striping" />
   <meta name="twitter:description" content="Quality parking lot striping and line marking in Whatcom County, WA" />
   <meta name="twitter:image" content="https://lmstriping.com/Screenshot 2025-12-02 145124.png" />
 
-  <!-- Performance & Mobile Optimization -->
+  <!-- Performance -->
   <meta name="theme-color" content="#f4d03f" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <!-- DNS Prefetch and Preconnect for Performance -->
+  <!-- Preconnect / Prefetch -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 
-  <!-- Preload critical assets for LCP optimization -->
+  <!-- Preload -->
   <link rel="preload" href="Screenshot 2025-12-02 145124.png" as="image" />
   <link rel="preload" href="logo.png" as="image" />
 
+  <!-- Styles & fonts -->
   <link rel="stylesheet" href="styles.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
+  <!-- LocalBusiness JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -80,7 +94,7 @@
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
         "opens": "07:00",
         "closes": "18:00"
       }
@@ -98,6 +112,190 @@
   </script>
 </head>
 <body>
-  <!-- PASTE YOUR EXISTING BODY CONTENT (HEADER, HERO, SECTIONS, FOOTER) HERE FROM A WORKING COPY -->
+  <header class="site-header">
+    <div class="logo">
+      <img src="logo.png" alt="LineMark Striping Logo" />
+      <div class="logo-text">
+        <h1>LineMark Striping</h1>
+        <p>Professional Service. Professional Results.</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#service-areas">Service Areas</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 style="color: white;">Professional Line Striping Services</h1>
+        <p class="hero-subtitle" style="color: white;">
+          Quality parking lot striping and road marking in Whatcom County
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Contact Us</a>
+          <a href="#about" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="section-content">
+        <h2>About LineMark Striping</h2>
+        <p>Your trusted partner for professional line striping services.</p>
+        <h3>Quality Striping Solutions</h3>
+        <p>
+          LineMark Striping is a professional line striping company based in Lynden, Washington.
+          We specialize in parking lot striping, road marking, and commercial line painting services
+          throughout Whatcom County.
+        </p>
+        <p>
+          We take pride in delivering clear, accurate, and professional results on every job.
+          Using modern equipment and high-quality materials, we ensure each project is completed
+          with care, durability, and attention to detail.
+          <strong>Licensed, Insured, and Bonded.</strong>
+        </p>
+        <ul class="contact-inline">
+          <li>360-739-9927</li>
+          <li>aaron@lmstriping.com</li>
+          <li>Lynden, WA</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section services">
+      <h2>Our Services</h2>
+      <p>Comprehensive line striping solutions for all your needs.</p>
+      <div class="services-grid">
+        <a href="parking-lot-striping.html" class="service-card">
+          <h3>Parking Lot Striping</h3>
+          <p>Professional parking lot line painting for businesses and commercial properties.</p>
+        </a>
+        <a href="commercial-striping.html" class="service-card">
+          <h3>Commercial Striping</h3>
+          <p>Striping services for commercial and industrial facilities of all sizes.</p>
+        </a>
+        <a href="ada-compliance.html" class="service-card">
+          <h3>ADA Compliance</h3>
+          <p>Handicap accessible parking spaces and compliant marking solutions.</p>
+        </a>
+        <a href="sports-courts.html" class="service-card">
+          <h3>Sports Courts</h3>
+          <p>Striping for pickleball, tennis, basketball, and other sports facilities.</p>
+        </a>
+        <a href="warehouse-factory-markings.html" class="service-card">
+          <h3>Warehouse &amp; Factory Markings</h3>
+          <p>Safety lines, forklift lanes, walkways, loading zones, and hazard markings.</p>
+        </a>
+        <a href="fire-lanes.html" class="service-card">
+          <h3>Fire Lanes &amp; Emergency Access</h3>
+          <p>Emergency vehicle access routes for safety compliance.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section id="service-areas" class="section service-areas">
+      <h2>Proudly Serving Whatcom County</h2>
+      <p>Professional striping services throughout the region.</p>
+      <h3>Our Coverage Area</h3>
+      <p>
+        LineMark Striping provides professional line striping and parking lot marking services
+        throughout Northwestern Washington. We serve commercial and residential clients in:
+      </p>
+      <ul class="area-list">
+        <li>Whatcom County</li>
+        <li>Skagit County</li>
+        <li>Snohomish County</li>
+        <li>San Juan County</li>
+        <li>Island County</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <h2>Contact Us</h2>
+      <p>Ready to start your striping project? Contact us today!</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Call Us</h3>
+          <p><a href="tel:360-739-9927">360-739-9927</a></p>
+
+          <h3>Email Us</h3>
+          <p><a href="mailto:aaron@lmstriping.com">aaron@lmstriping.com</a></p>
+        </div>
+
+        <div class="contact-form">
+          <h3>Send a Message</h3>
+          <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <input type="tel" name="phone" placeholder="Phone Number" required />
+            <input type="text" name="address" placeholder="Service Address" />
+            <textarea name="message" placeholder="How can we help?" rows="4"></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo.png" alt="LineMark Striping Logo" />
+        <h3>LineMark Striping</h3>
+        <p>Professional line striping services in Whatcom County, Washington.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact Info</h4>
+        <p>360-739-9927</p>
+        <p><a href="mailto:aaron@lmstriping.com">aaron@lmstriping.com</a></p>
+        <p>Lynden, WA</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Service Areas</h4>
+        <ul>
+          <li>Whatcom County</li>
+          <li>Skagit County</li>
+          <li>Snohomish County</li>
+          <li>San Juan County</li>
+          <li>Island County</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="parking-lot-striping.html">Parking Lot Striping</a></li>
+          <li><a href="commercial-striping.html">Commercial Striping</a></li>
+          <li><a href="ada-compliance.html">ADA Compliance</a></li>
+          <li><a href="sports-courts.html">Sports Courts</a></li>
+          <li><a href="warehouse-factory-markings.html">Warehouse &amp; Factory Markings</a></li>
+          <li><a href="fire-lanes.html">Fire Lanes &amp; Emergency Access</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 LineMark Striping. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
