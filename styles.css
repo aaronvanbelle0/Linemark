@@ -75,6 +75,10 @@ p {
     box-shadow: var(--shadow);
 }
 
+.nav-logo {
+    text-decoration: none;
+}
+
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
