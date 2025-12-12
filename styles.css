@@ -399,6 +399,8 @@ section {
     text-align: center;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-decoration: none;
+        color: var(--text-dark);
 }
 
 .service-card:hover {
