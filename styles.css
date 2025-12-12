@@ -408,6 +408,10 @@ section {
     box-shadow: var(--shadow-hover);
 }
 
+.service-card h3 {
+        text-decoration: none;
+    }
+
 .service-icon {
     width: 80px;
     height: 80px;
