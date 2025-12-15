@@ -253,7 +253,7 @@ p {
 
 /* Hero Section */
 .hero {
-    padding: 120px 0 80px;
+    padding: 160px 20px 80px;
 background-image: url('commercial_parking_lot.png'); /* Warehouse striping background */
         background-size: cover;
         background-position: center;
