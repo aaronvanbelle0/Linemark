@@ -140,6 +140,11 @@
                         <h2>LineMark Striping</h2>
                         <span class="tagline">Professional Service. Professional Results.</span>
             </div>
+                                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -488,6 +493,21 @@
     <script src="script.js" defer></script></body>
         <noscript>
         <div style="text-align:center; padding:20px;">
+
+                <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+            navMenu.classList.remove('active');
+        }
+    });
+    </script>
             <p>For the best experience, please enable JavaScript in your browser.</p>
             <p>Contact us at <a href="tel:360-739-9927">360-739-9927</a> or <a href="mailto:aaron@lmstriping.com">aaron@lmstriping.com</a></p>
         </div>
