@@ -71,7 +71,7 @@ p {
     background: rgba(254, 254, 254, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     box-shadow: var(--shadow);
 }
 
