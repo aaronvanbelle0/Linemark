@@ -989,3 +989,8 @@ textarea:focus {
     }
 
 }
+
+/* Override for logo text bottom spacing */
+.logo-text {
+    margin-bottom: 15px;
+}
