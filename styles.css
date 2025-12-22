@@ -994,3 +994,8 @@ textarea:focus {
 .logo-text {
     margin-bottom: 15px;
 }
+#service-hero::before,
+#service-hero::after {
+  display: none !important;
+  content: none !important;
+}
