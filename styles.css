@@ -994,6 +994,11 @@ textarea:focus {
 .logo-text {
     margin-bottom: 15px;
 }
+#service-hero {
+  background-image: none !important;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+}
+
 #service-hero::before,
 #service-hero::after {
   display: none !important;
