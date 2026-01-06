@@ -101,26 +101,64 @@
             <p style="font-size: 1.2em; color: #666; max-width: 800px; margin: 0 auto;">Expert guidance on parking lot maintenance, ADA compliance, and pavement marking best practices</p>
         </div>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
-            <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f;">
-                <div style="font-size: 2.5em; color: #f4d03f; margin-bottom: 15px;"><i class="fas fa-book"></i></div>
-                <h3 style="margin-bottom: 15px;">Maintenance Guides</h3>
-                <p style="color: #666;">Learn when and how to re-stripe your parking lot for optimal safety and appearance.</p>
+                <!-- Accordion Style Resource Cards -->
+        <div style="max-width: 900px; margin: 0 auto;">
+            
+            <!-- Maintenance Guides Accordion -->
+            <div class="resource-accordion" style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f; margin-bottom: 20px; cursor: pointer; transition: all 0.3s ease;" onclick="toggleAccordion('maintenance')">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="font-size: 2.5em; color: #f4d03f;"><i class="fas fa-book"></i></div>
+                        <div>
+                            <h3 style="margin-bottom: 10px;">Maintenance Guides</h3>
+                            <p style="color: #666; margin: 0;">Learn when and how to re-stripe your parking lot for optimal safety and appearance.</p>
+                        </div>
+                    </div>
+                    <div style="font-size: 1.5em; color: #f4d03f; transition: transform 0.3s;" id="maintenance-icon"><i class="fas fa-chevron-down"></i></div>
+                </div>
+                <div id="maintenance-content" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd;">
+                    <!-- Article links will go here -->
+                    <p style="color: #888; font-style: italic;">Article links coming soon...</p>
+                </div>
             </div>
             
-            <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f;">
-                <div style="font-size: 2.5em; color: #f4d03f; margin-bottom: 15px;"><i class="fas fa-wheelchair"></i></div>
-                <h3 style="margin-bottom: 15px;">ADA Compliance</h3>
-                <p style="color: #666;">Stay compliant with federal accessibility requirements and avoid costly violations.</p>
+            <!-- ADA Compliance Accordion -->
+            <div class="resource-accordion" style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f; margin-bottom: 20px; cursor: pointer; transition: all 0.3s ease;" onclick="toggleAccordion('ada')">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="font-size: 2.5em; color: #f4d03f;"><i class="fas fa-wheelchair"></i></div>
+                        <div>
+                            <h3 style="margin-bottom: 10px;">ADA Compliance</h3>
+                            <p style="color: #666; margin: 0;">Stay compliant with federal accessibility requirements and avoid costly violations.</p>
+                        </div>
+                    </div>
+                    <div style="font-size: 1.5em; color: #f4d03f; transition: transform 0.3s;" id="ada-icon"><i class="fas fa-chevron-down"></i></div>
+                </div>
+                <div id="ada-content" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd;">
+                    <!-- Article links will go here -->
+                    <p style="color: #888; font-style: italic;">Article links coming soon...</p>
+                </div>
             </div>
             
-            <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f;">
-                <div style="font-size: 2.5em; color: #f4d03f; margin-bottom: 15px;"><i class="fas fa-clipboard-check"></i></div>
-                <h3 style="margin-bottom: 15px;">Best Practices</h3>
-                <p style="color: #666;">Industry standards and recommendations for commercial property maintenance.</p>
+            <!-- Best Practices Accordion -->
+            <div class="resource-accordion" style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f; margin-bottom: 20px; cursor: pointer; transition: all 0.3s ease;" onclick="toggleAccordion('practices')">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="font-size: 2.5em; color: #f4d03f;"><i class="fas fa-clipboard-check"></i></div>
+                        <div>
+                            <h3 style="margin-bottom: 10px;">Best Practices</h3>
+                            <p style="color: #666; margin: 0;">Industry standards and recommendations for commercial property maintenance.</p>
+                        </div>
+                    </div>
+                    <div style="font-size: 1.5em; color: #f4d03f; transition: transform 0.3s;" id="practices-icon"><i class="fas fa-chevron-down"></i></div>
+                </div>
+                <div id="practices-content" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd;">
+                    <!-- Article links will go here -->
+                    <p style="color: #888; font-style: italic;">Article links coming soon...</p>
+                </div>
             </div>
-        </div>
-    </div>
+            
+        </div>v>
 </section>
 
 <!-- Detailed Resources -->
@@ -274,6 +312,23 @@
         </div>
     </div>
 </footer>
+
+    <!-- Accordion Toggle JavaScript -->
+<script>
+function toggleAccordion(section) {
+    const content = document.getElementById(section + '-content');
+    const icon = document.getElementById(section + '-icon');
+    
+    if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+        icon.style.transform = 'rotate(180deg)';
+    } else {
+        content.style.display = 'none';
+        icon.style.transform = 'rotate(0deg)';
+    }
+}
+</script>
+
 
 <script src="script.js" defer></script>
 </body>
