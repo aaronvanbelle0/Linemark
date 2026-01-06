@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSJ2N8W1EL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VSJ2N8W1EL');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Manager Resources | LineMark Striping Lynden WA</title>    
+    
+    <link rel="icon" type="image/png" href="faviconV2.png">
+    <link rel="apple-touch-icon" href="faviconV2.png">
+    
+    <meta name="description" content="Resources, tips, and compliance guides for parking lot maintenance, ADA striping rules, and pavement marking in Whatcom County.">
+    <meta name="author" content="LineMark Striping">
+    <link rel="canonical" href="https://lmstriping.com/resources.html">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo-container" style="display: flex; align-items: center; gap: 20px;">
+                        <img src="faviconV2.png" alt="LineMark Striping Logo" class="company-logo" style="margin: 0;">
+                        <div class="logo-text">
+                            <h2 style="margin: 0;">LineMark Striping</h2>
+                            <span class="tagline">Professional Service. Professional Results.</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                
+                <li class="dropdown">
+                    <a href="index.html#services" class="nav-link">Services <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="parking-lot-striping.html">Parking Lot Striping</a>
+                        <a href="commercial-striping.html">Commercial Striping</a>
+                        <a href="ada-compliance.html">ADA Compliance</a>
+                        <a href="sports-courts.html">Sports Courts</a>
+                        <a href="warehouse-factory-markings.html">Warehouse Markings</a>
+                        <a href="fire-lanes.html">Fire Lanes</a>
+                    </div>
+                </li>
+
+                <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+
+                <li class="dropdown">
+                    <a href="index.html#service-areas" class="nav-link">Service Areas <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="whatcom-county-parking-lot-striping.html">Whatcom County</a>
+                        <a href="mount-vernon-parking-lot-striping.html">Skagit County</a>
+                        <a href="snohomish-county-parking-lot-striping.html">Snohomish County</a>
+                        <a href="san-juan-county-parking-lot-striping.html">San Juan County</a>
+                        <a href="island-county-parking-lot-striping.html">Island County</a>
+                    </div>
+                </li>
+
+                <li><a href="resources.html" class="nav-link" style="color: #f4d03f;">Resources</a></li>
+                
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 120px 20px 80px; min-height: auto;">
+        <div class="container">
+            <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto;">
+                <h1 style="font-size: 3em; margin-bottom: 20px; color: #fff;">Property Manager Resources</h1>
+                <p class="hero-subtitle" style="font-size: 1.3em; color: #f4d03f; margin-bottom: 10px;">Guides, Checklists, and Compliance Information</p>
+                <p style="font-size: 1.1em; color: #ddd; margin-bottom: 30px;">Everything you need to know about maintaining your parking lot in Washington State.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources" style="padding: 80px 20px; background: #f8f9fa;">
+        <div class="container">
+            <div class="resources-grid">
+                
+                <article class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>ADA Compliance Guide</h3>
+                        <p>Understanding Washington State handicap parking requirements. Learn about stall dimensions, van-accessible aisles, and required signage to avoid fines.</p>
+                        <a href="ada-compliance.html" class="read-more">View Compliance Services <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>When to Restripe?</h3>
+                        <p>Faded lines can increase liability and accidents. We recommend restriping every 2 years in Whatcom County due to our rain and weather conditions.</p>
+                        <a href="#contact" class="read-more">Schedule Assessment <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-fire-extinguisher"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Fire Lane Regulations</h3>
+                        <p>Red curbs and "NO PARKING - FIRE LANE" stencils are critical for safety inspections. Ensure your emergency zones meet local fire marshal codes.</p>
+                        <a href="fire-lanes.html" class="read-more">See Fire Lane Specs <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Winter Maintenance</h3>
+                        <p>How to protect your pavement markings during winter. Tips on snow plowing around curbs and minimizing damage to thermoplastic applications.</p>
+                        <a href="#contact" class="read-more">Contact Us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Warehouse Safety Colors</h3>
+                        <p>Understanding OSHA color codes: Yellow for aisles, White for storage, and Red for danger zones. Optimize your facility workflow.</p>
+                        <a href="warehouse-factory-markings.html" class="read-more">Warehouse Services <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Maximize Parking Space</h3>
+                        <p>Is your lot layout inefficient? Re-designing your stall angles (45° vs 90°) can often add 10-20% more capacity to your existing lot.</p>
+                        <a href="#contact" class="read-more">Get a Layout Consult <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="padding: 100px 20px; background: linear-gradient(135deg, #f4d03f 0%, #e0bd2f 100%);">
+        <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2 style="font-size: 2.8em; margin-bottom: 20px; color: #1a1a1a;">Have a specific question?</h2>
+            <p style="font-size: 1.3em; color: #2d2d2d; margin-bottom: 40px; line-height: 1.6;">Our team is happy to provide free advice and on-site consultations for property managers.</p>
+            
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+                <a href="tel:360-739-9927" class="btn" style="background: #1a1a1a; color: #fff; padding: 18px 40px; font-size: 1.2em; border-radius: 5px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;"><i class="fas fa-phone"></i> 360-739-9927</a>
+                <a href="mailto:aaron@lmstriping.com" class="btn" style="background: #fff; color: #1a1a1a; padding: 18px 40px; font-size: 1.2em; border-radius: 5px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;"><i class="fas fa-envelope"></i> Email Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" style="background: #1a1a1a; color: #fff; padding: 60px 20px 30px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <img src="faviconV2.png" alt="LineMark Striping Logo" width="40" height="40" style="margin-right: 15px;">
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.3em;">LineMark Striping</h3>
+                            <span style="color: #f4d03f; font-size: 0.9em;">Professional Service. Professional Results.</span>
+                        </div>
+                    </div>
+                    <p style="color: #aaa; line-height: 1.6;">Professional line striping services in Whatcom County, Washington.</p>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 20px; color: #f4d03f;">Contact Info</h4>
+                    <p style="color: #aaa; margin-bottom: 10px;"><i class="fas fa-phone" style="color: #f4d03f; margin-right: 10px;"></i> 360-739-9927</p>
+                    <p style="color: #aaa; margin-bottom: 10px;"><i class="fas fa-envelope" style="color: #f4d03f; margin-right: 10px;"></i> aaron@lmstriping.com</p>
+                    <p style="color: #aaa;"><i class="fas fa-map-marker-alt" style="color: #f4d03f; margin-right: 10px;"></i> Lynden, WA</p>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 20px; color: #f4d03f;">Quick Links</h4>
+                    <p style="margin-bottom: 8px;"><a href="index.html" style="color: #aaa; text-decoration: none;">Home</a></p>
+                    <p style="margin-bottom: 8px;"><a href="index.html#about" style="color: #aaa; text-decoration: none;">About Us</a></p>
+                    <p style="margin-bottom: 8px;"><a href="index.html#services" style="color: #aaa; text-decoration: none;">All Services</a></p>
+                    <p style="margin-bottom: 8px;"><a href="index.html#contact" style="color: #aaa; text-decoration: none;">Contact</a></p>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #333; padding-top: 30px; text-align: center;">
+                <p style="color: #888; margin: 0;">&copy; 2025 LineMark Striping. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
