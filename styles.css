@@ -178,6 +178,17 @@ p {
     transform: translateY(0);
 }
 
+/* Dropdown for navigation without nav-item class */
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 .dropdown-menu li {
     margin: 0;
 }
