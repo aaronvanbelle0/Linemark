@@ -101,9 +101,8 @@
         </div>
         
                 <!-- Accordion Style Resource Cards -->
-        <div style="max-width: 900px; margin: 0 auto;">
+    <div style="max-width: 900px; margin: 0 auto;">
             
-            <!-- Maintenance Guides Accordion -->
             <div class="resource-accordion" style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f; margin-bottom: 20px; cursor: pointer; transition: all 0.3s ease;" onclick="toggleAccordion('maintenance')">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <div style="display: flex; align-items: center; gap: 20px;">
@@ -116,35 +115,11 @@
                     <div style="font-size: 1.5em; color: #f4d03f; transition: transform 0.3s;" id="maintenance-icon"><i class="fas fa-chevron-down"></i></div>
                 </div>
                 <div id="maintenance-content" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd;">
-                    <!-- Article links will go here -->
                     <p style="color: #888; font-style: italic;">Article links coming soon...</p>
                 </div>
             </div>
             
-            <!-- ADA Compliance Accordion -->
             <div class="resource-accordion" style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f; margin-bottom: 20px; cursor: pointer; transition: all 0.3s ease;" onclick="toggleAccordion('ada')">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div style="display: flex; align-items: center; gap: 20px;">
-                        <div style="font-size: 2.5em; color: #f4d03f;"><i class="fas fa-wheelchair"></i></div>
-                        <div>
-                            <h3 style="margin-bottom: 10px;">ADA Compliance</h3>
-                            <p style="color: #666; margin: 0;">Stay compliant with federal accessibility requirements and avoid costly violations.</p>
-                        </div>
-                    </div>
-                    <div style="font-size: 1.5em; color: #f4d03f; transition: transform 0.3s;" id="ada-icon"><i class="fas fa-chevron-down"></i></div>
-                </div>
-                <div id="ada-content" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd;">
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 15px;">
-                        <a href="slope-grade-ada-compliance-fairhaven-bellingham.html" style="color: #f4d03f; text-decoration: none; font-size: 1.1em; transition: color 0.3s;">
-                            <i class="fas fa-angle-right" style="margin-right: 10px;"></i>Managing Slope & Grade Issues in Historic Fairhaven & Downtown Bellingham
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <!-- Best Practices Accordion -->
-<div class="resource-accordion" style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f; margin-bottom: 20px; cursor: pointer; transition: all 0.3s ease;" onclick="toggleAccordion('ada')">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <div style="display: flex; align-items: center; gap: 20px;">
                         <div style="font-size: 2.5em; color: #f4d03f;"><i class="fas fa-wheelchair"></i></div>
@@ -165,14 +140,24 @@
                     </ul>
                 </div>
             </div>
-                    <!-- Article links will go here -->
+            
+            <div class="resource-accordion" style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f; margin-bottom: 20px; cursor: pointer; transition: all 0.3s ease;" onclick="toggleAccordion('practices')">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="font-size: 2.5em; color: #f4d03f;"><i class="fas fa-clipboard-check"></i></div>
+                        <div>
+                            <h3 style="margin-bottom: 10px;">Best Practices</h3>
+                            <p style="color: #666; margin: 0;">Industry standards and recommendations for commercial property maintenance.</p>
+                        </div>
+                    </div>
+                    <div style="font-size: 1.5em; color: #f4d03f; transition: transform 0.3s;" id="practices-icon"><i class="fas fa-chevron-down"></i></div>
+                </div>
+                <div id="practices-content" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd;">
                     <p style="color: #888; font-style: italic;">Article links coming soon...</p>
                 </div>
             </div>
             
         </div>
-</section>
-
 <!-- Detailed Resources -->
 <section id="resource-detail"     style="padding: 80px 20px; background: #f9f9f9;">
     <div class="container" style="max-width: 1100px; margin: 0 auto;">
