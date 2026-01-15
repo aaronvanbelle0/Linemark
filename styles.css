@@ -1022,3 +1022,58 @@ textarea:focus {
     text-decoration: none;
     opacity: 0.8;
 }
+
+/* TRUST STRIP STYLES */
+.trust-strip {
+    background-color: #f5f5f5; /* Light grey background to contrast with black site */
+    padding: 40px 20px;
+    border-bottom: 4px solid #F4D03F; /* Your brand yellow */
+}
+
+.trust-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.trust-text {
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif; /* Uses your site's font */
+}
+
+.logo-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Wraps to next line on mobile */
+    gap: 50px; /* Space between logos */
+}
+
+.trust-logo {
+    max-height: 50px; /* Forces all logos to be same height */
+    width: auto; /* Maintains aspect ratio */
+    filter: grayscale(100%) opacity(0.6); /* Makes them grey and slightly faded */
+    transition: all 0.3s ease; /* Smooth animation */
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.trust-logo:hover {
+    filter: grayscale(0%) opacity(1); /* Returns to full color on hover */
+    transform: scale(1.1); /* Slight pop up effect */
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+    .logo-grid {
+        gap: 30px;
+    }
+    .trust-logo {
+        max-height: 35px; /* Smaller on phones */
+    }
+}
