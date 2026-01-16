@@ -833,6 +833,15 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+    .hero {
+        padding: 180px 0 60px;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-top: 20px;
+    }
     
     .logo-container {
         gap: 0.5rem;
