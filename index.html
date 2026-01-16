@@ -97,6 +97,60 @@
         .footer, .footer *, .footer p, .footer span, .footer a, .footer h3, .footer h4 { color: #ffffff !important; opacity: 1 !important; }
         .footer a { text-decoration: none; }
     </style>
+    <style>
+        /* 1. Default State: Hide Hamburger on Desktop */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* 2. Style the 3 Lines (The "Meat" of the hamburger) */
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: #333; /* Dark Grey color */
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* 3. Mobile View Rules (When screen is small) */
+        @media (max-width: 768px) {
+            /* Show the button on mobile */
+            .hamburger {
+                display: block; 
+            }
+
+            /* Transform the menu into a slide-out drawer */
+            .nav-menu {
+                position: fixed;
+                left: -100%; /* Hide off-screen by default */
+                top: 70px; /* Push down below the logo bar */
+                flex-direction: column;
+                background-color: #ffffff; /* White background */
+                width: 100%;
+                height: auto;
+                text-align: center;
+                transition: 0.3s;
+                padding: 20px 0;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+
+            /* This class is added by your JavaScript when clicked */
+            .nav-menu.active {
+                left: 0; /* Slide onto screen */
+            }
+
+            /* Space out links vertically on mobile */
+            .nav-menu li {
+                margin: 15px 0;
+            }
+        }
+    </style>
 </head>
 <body>
 
