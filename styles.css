@@ -833,9 +833,6 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
     
     .logo-container {
         gap: 0.5rem;
