@@ -98,18 +98,16 @@
         .footer a { text-decoration: none; }
     </style>
 <style>
-        /* --- DESKTOP STYLES (Keep these) --- */
-        /* 1. Default State: Hide Hamburger on Desktop */
+        /* --- DESKTOP STYLES --- */
         .hamburger {
             display: none;
             background: none;
             border: none;
             cursor: pointer;
             padding: 10px;
-            z-index: 10001; /* Always on top */
+            z-index: 10001; /* Keeps button on top of menu */
         }
 
-        /* 2. Style the 3 Lines */
         .hamburger span {
             display: block;
             width: 25px;
@@ -119,88 +117,77 @@
             transition: all 0.3s ease-in-out;
         }
 
-        /* --- MOBILE FIXES (The new stuff) --- */
+        /* --- MOBILE FIXES --- */
         @media (max-width: 768px) {
-            /* --- FIX 1: HEADER CROWDING --- */
-            /* Hide the orange slogan on phones to save space */
+            /* 1. FIX HEADER CROWDING */
             .tagline {
-                display: none !important;
+                display: none !important; /* Hides slogan on mobile */
             }
-            /* Make the main company name smaller to fit next to the button */
             .logo-text h2 {
-                font-size: 1.1rem;
+                font-size: 1.1rem; /* Shrinks company name to fit */
             }
-            /* Slightly shrink logo image */
             .company-logo {
-                height: 35px;
+                height: 35px; /* Shrinks logo icon */
             }
-            /* Ensure the hamburger button is visible */
             .hamburger {
                 display: block !important;
             }
 
-            /* --- FIX 2: MENU SPACING & SCROLLING --- */
+            /* 2. FIX MENU SPACING & SCROLLING */
             .nav-menu {
                 position: fixed;
                 top: 0;
-                left: -100%; /* Hide off-screen */
+                left: -100%;
                 width: 100%;
                 height: 100vh; /* Full screen height */
                 background-color: #ffffff;
                 display: flex !important;
                 flex-direction: column;
-                /* IMPORTANT: Start items at the top, don't spread them out */
-                justify-content: flex-start;
+                justify-content: flex-start; /* Starts items at the top */
                 align-items: center;
                 transition: 0.3s ease-in-out;
                 z-index: 10000;
-                padding-top: 70px; /* Space for header bar */
-                padding-bottom: 30px; /* Space at bottom */
-                /* IMPORTANT: Allow scrolling if menu is taller than screen */
-                overflow-y: auto;
-                -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-                box-shadow: 0 0 15px rgba(0,0,0,0.2);
+                padding-top: 80px; /* Moves links down below the header */
+                padding-bottom: 40px;
+                overflow-y: auto; /* ENABLE SCROLLING */
             }
 
             .nav-menu.active {
-                left: 0; /* Slide onto screen */
+                left: 0;
             }
 
-            /* Tighter spacing between main links */
+            /* Move links closer together */
             .nav-menu > li {
-                margin: 5px 0;
+                margin: 5px 0; 
                 width: 100%;
                 text-align: center;
             }
 
-            /* Make links easy to tap */
             .nav-menu a {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
                 display: block;
                 padding: 10px 0;
             }
 
-            /* --- Handle Dropdowns on Mobile --- */
-            /* Make dropdowns visible by default in the list so they don't require hovering */
+            /* Fix Dropdowns on Mobile */
             .dropdown-menu {
-                position: static; /* Not absolute anymore */
+                position: static;
                 box-shadow: none;
                 border: 1px solid #eee;
                 background: #f9f9f9;
                 opacity: 1;
                 visibility: visible;
                 transform: none;
-                padding: 5px 0;
+                padding: 0;
                 margin: 5px auto;
-                width: 90%; /* Slightly narrower than main list */
+                width: 90%;
             }
             
             .dropdown-menu li a {
+                padding: 10px 0;
                 font-size: 1rem;
-                padding: 8px 0;
             }
             
-            /* Hide dropdown arrow on mobile since they are already open */
             .dropdown-toggle i {
                 display: none;
             }
