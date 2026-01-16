@@ -97,7 +97,7 @@
         .footer, .footer *, .footer p, .footer span, .footer a, .footer h3, .footer h4 { color: #ffffff !important; opacity: 1 !important; }
         .footer a { text-decoration: none; }
     </style>
-    <style>
+<style>
         /* 1. Default State: Hide Hamburger on Desktop */
         .hamburger {
             display: none;
@@ -105,49 +105,64 @@
             border: none;
             cursor: pointer;
             padding: 10px;
+            z-index: 10001; /* Always on top */
         }
 
-        /* 2. Style the 3 Lines (The "Meat" of the hamburger) */
+        /* 2. Style the 3 Lines */
         .hamburger span {
             display: block;
             width: 25px;
             height: 3px;
             margin: 5px auto;
-            background-color: #333; /* Dark Grey color */
+            background-color: #333; 
             transition: all 0.3s ease-in-out;
         }
 
-        /* 3. Mobile View Rules (When screen is small) */
+        /* 3. Mobile View Rules */
         @media (max-width: 768px) {
-            /* Show the button on mobile */
-            .hamburger {
-                display: block; 
+            /* HIDE THE TAGLINE to fix crowding */
+            .tagline {
+                display: none !important; 
+            }
+            
+            /* Adjust Logo text size */
+            .logo-text h2 {
+                font-size: 1.2rem; 
             }
 
-            /* Transform the menu into a slide-out drawer */
+            /* Show the button */
+            .hamburger {
+                display: block !important; 
+            }
+
+            /* Fix the Menu Drawer */
             .nav-menu {
                 position: fixed;
-                left: -100%; /* Hide off-screen by default */
-                top: 70px; /* Push down below the logo bar */
-                flex-direction: column;
-                background-color: #ffffff; /* White background */
+                top: 0;
+                left: -100%; /* Hide off-screen */
                 width: 100%;
-                height: auto;
-                text-align: center;
-                transition: 0.3s;
-                padding: 20px 0;
-                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-                z-index: 1000;
+                height: 100vh; /* Full screen height */
+                background-color: #ffffff;
+                display: flex !important; /* Force flex layout */
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: 0.3s ease-in-out;
+                z-index: 10000;
+                padding-top: 60px;
+                box-shadow: 0 0 15px rgba(0,0,0,0.2);
             }
 
-            /* This class is added by your JavaScript when clicked */
             .nav-menu.active {
                 left: 0; /* Slide onto screen */
             }
 
-            /* Space out links vertically on mobile */
             .nav-menu li {
-                margin: 15px 0;
+                margin: 20px 0;
+            }
+            
+            .nav-menu a {
+                font-size: 1.2rem;
             }
         }
     </style>
