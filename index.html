@@ -98,6 +98,7 @@
         .footer a { text-decoration: none; }
     </style>
 <style>
+        /* --- DESKTOP STYLES (Keep these) --- */
         /* 1. Default State: Hide Hamburger on Desktop */
         .hamburger {
             display: none;
@@ -114,28 +115,31 @@
             width: 25px;
             height: 3px;
             margin: 5px auto;
-            background-color: #333; 
+            background-color: #333;
             transition: all 0.3s ease-in-out;
         }
 
-        /* 3. Mobile View Rules */
+        /* --- MOBILE FIXES (The new stuff) --- */
         @media (max-width: 768px) {
-            /* HIDE THE TAGLINE to fix crowding */
+            /* --- FIX 1: HEADER CROWDING --- */
+            /* Hide the orange slogan on phones to save space */
             .tagline {
-                display: none !important; 
+                display: none !important;
             }
-            
-            /* Adjust Logo text size */
+            /* Make the main company name smaller to fit next to the button */
             .logo-text h2 {
-                font-size: 1.2rem; 
+                font-size: 1.1rem;
             }
-
-            /* Show the button */
+            /* Slightly shrink logo image */
+            .company-logo {
+                height: 35px;
+            }
+            /* Ensure the hamburger button is visible */
             .hamburger {
-                display: block !important; 
+                display: block !important;
             }
 
-            /* Fix the Menu Drawer */
+            /* --- FIX 2: MENU SPACING & SCROLLING --- */
             .nav-menu {
                 position: fixed;
                 top: 0;
@@ -143,13 +147,18 @@
                 width: 100%;
                 height: 100vh; /* Full screen height */
                 background-color: #ffffff;
-                display: flex !important; /* Force flex layout */
+                display: flex !important;
                 flex-direction: column;
-                justify-content: center;
+                /* IMPORTANT: Start items at the top, don't spread them out */
+                justify-content: flex-start;
                 align-items: center;
                 transition: 0.3s ease-in-out;
                 z-index: 10000;
-                padding-top: 60px;
+                padding-top: 70px; /* Space for header bar */
+                padding-bottom: 30px; /* Space at bottom */
+                /* IMPORTANT: Allow scrolling if menu is taller than screen */
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
                 box-shadow: 0 0 15px rgba(0,0,0,0.2);
             }
 
@@ -157,12 +166,43 @@
                 left: 0; /* Slide onto screen */
             }
 
-            .nav-menu li {
-                margin: 20px 0;
+            /* Tighter spacing between main links */
+            .nav-menu > li {
+                margin: 5px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            /* Make links easy to tap */
+            .nav-menu a {
+                font-size: 1.1rem;
+                display: block;
+                padding: 10px 0;
+            }
+
+            /* --- Handle Dropdowns on Mobile --- */
+            /* Make dropdowns visible by default in the list so they don't require hovering */
+            .dropdown-menu {
+                position: static; /* Not absolute anymore */
+                box-shadow: none;
+                border: 1px solid #eee;
+                background: #f9f9f9;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                padding: 5px 0;
+                margin: 5px auto;
+                width: 90%; /* Slightly narrower than main list */
             }
             
-            .nav-menu a {
-                font-size: 1.2rem;
+            .dropdown-menu li a {
+                font-size: 1rem;
+                padding: 8px 0;
+            }
+            
+            /* Hide dropdown arrow on mobile since they are already open */
+            .dropdown-toggle i {
+                display: none;
             }
         }
     </style>
