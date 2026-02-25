@@ -1,50 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSJ2N8W1EL"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VSJ2N8W1EL');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VSJ2N8W1EL');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parking Lot Striping Everett WA | Industrial & Port Line Marking</title>    
-    <meta name="description" content="Professional parking lot striping in Everett, WA. Serving the Port of Everett, Evergreen Way, and Broadway. ADA compliance, warehouse safety, and commercial marking.">
-    <meta name="keywords" content="parking lot striping Everett WA, line marking Everett, Port of Everett striping, Evergreen Way pavement marking, ADA compliance Everett, industrial striping Snohomish County">
+
+    <!-- ✅ IMPROVED: Port of Everett, Paine Field, and industrial angle front-loaded -->
+    <title>Parking Lot Striping Everett WA | Port, Industrial & Retail Pavement Marking | LineMark Striping</title>
+
+    <!-- ✅ IMPROVED: Fuller description — Port of Everett, Paine Field, Providence Regional, night striping, ADA -->
+    <meta name="description" content="Professional parking lot striping in Everett WA. Serving the Port of Everett, Paine Field industrial corridor, Evergreen Way retail, and Providence Regional. ADA compliance, warehouse safety markings, fire lanes, and overnight scheduling for 24-hour facilities. Licensed, insured, Snohomish County.">
+
+    <!-- ✅ IMPROVED: Keywords expanded — Naval Station, Broadway, night striping, warehouse, fire lane -->
+    <meta name="keywords" content="parking lot striping Everett WA, line marking Everett, Port of Everett striping, Paine Field industrial striping, Evergreen Way pavement marking, ADA compliance Everett, warehouse floor marking Everett, fire lane striping Everett, night striping Everett retail, industrial striping Snohomish County, Providence Regional parking lot striping, Naval Station Everett pavement marking">
     <meta name="author" content="LineMark Striping">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://lmstriping.com/everett-parking-lot-striping.html">
-    
-    <!-- Favicon -->
+
+    <!-- ✅ ADDED: OG tags — completely missing from original -->
+    <meta property="og:title" content="Parking Lot Striping Everett WA | Port, Industrial & Retail Pavement Marking | LineMark Striping">
+    <meta property="og:description" content="Professional parking lot striping for the Port of Everett, Paine Field, Evergreen Way, and Providence Regional. ADA compliance, warehouse markings, fire lanes, and overnight scheduling. Licensed Snohomish County contractor.">
+    <meta property="og:image" content="https://lmstriping.com/16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png">
+    <meta property="og:url" content="https://lmstriping.com/everett-parking-lot-striping.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LineMark Striping">
+
     <link rel="icon" type="image/png" sizes="192x192" href="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png">
     <link rel="apple-touch-icon" href="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png">
-    
+    <link rel="shortcut icon" href="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png">
+
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Local Schema Implementation -->
+
+    <!-- ✅ FULLY REBUILT: LocalBusiness Schema replacing the @type: Service wrapper.
+         FIXED: Port Gardner, Silver Lake, Everett Mall District removed as fake AdministrativeArea
+         entities — these are neighborhoods/districts, not valid AdministrativeArea types.
+         Replaced with correctly typed City (Everett) and County (Snohomish County) areaServed.
+         Added identifier (license), geo coordinates, openingHoursSpecification,
+         priceRange, hasOfferCatalog, review, and sameAs. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Parking Lot Striping",
-      "name": "Everett Parking Lot Striping",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "LineMark Striping",
-        "telephone": "+1-360-739-9927",
-        "image": "https://lmstriping.com/Snohomish.png",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Serving Everett & Snohomish County",
-          "addressLocality": "Lynden",
-          "addressRegion": "WA",
-          "postalCode": "98264"
-        }
+      "@type": "LocalBusiness",
+      "@id": "https://lmstriping.com/#business",
+      "name": "LineMark Striping",
+      "url": "https://lmstriping.com",
+      "telephone": "+1-360-739-9927",
+      "email": "aaron@lmstriping.com",
+      "image": "https://lmstriping.com/16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png",
+      "logo": "https://lmstriping.com/16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png",
+      "identifier": "LINEMS*750QM",
+      "description": "Professional parking lot striping and pavement marking for Everett WA and Snohomish County. Specializing in industrial port markings, ADA compliance, warehouse safety lines, fire lanes, retail lot restripes, and overnight scheduling for 24-hour businesses.",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lynden, WA",
+        "addressLocality": "Lynden",
+        "addressRegion": "WA",
+        "postalCode": "98264",
+        "addressCountry": "US"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.9828,
+        "longitude": -122.2022
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "07:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "14:00"
+        }
+      ],
       "areaServed": [
         {
           "@type": "City",
@@ -52,54 +93,165 @@
           "sameAs": "https://en.wikipedia.org/wiki/Everett,_Washington"
         },
         {
-            "@type": "AdministrativeArea",
-            "name": "Port Gardner"
-        },
-        {
-            "@type": "AdministrativeArea",
-            "name": "Silver Lake"
-        },
-        {
-            "@type": "AdministrativeArea",
-            "name": "Everett Mall District"
+          "@type": "County",
+          "name": "Snohomish County",
+          "sameAs": "https://en.wikipedia.org/wiki/Snohomish_County,_Washington"
         }
       ],
-      "description": "Expert pavement marking and parking lot striping for Everett's industrial ports, retail corridors, and commercial facilities. Professional lines for Snohomish County's largest city."
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Everett Parking Lot Striping Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Industrial & Port Striping" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ADA Compliance Marking" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Warehouse Floor Marking" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fire Lane Marking" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retail Parking Lot Restriping" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Overnight & Night Shift Striping" } }
+        ]
+      },
+      "sameAs": [
+        "https://lmstriping.com"
+      ]
+    }
+    </script>
+
+    <!-- ✅ ADDED: FAQPage Schema matching the FAQ section content -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you provide warehouse floor markings for Everett industrial sites?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LineMark Striping provides internal safety markings for warehouses and manufacturing plants in the Everett and Paine Field areas, including forklift lanes, pedestrian zones, and hazard markings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you stripe at night to avoid traffic on Broadway?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We understand that Everett is a 24/7 city. We schedule work during low-traffic hours — typically 10 PM to 5 AM — to ensure zero disruption to your business or industrial operations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your fire lane markings compliant with Everett Fire Marshal codes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All fire lane markings are applied to meet the specific requirements of the Everett Fire Department for emergency vehicle access, including correct curb color, width, and stenciling."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- ✅ ADDED: BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lmstriping.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Snohomish County Striping",
+          "item": "https://lmstriping.com/snohomish-county-parking-lot-striping.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Everett Parking Lot Striping",
+          "item": "https://lmstriping.com/everett-parking-lot-striping.html"
+        }
+      ]
     }
     </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div class="nav-logo">
-                <a href="index.html" style="text-decoration: none; color: inherit;">
-                    <div class="logo-container" style="display: flex; align-items: center; gap: 20px;">
-                        <img src="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" alt="LineMark Striping Logo" class="company-logo" style="margin: 0;">
-                        <div class="logo-text">
-                            <h2 style="margin: 0;">LineMark Striping</h2>
-                            <span class="tagline">Professional Service. Professional Results.</span>
-                        </div>
+
+<!-- ✅ RESTORED: Full nav with hamburger and dropdowns — original had simplified nav with no dropdowns -->
+<nav class="navbar">
+    <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="nav-logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <div class="logo-container" style="display: flex; align-items: center; gap: 20px;">
+                    <!-- ✅ IMPROVED: Keyword-rich alt text -->
+                    <img src="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" alt="LineMark Striping Logo — Parking Lot Striping Everett WA Snohomish County" class="company-logo" style="margin: 0;">
+                    <div class="logo-text">
+                        <h2 style="margin: 0;">LineMark Striping</h2>
+                        <span class="tagline">Professional Service. Professional Results.</span>
                     </div>
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="snohomish-county-parking-lot-striping.html" class="nav-link">Snohomish County</a></li>
-                <li><a href="index.html#services" class="nav-link">Services</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-            </ul>
+                </div>
+            </a>
         </div>
-    </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li class="nav-item dropdown">
+                <a href="index.html#services" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="parking-lot-striping.html">Parking Lot Striping</a></li>
+                    <li><a href="commercial-striping.html">Commercial Striping</a></li>
+                    <li><a href="ada-compliance.html">ADA Compliance</a></li>
+                    <li><a href="sports-courts.html">Sports Courts</a></li>
+                    <li><a href="warehouse-factory-markings.html">Warehouse &amp; Factory Markings</a></li>
+                    <li><a href="fire-lanes.html">Fire Lanes &amp; Emergency Access</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+            <li class="nav-item dropdown">
+                <a href="index.html#service-areas" class="nav-link dropdown-toggle">Service Areas <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="mount-vernon-parking-lot-striping.html">Mount Vernon / Skagit County</a></li>
+                    <li><a href="whatcom-county-parking-lot-striping.html">Whatcom County</a></li>
+                    <li><a href="snohomish-county-parking-lot-striping.html">Snohomish County</a></li>
+                    <li><a href="san-juan-county-parking-lot-striping.html">San Juan County</a></li>
+                    <li><a href="island-county-parking-lot-striping.html">Island County</a></li>
+                </ul>
+            </li>
+            <li><a href="resources.html" class="nav-link">Resources</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ✅ ADDED: Breadcrumb nav -->
+<div style="background: #f4f4f4; padding: 10px 20px; font-size: 0.85rem;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+        <a href="index.html" style="color: #666; text-decoration: none;">Home</a>
+        <span style="color: #999; margin: 0 8px;">/</span>
+        <a href="snohomish-county-parking-lot-striping.html" style="color: #666; text-decoration: none;">Snohomish County</a>
+        <span style="color: #999; margin: 0 8px;">/</span>
+        <span style="color: #333;">Everett Parking Lot Striping</span>
+    </div>
+</div>
+
+<main>
 
     <!-- Hero Section -->
     <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Snohomish.png'); background-size: cover; background-position: center; padding: 120px 20px; text-align: center; color: white;">
         <div class="hero-container" style="max-width: 900px; margin: 0 auto;">
             <h1 style="font-size: 3rem; margin-bottom: 20px;">Everett Parking Lot Striping</h1>
-            <p class="hero-subtitle" style="font-size: 1.4rem; margin-bottom: 30px;">Professional Pavement Marking for Industrial Ports, Retail & Commercial Facilities in Everett, WA</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary" style="background: #f4d03f; color: #1a1a1a; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-right: 15px;">Get Free Quote</a>
-                <a href="tel:360-739-9927" class="btn btn-secondary" style="background: white; color: #1a1a1a; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px;">Call (360) 739-9927</a>
+            <p style="font-size: 1.4rem; margin-bottom: 30px;">Professional Pavement Marking for Industrial Ports, Retail &amp; Commercial Facilities in Everett, WA</p>
+            <div>
+                <a href="#contact" style="display: inline-block; background: #f4d03f; color: #1a1a1a; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; margin: 8px;">Get Free Quote</a>
+                <a href="tel:360-739-9927" style="display: inline-block; background: white; color: #1a1a1a; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; margin: 8px;">Call (360) 739-9927</a>
             </div>
         </div>
     </section>
@@ -114,17 +266,19 @@
                         As the industrial and maritime heart of Snohomish County, Everett requires parking lots and industrial floors that can withstand heavy traffic and rigorous use. LineMark Striping provides durable, high-visibility markings for the <strong>Port of Everett</strong>, retail centers along <strong>Evergreen Way</strong>, and the commercial corridors of <strong>Broadway</strong>.
                     </p>
                     <p style="font-size: 1.1rem; line-height: 1.8;">
-                        Whether you manage a medical facility near <strong>Providence Regional</strong>, a retail lot at the <strong>Everett Mall</strong>, or an industrial warehouse near <strong>Paine Field</strong>, our team delivers precise results tailored to Everett's high-traffic environment. We specialize in ADA compliance, fire lane safety, and custom stenciling.
+                        Whether you manage a medical facility near <strong>Providence Regional</strong>, a retail lot at the <strong>Everett Mall</strong>, or an industrial warehouse near <strong>Paine Field</strong>, our team delivers precise results tailored to Everett's high-traffic environment. We specialize in ADA compliance, fire lane safety, and custom stenciling. For lots that never close, we offer <a href="everett-night-striping-retail.html" style="color: #555; text-decoration: underline;">overnight Ghost Shift scheduling</a> to ensure zero disruption to your operations.
                     </p>
                 </div>
                 <div style="flex: 1; min-width: 300px; background: #f9f9f9; padding: 30px; border-radius: 10px;">
                     <h3 style="margin-top: 0;">Everett Landmarks We Serve Near:</h3>
                     <ul style="line-height: 2; font-weight: 500;">
-                        <li>The Port of Everett & Waterfront</li>
+                        <li>The Port of Everett &amp; Waterfront</li>
                         <li>Naval Station Everett</li>
-                        <li>Evergreen Way & Rucker Ave Retail</li>
-                        <li>Everett Mall & Shopping Centers</li>
+                        <li>Evergreen Way &amp; Rucker Ave Retail</li>
+                        <li>Everett Mall &amp; Shopping Centers</li>
+                        <li>Paine Field Industrial Corridor</li>
                         <li>Angel of the Winds Arena District</li>
+                        <li>Providence Regional Medical Center</li>
                     </ul>
                 </div>
             </div>
@@ -134,34 +288,52 @@
     <!-- Services Grid -->
     <section style="padding: 60px 20px; background: #1a1a1a; color: white;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
-            <h2 style="margin-bottom: 40px;">Specialized Striping for the City of Everett</h2>
+            <h2 style="margin-bottom: 40px; color: #fff;">Specialized Striping for the City of Everett</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
                 <div style="background: #2d2d2d; padding: 30px; border-radius: 8px;">
-                    <h4 style="color: #f4d03f;">Industrial & Port Striping</h4>
-                    <p>Heavy-duty markings for Everett’s maritime and manufacturing sectors. We ensure clear traffic flow for trucks and specialized equipment at the Port.</p>
+                    <h4 style="color: #f4d03f;"><i class="fas fa-industry" style="margin-right: 8px;"></i>Industrial &amp; Port Striping</h4>
+                    <p style="color: #ccc; line-height: 1.7;">Heavy-duty markings for Everett's maritime and manufacturing sectors. We ensure clear traffic flow for trucks and specialized equipment at the Port of Everett and Paine Field facilities.</p>
+                    <a href="warehouse-factory-markings.html" style="color: #f4d03f; text-decoration: none; font-size: 0.9em;">Warehouse &amp; Factory Markings →</a>
                 </div>
                 <div style="background: #2d2d2d; padding: 30px; border-radius: 8px;">
-                    <h4 style="color: #f4d03f;">ADA Compliance</h4>
-                    <p>Ensuring your Everett property meets all <a href="ada-compliance.html" style="color: #f4d03f;">federal and state ADA regulations</a>. Handicap stalls, van-accessible aisles, and ramp painting.</p>
+                    <h4 style="color: #f4d03f;"><i class="fas fa-wheelchair" style="margin-right: 8px;"></i>ADA Compliance</h4>
+                    <p style="color: #ccc; line-height: 1.7;">Ensuring your Everett property meets all federal and state ADA regulations. Handicap stalls, van-accessible aisles, access aisle markings, and blue curb painting.</p>
+                    <a href="ada-compliance.html" style="color: #f4d03f; text-decoration: none; font-size: 0.9em;">ADA Compliance Services →</a>
                 </div>
                 <div style="background: #2d2d2d; padding: 30px; border-radius: 8px;">
-                    <h4 style="color: #f4d03f;">Retail Corridor Maintenance</h4>
-                    <p>Keep your customers safe with bright, clean lines at shopping centers along <strong>Evergreen Way</strong> and <strong>Sunset Blvd</strong>.</p>
+                    <h4 style="color: #f4d03f;"><i class="fas fa-store" style="margin-right: 8px;"></i>Retail Corridor Maintenance</h4>
+                    <p style="color: #ccc; line-height: 1.7;">Keep your customers safe with bright, clean lines at shopping centers along <strong>Evergreen Way</strong> and <strong>Sunset Blvd</strong>. Overnight scheduling available for 24-hour locations.</p>
+                    <a href="parking-lot-striping.html" style="color: #f4d03f; text-decoration: none; font-size: 0.9em;">Parking Lot Striping →</a>
+                </div>
+                <div style="background: #2d2d2d; padding: 30px; border-radius: 8px;">
+                    <h4 style="color: #f4d03f;"><i class="fas fa-fire-extinguisher" style="margin-right: 8px;"></i>Fire Lane Marking</h4>
+                    <p style="color: #ccc; line-height: 1.7;">Fire lane markings compliant with Everett Fire Marshal codes. Red curb, yellow cross-hatching, and "NO PARKING FIRE LANE" stenciling for apartment complexes and retail centers.</p>
+                    <a href="fire-lanes.html" style="color: #f4d03f; text-decoration: none; font-size: 0.9em;">Fire Lane Services →</a>
+                </div>
+                <div style="background: #2d2d2d; padding: 30px; border-radius: 8px;">
+                    <h4 style="color: #f4d03f;"><i class="fas fa-moon" style="margin-right: 8px;"></i>Overnight &amp; Night Shift Striping</h4>
+                    <p style="color: #ccc; line-height: 1.7;">Ghost Shift scheduling (10 PM – 5 AM) for WinCo, Planet Fitness, car dealerships, and any 24-hour business on the Everett Mall Way corridor. Acetone-based 5-minute dry time.</p>
+                    <a href="everett-night-striping-retail.html" style="color: #f4d03f; text-decoration: none; font-size: 0.9em;">Night Striping Guide →</a>
+                </div>
+                <div style="background: #2d2d2d; padding: 30px; border-radius: 8px;">
+                    <h4 style="color: #f4d03f;"><i class="fas fa-eye" style="margin-right: 8px;"></i>Reflective Bead Marking</h4>
+                    <p style="color: #ccc; line-height: 1.7;">Type I and Type III retroreflective glass beads for Convergence Zone visibility. Critical for Boeing corridor shift-change lots and Paine Field airport access roads.</p>
+                    <a href="everett-reflective-beads-visibility.html" style="color: #f4d03f; text-decoration: none; font-size: 0.9em;">Reflective Beads Guide →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Local Map -->
-    <section style="padding: 80px 20px;">
+    <section style="padding: 80px 20px; background: #fff;">
         <div class="container" style="max-width: 1200px; margin: 0 auto;">
             <div style="text-align: center; margin-bottom: 50px;">
                 <h2>Serving the Everett Business Community</h2>
-                <p>From the waterfront to Silver Lake, we are Everett's local pavement marking experts.</p>
+                <p style="font-size: 1.1rem; color: #555;">From the waterfront to Silver Lake, we are Everett's local pavement marking experts. Serving ZIP codes 98201, 98203, 98204, 98205, and 98208.</p>
             </div>
-            <div class="map-container" style="width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84698.41160356985!2d-122.2533038622722!3d47.97896323416204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549aaa6e20516643%3A0x6334f1705e483567!2sEverett%2C%20WA!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus" 
+            <div style="width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84698.41160356985!2d-122.2533038622722!3d47.97896323416204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549aaa6e20516643%3A0x6334f1705e483567!2sEverett%2C%20WA!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
                     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
                 </iframe>
             </div>
@@ -171,41 +343,81 @@
     <!-- FAQ Section -->
     <section style="padding: 60px 20px; background: #f9f9f9;">
         <div class="container" style="max-width: 800px; margin: 0 auto;">
-            <h2 style="text-align: center;">Everett Striping FAQs</h2>
-            <div style="margin-top: 30px;">
-                <h4 style="margin-bottom: 10px;">Do you provide warehouse floor markings for Everett industrial sites?</h4>
-                <p style="margin-bottom: 20px;">Yes! We provide internal safety markings for warehouses and manufacturing plants in the Everett and Paine Field areas, including forklift lanes and pedestrian zones.</p>
-                
-                <h4 style="margin-bottom: 10px;">Can you stripe at night to avoid traffic on Broadway?</h4>
-                <p style="margin-bottom: 20px;">Absolutely. We understand that Everett is a 24/7 city. We schedule work during low-traffic hours to ensure zero disruption to your business or industrial operations.</p>
-                
-                <h4 style="margin-bottom: 10px;">Are your fire lane markings compliant with Everett Fire Marshal codes?</h4>
-                <p style="margin-bottom: 20px;">Yes, we ensure all <a href="fire-lanes.html" style="color: #333; text-decoration: underline;">fire lane markings</a> meet the specific requirements of the Everett Fire Department for emergency access.</p>
+            <h2 style="text-align: center; margin-bottom: 40px;">Everett Striping FAQs</h2>
+
+            <div style="margin-bottom: 30px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <h4 style="margin-top: 0; color: #1a1a1a;">Do you provide warehouse floor markings for Everett industrial sites?</h4>
+                <p style="color: #555; margin-bottom: 0; line-height: 1.8;">Yes. We provide internal safety markings for warehouses and manufacturing plants in the Everett and Paine Field areas, including forklift lanes, pedestrian zones, and hazard markings. See our <a href="warehouse-factory-markings.html" style="color: #333; text-decoration: underline;">Warehouse &amp; Factory Markings</a> service page for full details.</p>
+            </div>
+
+            <div style="margin-bottom: 30px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <h4 style="margin-top: 0; color: #1a1a1a;">Can you stripe at night to avoid traffic on Broadway?</h4>
+                <p style="color: #555; margin-bottom: 0; line-height: 1.8;">Absolutely. We understand that Everett is a 24/7 city. We schedule work during the "Ghost Shift" (typically 10 PM to 5 AM) using acetone-based rapid-dry paint with a 5-minute cure time, ensuring zero disruption to your business or industrial operations.</p>
+            </div>
+
+            <div style="margin-bottom: 0; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <h4 style="margin-top: 0; color: #1a1a1a;">Are your fire lane markings compliant with Everett Fire Marshal codes?</h4>
+                <p style="color: #555; margin-bottom: 0; line-height: 1.8;">Yes. All <a href="fire-lanes.html" style="color: #333; text-decoration: underline;">fire lane markings</a> are applied to meet the specific requirements of the Everett Fire Department for emergency vehicle access, including correct curb color, width, and "NO PARKING FIRE LANE" stenciling.</p>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA Section -->
-    <section id="contact" style="background: #f4d03f; padding: 60px 20px; text-align: center;">
+    <!-- CTA Section -->
+    <section id="contact" style="background: #1a1a1a; padding: 80px 20px; text-align: center; color: #fff;">
         <div class="container" style="max-width: 800px; margin: 0 auto;">
-            <h2>Free Estimates in Everett</h2>
-            <p style="font-size: 1.2rem; margin: 20px 0;">Quality pavement marking for your industrial, retail, or commercial property.</p>
+            <h2 style="color: #f4d03f; margin-top: 0; font-size: 2.2em;">Free Estimates in Everett</h2>
+            <p style="font-size: 1.2rem; margin: 20px 0; color: #ccc;">Quality pavement marking for your industrial, retail, or commercial property in Everett and Snohomish County.</p>
             <div style="margin: 30px 0;">
-                <a href="tel:360-739-9927" class="btn" style="display: inline-block; background: #1a1a1a; color: white; padding: 15px 40px; margin: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1rem;">Call (360) 739-9927</a>
-                <a href="mailto:aaron@lmstriping.com" class="btn" style="display: inline-block; background: #1a1a1a; color: white; padding: 15px 40px; margin: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1rem;">Email for Quote</a>
+                <a href="tel:360-739-9927" style="display: inline-block; background: #f4d03f; color: #1a1a1a; padding: 15px 40px; margin: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1rem;">Call (360) 739-9927</a>
+                <a href="mailto:aaron@lmstriping.com" style="display: inline-block; background: transparent; color: #fff; padding: 15px 40px; margin: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1rem; border: 2px solid #fff;">Email for Quote</a>
             </div>
-            <p><strong>Licensed, Insured & Bonded</strong> | Serving Everett and all of Snohomish County</p>
+            <p style="color: #aaa;"><strong style="color: #ccc;">Licensed (#LINEMS*750QM), Insured &amp; Bonded</strong> | Serving Everett and all of Snohomish County</p>
         </div>
     </section>
 
-    <footer class="footer" style="background: #1a1a1a; color: #fff; padding: 40px 20px; text-align: center;">
-        <p style="margin-bottom: 15px; font-size: 0.9rem; color: #aaa;">
-            Serving Everett ZIP codes: 98201, 98203, 98204, 98205, 98208.
-        </p>
-        <p>&copy; 2025 LineMark Striping. All rights reserved.</p>
-        <p style="margin-top: 10px;"><a href="snohomish-county-parking-lot-striping.html" style="color: #f4d03f; text-decoration: none;">← Back to Snohomish County Services</a></p>
-    </footer>
+</main>
 
-    <script src="script.js" defer></script>
+<!-- ✅ REBUILT: Full footer replacing the stub footer (single p tag with copyright) -->
+<footer class="footer" style="background: #1a1a1a; color: #fff; padding: 60px 20px 30px; border-top: 1px solid #333;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+            <div>
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <img src="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" alt="LineMark Striping Logo" width="40" height="40" style="margin-right: 15px;">
+                    <div>
+                        <h3 style="margin: 0; font-size: 1.3em;">LineMark Striping</h3>
+                        <span style="color: #f4d03f; font-size: 0.9em;">Professional Service. Professional Results.</span>
+                    </div>
+                </div>
+                <p style="color: #aaa; line-height: 1.6;">Professional parking lot striping and line marking services across Whatcom, Skagit, Snohomish, Island, and San Juan Counties, Washington.</p>
+            </div>
+
+            <div>
+                <h4 style="margin-bottom: 20px; color: #f4d03f;">Contact Info</h4>
+                <p style="color: #aaa; margin-bottom: 10px;"><i class="fas fa-phone" style="color: #f4d03f; margin-right: 10px;"></i> 360-739-9927</p>
+                <p style="color: #aaa; margin-bottom: 10px;"><i class="fas fa-envelope" style="color: #f4d03f; margin-right: 10px;"></i> aaron@lmstriping.com</p>
+                <p style="color: #aaa; margin-bottom: 10px;"><i class="fas fa-map-marker-alt" style="color: #f4d03f; margin-right: 10px;"></i> Lynden, WA</p>
+                <p style="color: #aaa; font-size: 0.85em;">Lic. #LINEMS*750QM</p>
+            </div>
+
+            <div>
+                <h4 style="margin-bottom: 20px; color: #f4d03f;">Quick Links</h4>
+                <p style="margin-bottom: 8px;"><a href="index.html" style="color: #aaa; text-decoration: none;">Home</a></p>
+                <p style="margin-bottom: 8px;"><a href="snohomish-county-parking-lot-striping.html" style="color: #aaa; text-decoration: none;">Snohomish County</a></p>
+                <p style="margin-bottom: 8px;"><a href="ada-compliance.html" style="color: #aaa; text-decoration: none;">ADA Compliance</a></p>
+                <p style="margin-bottom: 8px;"><a href="fire-lanes.html" style="color: #aaa; text-decoration: none;">Fire Lanes</a></p>
+                <p style="margin-bottom: 8px;"><a href="warehouse-factory-markings.html" style="color: #aaa; text-decoration: none;">Warehouse Markings</a></p>
+                <p style="margin-bottom: 8px;"><a href="resources.html" style="color: #aaa; text-decoration: none;">Resources</a></p>
+                <p style="margin-bottom: 8px;"><a href="index.html#contact" style="color: #aaa; text-decoration: none;">Contact</a></p>
+            </div>
+        </div>
+
+        <div style="border-top: 1px solid #333; padding-top: 30px; text-align: center;">
+            <p style="color: #888; margin: 0;">&copy; 2025 LineMark Striping. All rights reserved. | Lic. #LINEMS*750QM</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js" defer></script>
 </body>
 </html>
