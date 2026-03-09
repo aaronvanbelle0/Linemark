@@ -1,121 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
+  <!-- HOMEPAGE -->
   <url>
-    <loc>https://lmstriping.com/</loc>
+    <loc>https://www.lmstriping.com/</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- CORE SERVICE PAGES -->
   <url>
-    <loc>https://lmstriping.com/resources.html</loc>
+    <loc>https://www.lmstriping.com/parking-lot-striping.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lmstriping.com/commercial-striping.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lmstriping.com/ada-compliance.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lmstriping.com/warehouse-factory-markings.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lmstriping.com/sports-courts.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lmstriping.com/fire-lanes.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- LOCATION / AREA PAGES -->
+  <url>
+    <loc>https://www.lmstriping.com/whatcom-county-parking-lot-striping.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lmstriping.com/mount-vernon-parking-lot-striping.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lmstriping.com/snohomish-county-parking-lot-striping.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lmstriping.com/island-county-parking-lot-striping.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lmstriping.com/san-juan-county-parking-lot-striping.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- RESOURCES HUB -->
+  <url>
+    <loc>https://www.lmstriping.com/resources.html</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
 
+  <!-- PROJECTS PAGE (was missing) -->
   <url>
-    <loc>https://lmstriping.com/parking-lot-striping.html</loc>
+    <loc>https://www.lmstriping.com/projects.html</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://lmstriping.com/commercial-striping.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://lmstriping.com/ada-compliance.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://lmstriping.com/fire-lanes.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lmstriping.com/sports-courts.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lmstriping.com/warehouse-factory-markings.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
+  <!-- RESOURCE / BLOG ARTICLES -->
   <url>
-    <loc>https://lmstriping.com/whatcom-county-parking-lot-striping.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lmstriping.com/mount-vernon-parking-lot-striping.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lmstriping.com/snohomish-county-parking-lot-striping.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lmstriping.com/island-county-parking-lot-striping.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lmstriping.com/san-juan-county-parking-lot-striping.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lmstriping.com/restriping-frequency-pnw-mount-vernon.html</loc>
+    <loc>https://www.lmstriping.com/restriping-frequency-pnw-mount-vernon.html</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lmstriping.com/rcw-4619050-signage-ferndale.html</loc>
+    <loc>https://www.lmstriping.com/thermoplastic-vs-paint-whatcom.html</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lmstriping.com/curb-appeal-roi-bellingham.html</loc>
+    <loc>https://www.lmstriping.com/rcw-4619050-signage-ferndale.html</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lmstriping.com/thermoplastic-vs-paint-whatcom.html</loc>
+    <loc>https://www.lmstriping.com/curb-appeal-roi-bellingham.html</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lmstriping.com/winterizing-ada-blaine-everson.html</loc>
+    <loc>https://www.lmstriping.com/winterizing-ada-blaine-everson.html</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lmstriping.com/parking-layout-efficiency-skagit.html</loc>
+    <loc>https://www.lmstriping.com/parking-layout-efficiency-skagit.html</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lmstriping.com/everett-reflective-beads-visibility.html</loc>
+    <loc>https://www.lmstriping.com/everett-reflective-beads-visibility.html</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lmstriping.com/everett-night-striping-retail.html</loc>
+    <loc>https://www.lmstriping.com/everett-night-striping-retail.html</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lmstriping.com/optimizing-lot-capacity-fairhaven-lynden.html</loc>
+    <loc>https://www.lmstriping.com/optimizing-lot-capacity-fairhaven-lynden.html</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lmstriping.com/ada-parking-ratios-lynnwood-bothell.html</loc>
+    <loc>https://www.lmstriping.com/ada-parking-ratios-lynnwood-bothell.html</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
