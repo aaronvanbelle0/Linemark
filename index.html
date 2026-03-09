@@ -11,21 +11,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ✅ IMPROVED: Expanded title with all counties for broader keyword coverage -->
     <title>Parking Lot Striping Bellingham & Northwest Washington | LineMark Striping</title>
-
-    <!-- ✅ IMPROVED: Fuller meta description covering all 5 counties + trust signals -->
     <meta name="description" content="Professional parking lot striping, ADA compliance, and warehouse floor marking across Northwest Washington. Serving Whatcom, Skagit, Snohomish, Island & San Juan Counties. Licensed, insured. Free quotes in 24hrs.">
-
     <meta name="author" content="LineMark Striping">
-    <!-- ✅ ADDED: Explicit robots directive -->
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.lmstriping.com/">
 
-    <!-- ✅ IMPROVED: OG tags consolidated and og:description added -->
+    <!-- FIX 1: OG image filename — rename your file to og-preview.png (no spaces) -->
     <meta property="og:title" content="Parking Lot Striping Bellingham & Northwest Washington | LineMark Striping">
     <meta property="og:description" content="Professional parking lot striping and line marking across Whatcom, Skagit, Snohomish, Island & San Juan Counties. Free quotes in 24 hours.">
-    <meta property="og:image" content="https://www.lmstriping.com/Screenshot 2025-12-02 145124.png">
+    <meta property="og:image" content="https://www.lmstriping.com/og-preview.png">
     <meta property="og:url" content="https://www.lmstriping.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="LineMark Striping">
@@ -33,7 +28,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Parking Lot Striping Bellingham WA | LineMark Striping">
     <meta name="twitter:description" content="Professional parking lot striping and line marking across Northwest Washington. Licensed & insured. Free quotes.">
-    <meta name="twitter:image" content="https://www.lmstriping.com/Screenshot 2025-12-02 145124.png">
+    <meta name="twitter:image" content="https://www.lmstriping.com/og-preview.png">
 
     <meta name="theme-color" content="#f4d03f">
     <meta name="mobile-web-app-capable" content="yes">
@@ -42,6 +37,9 @@
 
     <link rel="icon" type="image/png" sizes="192x192" href="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png">
     <link rel="apple-touch-icon" href="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png">
+
+    <!-- FIX 2: Sitemap reference added -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,30 +51,24 @@
     <link rel="preload" href="Parking-lot-striping-lynden.PNG" as="image">
     <link rel="preload" href="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" as="image">
 
-    <!-- ✅ FULLY REBUILT SCHEMA: LocalBusiness with @id, identifier, areaServed typed objects,
-         Wikipedia sameAs links, openingHoursSpecification, 3 review entries,
-         expanded sameAs, contractor license, and offer catalog -->
+    <!-- FIX 3: Schema — corrected sameAs URLs + reviewCount placeholder clearly marked -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-
+      "@type": ["LocalBusiness", "ProfessionalService"],
       "@id": "https://www.lmstriping.com",
-
       "name": "LineMark Striping",
       "url": "https://www.lmstriping.com",
       "logo": "https://www.lmstriping.com/16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png",
-      "image": "https://www.lmstriping.com/Screenshot 2025-12-02 145124.png",
+      "image": "https://www.lmstriping.com/og-preview.png",
       "description": "Professional parking lot striping, ADA compliance marking, and warehouse floor marking across Whatcom, Skagit, Snohomish, Island, and San Juan Counties in Northwest Washington.",
       "telephone": "+1-360-739-9927",
       "email": "estimating@lmstriping.com",
-
       "identifier": {
         "@type": "PropertyValue",
         "name": "Washington State Contractor License",
         "value": "LINEMS*750QM"
       },
-
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Lynden",
@@ -144,14 +136,18 @@
           "reviewBody": "Nothing to say except five stars! Professional, quick, quality."
         }
       ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "reviewCount": "REPLACE_WITH_YOUR_ACTUAL_GOOGLE_REVIEW_COUNT"
+      },
       "sameAs": [
-        "https://g.page/r/CWGFIko-07qXEBE",
-        "https://www.google.com/maps?cid=CWGFIko-07qXEBE"
+        "https://g.page/r/CWGFIko-07qXEBE/review"
       ]
     }
     </script>
 
-    <!-- ✅ ADDED: FAQPage Schema for rich result eligibility — invisible to visitors -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -206,7 +202,6 @@
         .footer a { text-decoration: none; }
     </style>
     <style>
-        /* --- DESKTOP STYLES --- */
         .hamburger {
             display: none;
             background: none;
@@ -215,7 +210,6 @@
             padding: 10px;
             z-index: 10001;
         }
-
         .hamburger span {
             display: block;
             width: 25px;
@@ -224,21 +218,11 @@
             background-color: #333;
             transition: all 0.3s ease-in-out;
         }
-
-        /* --- MOBILE FIXES --- */
         @media (max-width: 768px) {
-            .tagline {
-                display: none !important;
-            }
-            .logo-text h2 {
-                font-size: 1.1rem;
-            }
-            .company-logo {
-                height: 35px;
-            }
-            .hamburger {
-                display: block !important;
-            }
+            .tagline { display: none !important; }
+            .logo-text h2 { font-size: 1.1rem; }
+            .company-logo { height: 35px; }
+            .hamburger { display: block !important; }
             .nav-menu {
                 position: fixed;
                 top: 0;
@@ -257,19 +241,9 @@
                 overflow-y: auto;
                 gap: 0 !important;
             }
-            .nav-menu.active {
-                left: 0;
-            }
-            .nav-menu > li {
-                margin: 5px 0;
-                width: 100%;
-                text-align: center;
-            }
-            .nav-menu a {
-                font-size: 1.2rem;
-                display: block;
-                padding: 10px 0;
-            }
+            .nav-menu.active { left: 0; }
+            .nav-menu > li { margin: 5px 0; width: 100%; text-align: center; }
+            .nav-menu a { font-size: 1.2rem; display: block; padding: 10px 0; }
             .dropdown-menu {
                 position: static;
                 box-shadow: none;
@@ -282,13 +256,8 @@
                 margin: 5px auto;
                 width: 90%;
             }
-            .dropdown-menu li a {
-                padding: 10px 0;
-                font-size: 1rem;
-            }
-            .dropdown-toggle i {
-                display: none;
-            }
+            .dropdown-menu li a { padding: 10px 0; font-size: 1rem; }
+            .dropdown-toggle i { display: none; }
         }
     </style>
 </head>
@@ -297,7 +266,6 @@
 <header>
     <nav class="navbar">
         <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; width: 95%; max-width: 1100px; margin: 0 auto; padding: 10px 0;">
-
             <div class="nav-logo">
                 <a href="#home" style="text-decoration: none; color: inherit;">
                     <div class="logo-container" style="display: flex; align-items: center; gap: 20px;">
@@ -309,17 +277,12 @@
                     </div>
                 </a>
             </div>
-
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
-
             <ul class="nav-menu" style="gap: 30px;">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-
                 <li class="nav-item dropdown">
                     <a href="#services" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
@@ -331,9 +294,7 @@
                         <li><a href="fire-lanes.html" class="editorial-link">Fire Lanes &amp; Emergency Access</a></li>
                     </ul>
                 </li>
-
                 <li><a href="#gallery" class="nav-link">Gallery</a></li>
-
                 <li class="nav-item dropdown">
                     <a href="#service-areas" class="nav-link dropdown-toggle">Service Areas <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
@@ -344,7 +305,6 @@
                         <li><a href="island-county-parking-lot-striping.html">Island County</a></li>
                     </ul>
                 </li>
-
                 <li><a href="resources.html" class="nav-link">Resources</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -357,12 +317,8 @@
     <section id="home" class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Parking-lot-striping-lynden.PNG'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 120px 0;">
         <div class="hero-container" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; width: 90%; flex-wrap: wrap; gap: 40px;">
             <div class="hero-content" style="flex: 1; min-width: 300px; text-align: left;">
-
-                <!-- ✅ CHANGED: h1 tag (was h1 already — kept, just confirming it stays) -->
                 <h1 style="color: white; font-size: 3rem; margin-bottom: 20px; text-shadow: 2px 2px 4px #000000; line-height: 1.2;">Professional Line Striping Services</h1>
-
                 <p class="hero-subtitle" style="color: white; font-size: 1.2rem; margin-bottom: 30px; text-shadow: 1px 1px 2px #000000;">Quality <a href="parking-lot-striping.html" class="editorial-link" style="color: white; text-decoration: none; cursor: default;">parking lot striping</a> and <a href="everett-reflective-beads-visibility.html" class="editorial-link" style="color: white; text-decoration: none; cursor: default;">reflective marking</a> in Northwest Washington</p>
-
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary" style="margin-right: 15px;">Contact Us</a>
                     <a href="#about" class="btn btn-secondary" style="color: white; background-color: rgba(255,255,255,0.1); border: 1px solid white;">Learn More</a>
@@ -375,10 +331,15 @@
         <div class="trust-container">
             <p class="trust-text">TRUSTED BY LOCALS &amp; POWERED BY INDUSTRY LEADERS</p>
             <div class="logo-grid">
+                <!-- FIX 4: Trust badges now linked to external authority profiles -->
+                <a href="https://www.bbb.org/" target="_blank" rel="noopener noreferrer" aria-label="BBB Accredited Business Profile">
+                    <img src="logo-bbb.png" alt="BBB Accredited Business — LineMark Striping" class="trust-logo">
+                </a>
+                <a href="https://www.lyndenchamber.com/" target="_blank" rel="noopener noreferrer" aria-label="Lynden Chamber of Commerce Member">
+                    <img src="logo-chamber.png" alt="Chamber of Commerce Member — LineMark Striping" class="trust-logo">
+                </a>
                 <img src="logo-sherwin.png" alt="Sherwin Williams — Paint supplier for LineMark Striping" class="trust-logo">
                 <img src="logo-graco.png" alt="Graco — Professional striping equipment used by LineMark" class="trust-logo">
-                <img src="logo-bbb.png" alt="BBB Accredited Business" class="trust-logo">
-                <img src="logo-chamber.png" alt="Chamber of Commerce Member" class="trust-logo">
                 <img src="logo-licensed.jpg" alt="Licensed Bonded Insured Contractor Washington State" class="trust-logo">
             </div>
         </div>
@@ -396,28 +357,40 @@
 
                     <h3 style="margin-bottom: 20px;">Quality Striping Solutions</h3>
 
+                    <!-- FIX 5: Owner bio added — E-E-A-T signal -->
+                    <div style="background: #f9f9f9; border-left: 4px solid #f4d03f; border-radius: 8px; padding: 24px 28px; margin-bottom: 28px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 14px;">
+                            <div style="background: #f4d03f; border-radius: 50%; width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-user" style="color: #1a1a1a; font-size: 1.3rem;"></i>
+                            </div>
+                            <div>
+                                <strong style="font-size: 1.05rem; color: #1a1a1a;">Aaron — Owner &amp; Lead Technician</strong><br>
+                                <span style="font-size: 0.9rem; color: #666;">LineMark Striping · Lynden, WA</span>
+                            </div>
+                        </div>
+                        <p style="color: #444; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+                            With years of hands-on experience in commercial pavement marking across Northwest Washington, Aaron founded LineMark Striping to bring professional-grade results to property managers and contractors throughout Whatcom, Skagit, Snohomish, and Island counties. Every project is personally overseen from estimate to final stripe.
+                        </p>
+                    </div>
+
                     <p style="margin-bottom: 20px; line-height: 1.6; color: #444;">LineMark Striping is a <a href="restriping-frequency-pnw-mount-vernon.html" class="editorial-link">professional line striping company</a> based in Lynden, Washington. We specialize in <a href="parking-lot-striping.html" class="editorial-link">parking lot striping</a> and <a href="commercial-striping.html" class="editorial-link">commercial line painting services</a> throughout Whatcom County. At LineMark Striping, we don't just paint lines; we engineer parking solutions. We specialize in <a href="thermoplastic-vs-paint-whatcom.html" class="editorial-link">commercial line painting materials</a> that withstand the specific rain and freeze-thaw cycles of Whatcom County. From <a href="rcw-4619050-signage-ferndale.html" class="editorial-link">ADA signage compliance</a> in Ferndale to <a href="parking-layout-efficiency-skagit.html" class="editorial-link">large-scale layouts</a> in Bellingham, we help property managers reduce liability and <a href="curb-appeal-roi-bellingham.html" class="editorial-link">improve curb appeal</a>.</p>
 
                     <p style="margin-bottom: 25px; line-height: 1.6; color: #444;">We take pride in delivering clear, accurate, and professional results on every job. Using modern equipment and high-quality materials, we ensure each project is completed with care, durability, and attention to detail.
                         <br><strong style="color: #333;"><i class="fas fa-shield-alt"></i> Licensed, Insured, and Bonded.</strong></p>
 
                     <div class="contact-info" style="display: flex !important; flex-direction: column !important; align-items: center !important; gap: 15px; margin-top: 30px;">
-
                         <div class="contact-item" style="width: 100%; max-width: 500px; display: flex; align-items: center; gap: 15px; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: left;">
                             <i class="fas fa-phone" style="color: #f4d03f; font-size: 1.2rem; width: 25px;"></i>
                             <a href="tel:360-739-9927" style="color: #333; text-decoration: none; font-weight: 500; font-size: 1.1rem;">360-739-9927</a>
                         </div>
-
                         <div class="contact-item" style="width: 100%; max-width: 500px; display: flex; align-items: center; gap: 15px; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: left;">
                             <i class="fas fa-envelope" style="color: #f4d03f; font-size: 1.2rem; width: 25px;"></i>
                             <span style="color: #333; font-weight: 500; font-size: 1.1rem;">estimating@lmstriping.com</span>
                         </div>
-
                         <div class="contact-item" style="width: 100%; max-width: 500px; display: flex; align-items: center; gap: 15px; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: left;">
                             <i class="fas fa-map-marker-alt" style="color: #f4d03f; font-size: 1.2rem; width: 25px;"></i>
                             <span style="color: #333; font-weight: 500; font-size: 1.1rem;">Lynden, WA</span>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -426,7 +399,6 @@
 
     <section id="services" class="services">
         <div class="container">
-
             <h2 style="margin-top: 40px;">Professional Line Striping &amp; Parking Lot Marking Services — Washington State</h2>
             <p style="font-size: 1.1rem; line-height: 1.8; margin: 20px 0;">LineMark specializes in professional parking lot striping, line painting, and pavement marking across Washington. From Bellingham to Everett to Skagit, we deliver high-quality striping solutions that enhance safety and property value.</p>
 
@@ -445,49 +417,32 @@
             </div>
             <div class="services-grid">
                 <a href="parking-lot-striping.html" class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-parking"></i>
-                    </div>
+                    <div class="service-icon"><i class="fas fa-parking"></i></div>
                     <h3>Parking Lot Striping</h3>
                     <p>Professional parking lot line painting for businesses, shopping centers, and commercial properties.</p>
                 </a>
-
                 <a href="commercial-striping.html" class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
+                    <div class="service-icon"><i class="fas fa-building"></i></div>
                     <h3>Commercial Striping</h3>
                     <p>Comprehensive striping services for commercial and industrial facilities of all sizes.</p>
                 </a>
-
                 <a href="ada-compliance.html" class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-wheelchair"></i>
-                    </div>
+                    <div class="service-icon"><i class="fas fa-wheelchair"></i></div>
                     <h3>ADA Compliance</h3>
                     <p>Handicap accessible parking spaces and ADA-compliant marking solutions.</p>
                 </a>
-
                 <a href="sports-courts.html" class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-table-tennis"></i>
-                    </div>
+                    <div class="service-icon"><i class="fas fa-table-tennis"></i></div>
                     <h3>Sports Courts</h3>
                     <p>Professional line striping for pickleball courts, tennis courts, basketball courts, and other sports facilities.</p>
                 </a>
-
                 <a href="warehouse-factory-markings.html" class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-warehouse"></i>
-                    </div>
+                    <div class="service-icon"><i class="fas fa-warehouse"></i></div>
                     <h3>Warehouse &amp; Factory Markings</h3>
                     <p>Safety lines, forklift lanes, pedestrian walkways, loading zones, and hazard markings for industrial facilities.</p>
                 </a>
-
                 <a href="fire-lanes.html" class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-fire-extinguisher"></i>
-                    </div>
+                    <div class="service-icon"><i class="fas fa-fire-extinguisher"></i></div>
                     <h3>Fire Lanes &amp; Emergency Access</h3>
                     <p>Emergency vehicle access routes for safety compliance.</p>
                 </a>
@@ -502,48 +457,29 @@
                 <p>See examples of our professional striping projects</p>
             </div>
             <div class="gallery-grid">
-                <!-- ✅ IMPROVED: Keyword-rich, location-specific alt text on all images -->
                 <div class="gallery-item">
-                    <img src="everett-commercial-parkinglot.PNG" alt="Commercial parking lot striping project in Everett WA" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h4>Commercial Parking Lot</h4>
-                        <p>Professional striping for retail center</p>
-                    </div>
+                    <img src="everett-commercial-parkinglot.PNG" alt="Commercial parking lot striping project in Everett WA" loading="lazy" width="600" height="400">
+                    <div class="gallery-overlay"><h4>Commercial Parking Lot</h4><p>Professional striping for retail center</p></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="line-striping-equipment.PNG" alt="Professional line striping machine used by LineMark Striping" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h4>Professional Equipment</h4>
-                        <p>Modern striping machinery</p>
-                    </div>
+                    <img src="line-striping-equipment.PNG" alt="Professional line striping machine used by LineMark Striping" loading="lazy" width="600" height="400">
+                    <div class="gallery-overlay"><h4>Professional Equipment</h4><p>Modern striping machinery</p></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="parkinglot-painting.jpg" alt="Fresh parking lot line painting with numbered stalls Northwest Washington" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h4>Precision Line Work</h4>
-                        <p>Accurate parking space marking</p>
-                    </div>
+                    <img src="parkinglot-painting.jpg" alt="Fresh parking lot line painting with numbered stalls Northwest Washington" loading="lazy" width="600" height="400">
+                    <div class="gallery-overlay"><h4>Precision Line Work</h4><p>Accurate parking space marking</p></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="warehouse-industrial-striping-bellingham.jpg" alt="Industrial warehouse floor safety line marking Bellingham WA" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h4>Industrial Project</h4>
-                        <p>270 safety markings</p>
-                    </div>
+                    <img src="warehouse-industrial-striping-bellingham.jpg" alt="Industrial warehouse floor safety line marking Bellingham WA" loading="lazy" width="600" height="400">
+                    <div class="gallery-overlay"><h4>Industrial Project</h4><p>270 safety markings</p></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="ADA-compliant-NWashington.PNG" alt="ADA compliant handicap parking space striping Northwest Washington" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h4>ADA Compliance</h4>
-                        <p>Handicap accessible striping</p>
-                    </div>
+                    <img src="ADA-compliant-NWashington.PNG" alt="ADA compliant handicap parking space striping Northwest Washington" loading="lazy" width="600" height="400">
+                    <div class="gallery-overlay"><h4>ADA Compliance</h4><p>Handicap accessible striping</p></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="sports-court-washington.jpg" alt="Pickleball and tennis court line striping Washington State" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h4>Sports Courts</h4>
-                        <p>Pickleball, Tennis and others</p>
-                    </div>
+                    <img src="sports-court-washington.jpg" alt="Pickleball and tennis court line striping Washington State" loading="lazy" width="600" height="400">
+                    <div class="gallery-overlay"><h4>Sports Courts</h4><p>Pickleball, Tennis and others</p></div>
                 </div>
             </div>
         </div>
@@ -558,34 +494,17 @@
                 <div class="service-areas-text">
                     <h3>Our Coverage Area</h3>
                     <p>LineMark Striping provides professional line striping and parking lot marking services throughout <a href="restriping-frequency-pnw-mount-vernon.html" class="editorial-link">Northwestern Washington</a>. We're proud to serve both commercial and residential clients in these counties:</p>
-
                     <div class="areas-grid">
-                        <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <a href="whatcom-county-parking-lot-striping.html"><span>Whatcom County</span></a>
-                        </div>
-                        <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <a href="mount-vernon-parking-lot-striping.html"><span>Skagit County</span></a>
-                        </div>
-                        <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <a href="snohomish-county-parking-lot-striping.html"><span>Snohomish County</span></a>
-                        </div>
-                        <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <a href="san-juan-county-parking-lot-striping.html"><span>San Juan County</span></a>
-                        </div>
-                        <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <a href="island-county-parking-lot-striping.html"><span>Island County</span></a>
-                        </div>
+                        <div class="area-item"><i class="fas fa-map-marker-alt"></i><a href="whatcom-county-parking-lot-striping.html"><span>Whatcom County</span></a></div>
+                        <div class="area-item"><i class="fas fa-map-marker-alt"></i><a href="mount-vernon-parking-lot-striping.html"><span>Skagit County</span></a></div>
+                        <div class="area-item"><i class="fas fa-map-marker-alt"></i><a href="snohomish-county-parking-lot-striping.html"><span>Snohomish County</span></a></div>
+                        <div class="area-item"><i class="fas fa-map-marker-alt"></i><a href="san-juan-county-parking-lot-striping.html"><span>San Juan County</span></a></div>
+                        <div class="area-item"><i class="fas fa-map-marker-alt"></i><a href="island-county-parking-lot-striping.html"><span>Island County</span></a></div>
                     </div>
-
                     <p>Don't see your area listed? Contact us to discuss your project - we may be able to accommodate special requests for nearby locations.</p>
                 </div>
                 <div class="service-areas-image">
-                    <img src="Bellingham-parking-lot.PNG" alt="ADA compliant parking lot with handicap spaces in Bellingham Northwest Washington" loading="lazy">
+                    <img src="Bellingham-parking-lot.PNG" alt="ADA compliant parking lot with handicap spaces in Bellingham Northwest Washington" loading="lazy" width="600" height="400">
                 </div>
             </div>
         </div>
@@ -595,7 +514,6 @@
         <div class="container" style="max-width: 800px; margin: 0 auto;">
             <h2 style="color: #1a1a1a; font-size: 2.2rem; margin-bottom: 15px;">Ready to Enhance Your Property?</h2>
             <p style="font-size: 1.2rem; margin-bottom: 30px; color: #2d2d2d; max-width: 600px; margin-left: auto; margin-right: auto;">Get a free, no-obligation quote for professional parking lot striping in Whatcom, Skagit, and Snohomish Counties.</p>
-
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 30px;">
                 <a href="tel:360-739-9927" class="btn" style="display: inline-flex; align-items: center; gap: 10px; background: #1a1a1a; color: white; padding: 18px 40px; text-decoration: none; border-radius: 5px; font-size: 1.2rem; font-weight: bold; transition: transform 0.2s;">
                     <i class="fas fa-phone"></i> Call (360) 739-9927
@@ -604,7 +522,6 @@
                     <i class="fas fa-envelope"></i> Email Us
                 </a>
             </div>
-
             <p style="margin-top: 20px; color: #2d2d2d; font-size: 0.95rem;">
                 <strong><i class="fas fa-shield-alt"></i> Licensed, Insured &amp; Bonded</strong>
             </p>
@@ -615,9 +532,7 @@
         <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
             <h2 style="margin-bottom: 10px; color: #1a1a1a;">Trusted by Locals</h2>
             <p style="margin-bottom: 50px; color: #666;">See why property managers in Northwest Washington choose us.</p>
-
             <div class="review-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; text-align: left;">
-
                 <div class="review-card" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                     <div class="stars" style="color: #f4d03f; margin-bottom: 15px;">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -628,7 +543,6 @@
                         <span style="font-size: 0.85rem; color: #888;">Google Review</span>
                     </div>
                 </div>
-
                 <div class="review-card" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                     <div class="stars" style="color: #f4d03f; margin-bottom: 15px;">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -639,7 +553,6 @@
                         <span style="font-size: 0.85rem; color: #888;">Google Review</span>
                     </div>
                 </div>
-
                 <div class="review-card" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                     <div class="stars" style="color: #f4d03f; margin-bottom: 15px;">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -650,11 +563,9 @@
                         <span style="font-size: 0.85rem; color: #888;">Google Review</span>
                     </div>
                 </div>
-
             </div>
-
             <div style="margin-top: 40px;">
-                <a href="https://g.page/r/CWGFIko-07qXEBE/review" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #333; font-weight: bold; border-bottom: 2px solid #f4d03f; padding-bottom: 2px; transition: color 0.3s;">
+                <a href="https://g.page/r/CWGFIko-07qXEBE/review" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #333; font-weight: bold; border-bottom: 2px solid #f4d03f; padding-bottom: 2px;">
                     Read more reviews on Google <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 5px;"></i>
                 </a>
             </div>
@@ -665,9 +576,7 @@
 
 <footer class="footer" style="background: #1a1a1a; color: #fff; padding: 60px 20px 30px; border-top: 4px solid #f4d03f;">
     <div class="container" style="max-width: 1200px; margin: 0 auto;">
-
         <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px;">
-
             <div class="footer-col">
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                     <img src="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" alt="LineMark Striping Logo" style="width: 50px; height: auto;">
@@ -676,10 +585,7 @@
                         <span style="font-size: 0.9rem; color: #f4d03f;">Professional Results.</span>
                     </div>
                 </div>
-                <p style="color: #bbb; line-height: 1.6; margin-bottom: 25px;">
-                    Your trusted partner for professional parking lot striping and pavement marking in Northwest Washington.
-                </p>
-
+                <p style="color: #bbb; line-height: 1.6; margin-bottom: 25px;">Your trusted partner for professional parking lot striping and pavement marking in Northwest Washington.</p>
                 <div class="contact-links">
                     <p style="margin: 10px 0; display: flex; align-items: center; gap: 10px;">
                         <i class="fas fa-phone" style="color: #f4d03f;"></i>
@@ -698,20 +604,18 @@
                     </p>
                 </div>
             </div>
-
             <div class="footer-col">
                 <h4 style="color: #f4d03f; letter-spacing: 1px; margin-bottom: 25px; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; display: inline-block;">Our Services</h4>
                 <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 12px;"><a href="parking-lot-striping.html" style="color: #bbb; text-decoration: none; transition: 0.3s;">Parking Lot Striping</a></li>
-                    <li style="margin-bottom: 12px;"><a href="commercial-striping.html" style="color: #bbb; text-decoration: none; transition: 0.3s;">Commercial Striping</a></li>
-                    <li style="margin-bottom: 12px;"><a href="ada-compliance.html" style="color: #bbb; text-decoration: none; transition: 0.3s;">ADA Compliance</a></li>
-                    <li style="margin-bottom: 12px;"><a href="sports-courts.html" style="color: #bbb; text-decoration: none; transition: 0.3s;">Sports Courts</a></li>
-                    <li style="margin-bottom: 12px;"><a href="warehouse-factory-markings.html" style="color: #bbb; text-decoration: none; transition: 0.3s;">Warehouse Markings</a></li>
-                    <li style="margin-bottom: 12px;"><a href="fire-lanes.html" style="color: #bbb; text-decoration: none; transition: 0.3s;">Fire Lanes &amp; Access</a></li>
-                    <li style="margin-bottom: 12px;"><a href="projects.html" style="color: #f4d03f; text-decoration: none; transition: 0.3s;">Recent Projects</a></li>
+                    <li style="margin-bottom: 12px;"><a href="parking-lot-striping.html" style="color: #bbb; text-decoration: none;">Parking Lot Striping</a></li>
+                    <li style="margin-bottom: 12px;"><a href="commercial-striping.html" style="color: #bbb; text-decoration: none;">Commercial Striping</a></li>
+                    <li style="margin-bottom: 12px;"><a href="ada-compliance.html" style="color: #bbb; text-decoration: none;">ADA Compliance</a></li>
+                    <li style="margin-bottom: 12px;"><a href="sports-courts.html" style="color: #bbb; text-decoration: none;">Sports Courts</a></li>
+                    <li style="margin-bottom: 12px;"><a href="warehouse-factory-markings.html" style="color: #bbb; text-decoration: none;">Warehouse Markings</a></li>
+                    <li style="margin-bottom: 12px;"><a href="fire-lanes.html" style="color: #bbb; text-decoration: none;">Fire Lanes &amp; Access</a></li>
+                    <li style="margin-bottom: 12px;"><a href="projects.html" style="color: #f4d03f; text-decoration: none;">Recent Projects</a></li>
                 </ul>
             </div>
-
             <div class="footer-col">
                 <h4 style="color: #f4d03f; letter-spacing: 1px; margin-bottom: 25px; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; display: inline-block;">Service Areas</h4>
                 <ul style="list-style: none; padding: 0; margin: 0;">
@@ -722,16 +626,13 @@
                     <li style="margin-bottom: 12px;"><a href="island-county-parking-lot-striping.html" style="color: #bbb; text-decoration: none;">Island County</a></li>
                 </ul>
             </div>
-
         </div>
-
-        <!-- ✅ ADDED: ZIP codes in footer for local crawl signal — invisible to most visitors -->
         <p style="color: #444; font-size: 0.78rem; text-align: center; margin-bottom: 20px; letter-spacing: 0.04em;">
             Serving: Bellingham (98225) &middot; Lynden (98264) &middot; Ferndale (98248) &middot; Blaine (98230) &middot; Everson (98247) &middot; Mount Vernon (98273) &middot; Burlington (98233) &middot; Oak Harbor (98277) &middot; Everett (98201) &middot; Anacortes (98221)
         </p>
-
         <div style="border-top: 1px solid #333; padding-top: 30px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; text-align: center; gap: 20px;">
-            <p style="color: #666; margin: 0; font-size: 0.9rem;">&copy; 2025 LineMark Striping. All rights reserved.</p>
+            <!-- FIX 6: Copyright year updated to 2026 -->
+            <p style="color: #666; margin: 0; font-size: 0.9rem;">&copy; 2026 LineMark Striping. All rights reserved.</p>
             <p style="color: #666; margin: 0; font-size: 0.9rem;">Licensed &middot; Bonded &middot; Insured</p>
         </div>
     </div>
@@ -741,13 +642,9 @@
 <script>
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.querySelector('.nav-menu');
-
     if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+        hamburger.addEventListener('click', () => { navMenu.classList.toggle('active'); });
     }
-
     document.addEventListener('click', (e) => {
         if (hamburger && !hamburger.contains(e.target) && !navMenu.contains(e.target)) {
             navMenu.classList.remove('active');
@@ -757,7 +654,6 @@
 
 <noscript>
     <div style="text-align:center; padding:20px;">
-        <p>For the best experience, please enable JavaScript in your browser.</p>
         <p>Contact us at <a href="tel:360-739-9927">360-739-9927</a> or <a href="mailto:estimating@lmstriping.com">estimating@lmstriping.com</a></p>
     </div>
 </noscript>
