@@ -104,6 +104,67 @@
       ]
     }
     </script>
+    <style>
+  /* ── Mobile Sticky CTA Bar ── */
+  .mobile-cta-bar {
+    display: none; /* hidden by default on all screens */
+  }
+
+  @media (max-width: 768px) {
+    /* Show the bar on mobile */
+    .mobile-cta-bar {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 99999;
+      height: 60px;
+      box-shadow: 0 -3px 16px rgba(0, 0, 0, 0.18);
+    }
+
+    /* Push page content up so footer isn't hidden behind bar */
+    body {
+      padding-bottom: 60px;
+    }
+
+    .mobile-cta-bar a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: filter 0.15s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-cta-bar a:active {
+      filter: brightness(0.88);
+    }
+
+    /* Call button — dark background */
+    .mobile-cta-bar .cta-call {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      border-right: 1px solid #333;
+    }
+
+    /* Email button — brand yellow */
+    .mobile-cta-bar .cta-email {
+      background-color: #f4d03f;
+      color: #1a1a1a;
+    }
+
+    .mobile-cta-bar i {
+      font-size: 1rem;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -396,5 +457,15 @@
 </footer>
 
 <script src="script.js" defer></script>
+    <div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
+  <a href="tel:360-739-9927" class="cta-call" aria-label="Call LineMark Striping">
+    <i class="fas fa-phone"></i> Call Us
+  </a>
+  <!--email_off-->
+  <a href="mailto:estimating@lmstriping.com" class="cta-email" aria-label="Email LineMark Striping">
+    <i class="fas fa-envelope"></i> Email Us
+  </a>
+  <!--/email_off-->
+</div>
 </body>
 </html>
