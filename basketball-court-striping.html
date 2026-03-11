@@ -209,6 +209,67 @@
         }
     </style>
 </head>
+    <style>
+  /* ── Mobile Sticky CTA Bar ── */
+  .mobile-cta-bar {
+    display: none; /* hidden by default on all screens */
+  }
+
+  @media (max-width: 768px) {
+    /* Show the bar on mobile */
+    .mobile-cta-bar {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 99999;
+      height: 60px;
+      box-shadow: 0 -3px 16px rgba(0, 0, 0, 0.18);
+    }
+
+    /* Push page content up so footer isn't hidden behind bar */
+    body {
+      padding-bottom: 60px;
+    }
+
+    .mobile-cta-bar a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: filter 0.15s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-cta-bar a:active {
+      filter: brightness(0.88);
+    }
+
+    /* Call button — dark background */
+    .mobile-cta-bar .cta-call {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      border-right: 1px solid #333;
+    }
+
+    /* Email button — brand yellow */
+    .mobile-cta-bar .cta-email {
+      background-color: #f4d03f;
+      color: #1a1a1a;
+    }
+
+    .mobile-cta-bar i {
+      font-size: 1rem;
+    }
+  }
+</style>
 <body>
 
     <!-- Navigation -->
@@ -520,7 +581,7 @@
                     </div>
                 </div>
                 <div>
-                    <img src="sports-court-washington.webp" alt="Multi-sport court striping with basketball and pickleball lines Northwest Washington" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,.4);" loading="lazy" width="600" height="400">
+                    <img src="multi-sport-court-photo.avif" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,.4);" loading="lazy" width="600" height="400">
                     <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; text-align: center;">
                         <div style="background: rgba(255,255,255,0.06); border-radius: 8px; padding: 16px 10px;">
                             <div style="font-size: 1.5rem; font-weight: 800; color: #f4d03f;">1</div>
@@ -591,7 +652,7 @@
 
             <div class="areas-cards-grid">
                 <div class="area-card-item">
-                    <a href="whatcom-county-parking-lot-striping.html">
+                    <a href="bellingham-parking-lot-striping.html">
                         <div class="area-city">Bellingham</div>
                         <div class="area-county-label">Whatcom County →</div>
                         <div class="area-landmarks-text">HOA courts · Columbia neighborhood · Fairhaven · schools</div>
@@ -605,14 +666,14 @@
                     </a>
                 </div>
                 <div class="area-card-item">
-                    <a href="whatcom-county-parking-lot-striping.html">
+                    <a href="ferndale-parking-lot-striping.html">
                         <div class="area-city">Ferndale</div>
                         <div class="area-county-label">Whatcom County →</div>
                         <div class="area-landmarks-text">Pioneer Trails · Civic Center · schools</div>
                     </a>
                 </div>
                 <div class="area-card-item">
-                    <a href="whatcom-county-parking-lot-striping.html">
+                    <a href="blaine-parking-lot-striping.html">
                         <div class="area-city">Blaine &amp; Birch Bay</div>
                         <div class="area-county-label">Whatcom County →</div>
                         <div class="area-landmarks-text">Birch Bay Village · community parks · schools</div>
@@ -626,56 +687,56 @@
                     </a>
                 </div>
                 <div class="area-card-item">
-                    <a href="mount-vernon-parking-lot-striping.html">
+                    <a href="mt-vernon-parking-lot-striping.html">
                         <div class="area-city">Mount Vernon</div>
                         <div class="area-county-label">Skagit County →</div>
                         <div class="area-landmarks-text">Lincoln Park · school campuses · HOA courts</div>
                     </a>
                 </div>
                 <div class="area-card-item">
-                    <a href="mount-vernon-parking-lot-striping.html">
+                    <a href="burlington-parking-lot-striping.html">
                         <div class="area-city">Burlington</div>
                         <div class="area-county-label">Skagit County →</div>
                         <div class="area-landmarks-text">City parks · HOA communities · school courts</div>
                     </a>
                 </div>
                 <div class="area-card-item">
-                    <a href="mount-vernon-parking-lot-striping.html">
+                    <a href="anacortes-parking-lot-striping.html">
                         <div class="area-city">Anacortes</div>
                         <div class="area-county-label">Skagit County →</div>
                         <div class="area-landmarks-text">Washington Park · community courts · schools</div>
                     </a>
                 </div>
                 <div class="area-card-item">
-                    <a href="mount-vernon-parking-lot-striping.html">
+                    <a href="sedro-woolley-parking-lot-striping.html">
                         <div class="area-city">Sedro-Woolley</div>
                         <div class="area-county-label">Skagit County →</div>
                         <div class="area-landmarks-text">Community parks · schools · HOA facilities</div>
                     </a>
                 </div>
                 <div class="area-card-item">
-                    <a href="snohomish-county-parking-lot-striping.html">
+                    <a href="everett-parking-lot-striping.html">
                         <div class="area-city">Everett</div>
                         <div class="area-county-label">Snohomish County →</div>
                         <div class="area-landmarks-text">Forest Park · school campuses · HOA courts</div>
                     </a>
                 </div>
                 <div class="area-card-item">
-                    <a href="snohomish-county-parking-lot-striping.html">
+                    <a href="marysville-parking-lot-striping.html">
                         <div class="area-city">Marysville &amp; Arlington</div>
                         <div class="area-county-label">Snohomish County →</div>
                         <div class="area-landmarks-text">Jennings Memorial · community parks · schools</div>
                     </a>
                 </div>
                 <div class="area-card-item">
-                    <a href="island-county-parking-lot-striping.html">
+                    <a href="oak-harbor-parking-lot-striping.html">
                         <div class="area-city">Oak Harbor</div>
                         <div class="area-county-label">Island County →</div>
                         <div class="area-landmarks-text">Windjammer Park · NAS Whidbey area · schools</div>
                     </a>
                 </div>
                 <div class="area-card-item">
-                    <a href="island-county-parking-lot-striping.html">
+                    <a href="coupeville-parking-lot-striping.html">
                         <div class="area-city">Coupeville &amp; Langley</div>
                         <div class="area-county-label">Island County →</div>
                         <div class="area-landmarks-text">Whidbey Island parks · HOA communities</div>
@@ -893,6 +954,15 @@
         });
     });
 </script>
-
+<div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
+  <a href="tel:360-739-9927" class="cta-call" aria-label="Call LineMark Striping">
+    <i class="fas fa-phone"></i> Call Us
+  </a>
+  <!--email_off-->
+  <a href="mailto:estimating@lmstriping.com" class="cta-email" aria-label="Email LineMark Striping">
+    <i class="fas fa-envelope"></i> Email Us
+  </a>
+  <!--/email_off-->
+</div>
 </body>
 </html>
