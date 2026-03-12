@@ -1,24 +1,24 @@
-# ============================================================
-# LineMark Striping — .htaccess
+# =================================================================
+# LineMark Striping - .htaccess
 # https://www.lmstriping.com
-# ============================================================
+# =================================================================
 
 # --- MIME Types ---
 # Required for browsers to correctly render .avif and .webp images
 AddType image/avif .avif
 AddType image/webp .webp
 
-# --- Force www (301 permanent redirect) ---
-# Redirects lmstriping.com → www.lmstriping.com
-# This fixes the Google canonical conflict
+# --- Force HTTPS (301 permanent redirect) ---
+# Redirects http:// to https:// (in case not handled by hosting)
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^lmstriping\.com [NC]
-RewriteRule ^(.*)$ https://www.lmstriping.com/$1 [R=301,L]
-
-# --- Force HTTPS ---
-# Redirects http:// → https:// (in case not handled by hosting)
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# --- Remove www (301 permanent redirect) ---
+# Redirects https://www.lmstriping.com → https://lmstriping.com
+# This consolidates all traffic to the non-www version
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://lmstriping.com/$1 [R=301,L]
 
 # --- Security Headers ---
 # Prevents clickjacking and sniffing attacks
@@ -28,28 +28,22 @@ Header always set X-Content-Type-Options "nosniff"
 # --- Browser Caching ---
 # Tells browsers to cache images/css/js locally for faster repeat visits
 <IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/gif "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType text/html "access plus 1 week"
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/html "access plus 1 week"
 </IfModule>
 
 # --- Gzip Compression ---
-# Compresses files before sending to browser — improves mobile load speed
+# Compresses files before sending to browser - improves mobile load speed
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html
-  AddOutputFilterByType DEFLATE text/css
-  AddOutputFilterByType DEFLATE application/javascript
-  AddOutputFilterByType DEFLATE application/json
-  AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml
+    AddOutputFilterByType DEFLATE text/css text/javascript
+    AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+    AddOutputFilterByType DEFLATE application/xml application/rss+xml
+    AddOutputFilterByType DEFLATE application/atom+xml
 </IfModule>
-
-# --- Block access to sensitive files ---
-<FilesMatch "\.(htaccess|htpasswd|env|log|sh|bak)$">
-  Order Allow,Deny
-  Deny from all
-</FilesMatch>
