@@ -607,17 +607,6 @@
 
 <script src="script.js" defer></script>
 <script>
-    // Hamburger menu
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    if (hamburger) {
-        hamburger.addEventListener('click', () => { navMenu.classList.toggle('active'); });
-    }
-    document.addEventListener('click', (e) => {
-        if (hamburger && !hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-            navMenu.classList.remove('active');
-        }
-    });
 
     // Hero background slideshow — fades every 5 seconds
     (function() {
