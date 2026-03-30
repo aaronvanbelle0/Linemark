@@ -32,15 +32,16 @@
     <link rel="icon" type="image/png" sizes="192x192" href="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png">
     <link rel="apple-touch-icon" href="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preload" href="Parking-lot-striping-lynden.webp" as="image" fetchpriority="high">
     <link rel="preload" href="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" as="image" fetchpriority="high">
 
+    <!-- ✅ FULL LocalBusiness Schema with Wikipedia sameAs, all counties, identifier, geo, hours -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -53,108 +54,997 @@
       "description": "Professional parking lot striping, ADA compliance marking, and warehouse floor marking across Whatcom, Skagit, Snohomish, Island, and San Juan Counties in Northwest Washington.",
       "telephone": "+1-360-739-9927",
       "email": "estimating@lmstriping.com",
-      "identifier": { "@type": "PropertyValue", "name": "Washington State Contractor License", "value": "LINEMS*750QM" },
-      "address": { "@type": "PostalAddress", "addressLocality": "Lynden", "addressRegion": "WA", "addressCountry": "US", "postalCode": "98264" },
-      "geo": { "@type": "GeoCoordinates", "latitude": 48.9465, "longitude": -122.4521 },
-      "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "18:00" }],
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Washington State Contractor License",
+        "value": "LINEMS*750QM"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lynden",
+        "addressRegion": "WA",
+        "addressCountry": "US",
+        "postalCode": "98264"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.9465,
+        "longitude": -122.4521
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "07:00",
+        "closes": "18:00"
+      }],
       "priceRange": "$$",
       "areaServed": [
-        { "@type": "AdministrativeArea", "name": "Whatcom County" },
-        { "@type": "AdministrativeArea", "name": "Skagit County" },
-        { "@type": "AdministrativeArea", "name": "Snohomish County" },
-        { "@type": "AdministrativeArea", "name": "Island County" },
-        { "@type": "AdministrativeArea", "name": "San Juan County" }
+        { "@type": "AdministrativeArea", "name": "Whatcom County", "sameAs": "https://en.wikipedia.org/wiki/Whatcom_County,_Washington" },
+        { "@type": "AdministrativeArea", "name": "Skagit County", "sameAs": "https://en.wikipedia.org/wiki/Skagit_County,_Washington" },
+        { "@type": "AdministrativeArea", "name": "Snohomish County", "sameAs": "https://en.wikipedia.org/wiki/Snohomish_County,_Washington" },
+        { "@type": "AdministrativeArea", "name": "Island County", "sameAs": "https://en.wikipedia.org/wiki/Island_County,_Washington" },
+        { "@type": "AdministrativeArea", "name": "San Juan County", "sameAs": "https://en.wikipedia.org/wiki/San_Juan_County,_Washington" },
+        { "@type": "City", "name": "Bellingham", "sameAs": "https://en.wikipedia.org/wiki/Bellingham,_Washington" },
+        { "@type": "City", "name": "Lynden", "sameAs": "https://en.wikipedia.org/wiki/Lynden,_Washington" },
+        { "@type": "City", "name": "Mount Vernon", "sameAs": "https://en.wikipedia.org/wiki/Mount_Vernon,_Washington" },
+        { "@type": "City", "name": "Everett", "sameAs": "https://en.wikipedia.org/wiki/Everett,_Washington" },
+        { "@type": "City", "name": "Oak Harbor", "sameAs": "https://en.wikipedia.org/wiki/Oak_Harbor,_Washington" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "bestRating": "5", "reviewCount": "12" },
-      "sameAs": ["https://g.page/r/CWGFIko-07qXEBE/review"]
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Line Striping Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Parking Lot Striping" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ADA Compliance Marking" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Striping" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Warehouse Floor Marking" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fire Lane Striping" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sports Court Marking" } }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "reviewCount": "12"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Local Customer" },
+          "reviewBody": "Wonderful experience with great customer service. Timely quoting and quick communication for their availability. They were friendly and professional. Would recommend!"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Project Manager" },
+          "reviewBody": "LineMark striped 6 pickleball courts for me in Island County. Aaron was extremely responsive and worked to find a solution to get the project completed. Looking forward to my next project with Linemark!"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Property Manager" },
+          "reviewBody": "Nothing to say except five stars! Professional, quick, quality."
+        }
+      ],
+      "sameAs": [
+        "https://g.page/r/CWGFIko-07qXEBE/review",
+        "https://www.google.com/maps?cid=CWGFIko-07qXEBE"
+      ]
+    }
+    </script>
+
+    <!-- ✅ FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What areas does LineMark Striping serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LineMark Striping serves Whatcom County, Skagit County, Snohomish County, Island County, and San Juan County in Northwest Washington — including Bellingham, Lynden, Ferndale, Blaine, Mount Vernon, Burlington, Everett, Oak Harbor, and surrounding communities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does parking lot striping cost in Northwest Washington?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Parking lot striping costs vary based on lot size, number of stalls, layout complexity, ADA requirements, and materials used. LineMark provides free, no-obligation quotes with responses within 24 hours for all Northwest Washington service areas. Most commercial lots range from $500 to $3,000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does LineMark Striping offer ADA compliance services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LineMark provides full ADA-compliant accessible parking space marking including correct stall ratios, van-accessible spaces, access aisles, and required signage per federal and Washington State requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does LineMark do warehouse and industrial floor marking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LineMark offers OSHA-compliant warehouse floor marking including forklift aisle designations, safety zones, pedestrian walkways, staging areas, and loading dock markings for industrial facilities across Northwest Washington."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should parking lots in the Pacific Northwest be restriped?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In the Pacific Northwest, most commercial parking lots benefit from restriping every 1-2 years due to heavy rainfall, UV exposure, and freeze-thaw cycles. LineMark uses commercial-grade traffic paints formulated for PNW weather conditions."
+          }
+        }
+      ]
     }
     </script>
 
     <style>
-        /* ── 4-photo strip responsive ── */
-        @media (max-width: 600px) {
-            .photo-strip { grid-template-columns: repeat(2, 1fr) !important; height: 320px !important; }
+        /* ═══════════════════════════════════════
+           CSS CUSTOM PROPERTIES
+        ═══════════════════════════════════════ */
+        :root {
+            --gold: #f4d03f;
+            --gold-dark: #d4a800;
+            --black: #111111;
+            --dark: #1a1a1a;
+            --dark2: #242424;
+            --dark3: #2d2d2d;
+            --mid: #555555;
+            --light: #f5f5f5;
+            --white: #ffffff;
+            --border: #e8e8e8;
+            --font-display: 'Barlow Condensed', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --radius: 8px;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 8px 24px rgba(0,0,0,0.12);
+            --shadow-lg: 0 20px 50px rgba(0,0,0,0.18);
+            --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* ── Existing site styles preserved ── */
-        .footer, .footer *, .footer p, .footer span, .footer a, .footer h3, .footer h4 { color: #ffffff !important; opacity: 1 !important; }
-        .footer a { text-decoration: none; }
+        /* ═══════════════════════════════════════
+           BASE RESETS
+        ═══════════════════════════════════════ */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); color: var(--dark); background: var(--white); -webkit-font-smoothing: antialiased; }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; }
 
-        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 10px; z-index: 10001; }
-        .hamburger span { display: block; width: 25px; height: 3px; margin: 5px auto; background-color: #333; transition: all 0.3s ease-in-out; }
-
-        @media (max-width: 768px) {
-            .tagline { display: none !important; }
-            .logo-text h2 { font-size: 1.1rem; }
-            .company-logo { height: 35px; }
-            .hamburger { display: block !important; }
-            .nav-menu { position: fixed; top: 0; left: -100%; width: 100%; height: 100vh; background-color: #ffffff; display: flex !important; flex-direction: column; justify-content: flex-start; align-items: center; transition: 0.3s ease-in-out; z-index: 10000; padding-top: 80px; padding-bottom: 40px; overflow-y: auto; gap: 0 !important; }
-            .nav-menu.active { left: 0; }
-            .nav-menu > li { margin: 5px 0; width: 100%; text-align: center; }
-            .nav-menu a { font-size: 1.2rem; display: block; padding: 10px 0; }
-            .dropdown-menu { position: static; box-shadow: none; border: 1px solid #eee; background: #f9f9f9; opacity: 1; visibility: visible; transform: none; padding: 0; margin: 5px auto; width: 90%; }
-            .dropdown-menu li a { padding: 10px 0; font-size: 1rem; }
-            .dropdown-toggle i { display: none; }
+        /* ═══════════════════════════════════════
+           NAVIGATION
+        ═══════════════════════════════════════ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(17,17,17,0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(244,208,63,0.15);
+            transition: background var(--transition), box-shadow var(--transition);
         }
+        .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 70px;
+        }
+        .nav-logo a { text-decoration: none; }
+        .logo-container { display: flex; align-items: center; gap: 14px; }
+        .company-logo { height: 40px; width: auto; }
+        .logo-text h2 {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.02em;
+            line-height: 1;
+        }
+        .tagline {
+            font-size: 0.68rem;
+            color: var(--gold);
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 4px;
+            align-items: center;
+        }
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.82);
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            letter-spacing: 0.03em;
+            transition: color var(--transition), background var(--transition);
+            white-space: nowrap;
+        }
+        .nav-link:hover, .nav-link.active { color: var(--gold); }
+        .nav-item { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 5px; }
+        .dropdown-toggle i { font-size: 0.6rem; transition: transform var(--transition); }
+        .nav-item:hover .dropdown-toggle i { transform: rotate(180deg); }
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            background: var(--dark);
+            border: 1px solid rgba(244,208,63,0.15);
+            border-radius: var(--radius);
+            min-width: 220px;
+            padding: 8px;
+            list-style: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-6px);
+            transition: all var(--transition);
+            box-shadow: var(--shadow-lg);
+        }
+        .nav-item:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-menu li a {
+            display: block;
+            padding: 9px 14px;
+            font-size: 0.84rem;
+            color: rgba(255,255,255,0.75);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background var(--transition), color var(--transition);
+            font-weight: 500;
+        }
+        .dropdown-menu li a:hover { background: rgba(244,208,63,0.12); color: var(--gold); }
 
-        /* ── Hero Slideshow ── */
-        #home.hero { position: relative; overflow: hidden; padding: 120px 0; }
+        /* Hamburger */
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 10001; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); margin: 5px 0; transition: all 0.3s; border-radius: 2px; }
+
+        /* ═══════════════════════════════════════
+           HERO SLIDESHOW
+        ═══════════════════════════════════════ */
+        #home.hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
         .hero-slides { position: absolute; inset: 0; z-index: 0; }
-        .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0; transition: opacity 0.5s ease-in-out; }
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
         .hero-slide.active { opacity: 1; }
-        .hero-slide::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
-        .hero-container { position: relative; z-index: 1; }
-        .hero-controls { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; align-items: center; gap: 14px; }
-        .hero-dots { display: flex; gap: 8px; align-items: center; }
-        .hero-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.45); border: none; cursor: pointer; padding: 0; transition: background 0.3s, transform 0.3s; }
-        .hero-dot.active { background: #f4d03f; transform: scale(1.3); }
-        .hero-next { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.5); color: #fff; padding: 6px 14px; border-radius: 20px; cursor: pointer; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; transition: background 0.2s; display: flex; align-items: center; gap: 6px; }
-        .hero-next:hover { background: rgba(255,255,255,0.3); }
+        .hero-slide::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(105deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.55) 60%, rgba(10,10,10,0.3) 100%);
+        }
+        .hero-content-wrap {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 140px 40px 100px;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(244,208,63,0.12);
+            border: 1px solid rgba(244,208,63,0.35);
+            border-radius: 100px;
+            padding: 6px 16px;
+            margin-bottom: 24px;
+        }
+        .hero-eyebrow span {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+        .hero-eyebrow::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+        .hero-headline {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 0.95;
+            letter-spacing: -0.01em;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+        .hero-headline .accent { color: var(--gold); }
+        .hero-sub {
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: rgba(255,255,255,0.75);
+            max-width: 520px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+        .hero-sub a { color: rgba(255,255,255,0.75); text-decoration: none; }
+        .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+        .btn-hero-primary {
+            background: var(--gold);
+            color: var(--black);
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 0.92rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 16px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+            box-shadow: 0 4px 20px rgba(244,208,63,0.35);
+        }
+        .btn-hero-primary:hover { background: #ffe55a; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(244,208,63,0.45); }
+        .btn-hero-secondary {
+            background: transparent;
+            color: var(--white);
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.92rem;
+            letter-spacing: 0.04em;
+            padding: 15px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            border: 1.5px solid rgba(255,255,255,0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: border-color var(--transition), background var(--transition);
+        }
+        .btn-hero-secondary:hover { border-color: var(--gold); background: rgba(244,208,63,0.08); }
+        .hero-trust {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 48px;
+            padding-top: 36px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .hero-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .hero-trust-item i { color: var(--gold); font-size: 0.75rem; }
+        .hero-slide-counter {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .hero-dots { display: flex; gap: 7px; }
+        .hero-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            transition: background 0.3s, width 0.3s;
+        }
+        .hero-dot.active { background: var(--gold); width: 22px; border-radius: 4px; }
+        .hero-next {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.2s;
+        }
+        .hero-next:hover { background: rgba(255,255,255,0.2); }
 
-        /* ── Mobile Sticky CTA Bar ── */
-        .mobile-cta-bar { display: none; }
-        @media (max-width: 768px) {
-            .mobile-cta-bar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 99999; height: 60px; box-shadow: 0 -3px 16px rgba(0,0,0,0.18); }
-            body { padding-bottom: 60px; }
-            .mobile-cta-bar a { flex: 1; display: flex; align-items: center; justify-content: center; gap: 9px; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; text-decoration: none; letter-spacing: 0.02em; transition: filter 0.15s ease; -webkit-tap-highlight-color: transparent; }
-            .mobile-cta-bar a:active { filter: brightness(0.88); }
-            .mobile-cta-bar .cta-call { background-color: #1a1a1a; color: #ffffff; border-right: 1px solid #333; }
-            .mobile-cta-bar .cta-email { background-color: #f4d03f; color: #1a1a1a; }
-            .mobile-cta-bar i { font-size: 1rem; }
+        /* ═══════════════════════════════════════
+           STATS STRIP
+        ═══════════════════════════════════════ */
+        .stats-strip {
+            background: var(--dark);
+            border-top: 3px solid var(--gold);
+            padding: 0;
+        }
+        .stats-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            divide-x: 1px solid rgba(255,255,255,0.06);
+        }
+        .stat-item {
+            padding: 32px 24px;
+            text-align: center;
+            border-right: 1px solid rgba(255,255,255,0.06);
+            position: relative;
+        }
+        .stat-item:last-child { border-right: none; }
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--gold);
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+        .stat-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.45);
+            margin-top: 6px;
         }
 
-        /* ── Contact / Quote Form Section ── */
-        #contact {
-            background: #1a1a1a;
-            padding: 80px 20px;
+        /* ═══════════════════════════════════════
+           PHOTO STRIP
+        ═══════════════════════════════════════ */
+        .photo-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            height: 200px;
         }
+        .photo-strip div { overflow: hidden; position: relative; }
+        .photo-strip img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+        .photo-strip div:hover img { transform: scale(1.06); }
+
+        /* ═══════════════════════════════════════
+           TRUST STRIP
+        ═══════════════════════════════════════ */
+        .trust-strip {
+            background: var(--light);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 22px 24px;
+        }
+        .trust-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .trust-text {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #999;
+            white-space: nowrap;
+        }
+        .logo-grid { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; justify-content: center; }
+        .trust-logo { height: 34px; width: auto; object-fit: contain; filter: grayscale(100%) opacity(0.55); transition: filter 0.3s; }
+        .trust-logo:hover { filter: grayscale(0%) opacity(1); }
+
+        /* ═══════════════════════════════════════
+           SERVICES SECTION
+        ═══════════════════════════════════════ */
+        .services-section { padding: 100px 24px; background: var(--white); }
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+            margin-bottom: 14px;
+        }
+        .section-tag::before { content: ''; width: 24px; height: 2px; background: var(--gold); }
+        .section-headline {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            font-weight: 800;
+            color: var(--black);
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+        .section-sub {
+            font-size: 1rem;
+            color: var(--mid);
+            max-width: 560px;
+            line-height: 1.7;
+            margin-bottom: 60px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: #e8e8e8;
+            border: 2px solid #e8e8e8;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .service-card {
+            background: var(--white);
+            padding: 36px 32px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            position: relative;
+            overflow: hidden;
+            transition: background var(--transition);
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover { background: #fafafa; }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-icon-wrap {
+            width: 52px;
+            height: 52px;
+            background: var(--dark);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background var(--transition);
+        }
+        .service-card:hover .service-icon-wrap { background: var(--gold); }
+        .service-icon-wrap i { color: var(--gold); font-size: 1.25rem; transition: color var(--transition); }
+        .service-card:hover .service-icon-wrap i { color: var(--black); }
+        .service-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--black);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+        }
+        .service-card p { font-size: 0.88rem; color: var(--mid); line-height: 1.65; }
+        .service-card .card-arrow {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--gold-dark);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+        .service-card:hover .card-arrow { opacity: 1; }
+
+        /* Hidden SEO content block — readable by Google, not visually dominant */
+        .seo-content-block {
+            max-width: 1200px;
+            margin: 60px auto 0;
+            padding: 0 24px;
+        }
+        .seo-content-block h2 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--black);
+            text-transform: uppercase;
+            margin: 32px 0 10px;
+            letter-spacing: 0.02em;
+        }
+        .seo-content-block h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark3);
+            text-transform: uppercase;
+            margin: 24px 0 8px;
+        }
+        .seo-content-block p {
+            font-size: 0.9rem;
+            color: var(--mid);
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        /* ═══════════════════════════════════════
+           WHY US SECTION
+        ═══════════════════════════════════════ */
+        .why-section {
+            background: var(--dark);
+            padding: 100px 24px;
+        }
+        .why-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .why-left .section-tag { color: var(--gold); }
+        .why-left .section-tag::before { background: var(--gold); }
+        .why-left .section-headline { color: var(--white); }
+        .why-left .section-sub { color: rgba(255,255,255,0.55); margin-bottom: 0; }
+        .why-list { display: flex; flex-direction: column; gap: 20px; }
+        .why-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .why-num {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: rgba(244,208,63,0.15);
+            line-height: 1;
+            min-width: 44px;
+            transition: color var(--transition);
+        }
+        .why-item:hover .why-num { color: rgba(244,208,63,0.4); }
+        .why-item-body {}
+        .why-item-body h4 {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            margin-bottom: 4px;
+        }
+        .why-item-body p {
+            font-size: 0.87rem;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.6;
+        }
+        .why-divider {
+            width: 1px;
+            background: rgba(255,255,255,0.06);
+            align-self: stretch;
+        }
+
+        /* ═══════════════════════════════════════
+           ABOUT SECTION
+        ═══════════════════════════════════════ */
+        .about-section { padding: 100px 24px; background: var(--white); }
+        .about-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 80px;
+            align-items: start;
+        }
+        .about-sticky { position: sticky; top: 90px; }
+        .about-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .about-label::before { content: ''; width: 20px; height: 2px; background: var(--gold); }
+        .about-headline {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 3.5vw, 3rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 0.95;
+            color: var(--black);
+            margin-bottom: 28px;
+        }
+        .about-headline .accent { color: var(--gold-dark); }
+        .license-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--dark);
+            color: var(--white);
+            padding: 10px 18px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-top: 24px;
+        }
+        .license-badge i { color: var(--gold); }
+        .about-body p {
+            font-size: 0.97rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+        .about-body a { color: var(--gold-dark); text-decoration: none; border-bottom: 1px solid rgba(212,168,0,0.3); }
+        .about-body a:hover { border-color: var(--gold-dark); }
+        .contact-cards { display: flex; flex-direction: column; gap: 12px; margin-top: 36px; }
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: var(--dark);
+            transition: border-color var(--transition), box-shadow var(--transition);
+        }
+        .contact-card:hover { border-color: var(--gold); box-shadow: 0 4px 16px rgba(244,208,63,0.15); }
+        .contact-card-icon { width: 38px; height: 38px; background: var(--dark); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .contact-card-icon i { color: var(--gold); font-size: 0.9rem; }
+        .contact-card-text { display: flex; flex-direction: column; }
+        .contact-card-label { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #999; }
+        .contact-card-value { font-size: 0.97rem; font-weight: 600; color: var(--dark); }
+
+        /* ═══════════════════════════════════════
+           SERVICE AREAS SECTION
+        ═══════════════════════════════════════ */
+        .areas-section { padding: 100px 24px; background: var(--light); }
+        .areas-inner { max-width: 1200px; margin: 0 auto; }
+        .areas-section .section-headline { margin-bottom: 8px; }
+        .areas-section .section-sub { margin-bottom: 48px; }
+        .counties-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+        .county-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 20px;
+            text-decoration: none;
+            color: inherit;
+            text-align: center;
+            transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .county-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .county-card:hover { border-color: var(--gold); box-shadow: var(--shadow-md); transform: translateY(-3px); }
+        .county-card:hover::after { transform: scaleX(1); }
+        .county-icon { font-size: 1.6rem; color: var(--gold); margin-bottom: 12px; }
+        .county-name {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--black);
+            letter-spacing: 0.03em;
+            margin-bottom: 4px;
+        }
+        .county-cities { font-size: 0.73rem; color: #999; line-height: 1.5; }
+        .areas-image-wrap {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 280px;
+        }
+        .areas-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* ═══════════════════════════════════════
+           GALLERY
+        ═══════════════════════════════════════ */
+        .gallery-section { padding: 100px 24px; background: var(--white); }
+        .gallery-inner { max-width: 1200px; margin: 0 auto; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 240px);
+            gap: 12px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius);
+            cursor: pointer;
+        }
+        .gallery-item:first-child { grid-column: span 2; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
+        .gallery-item:hover img { transform: scale(1.06); }
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity var(--transition);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-overlay-text h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+        }
+        .gallery-overlay-text p { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 2px; }
+
+        /* ═══════════════════════════════════════
+           REVIEWS
+        ═══════════════════════════════════════ */
+        .reviews-section { padding: 100px 24px; background: var(--dark); }
+        .reviews-inner { max-width: 1200px; margin: 0 auto; }
+        .reviews-section .section-tag { color: var(--gold); }
+        .reviews-section .section-tag::before { background: var(--gold); }
+        .reviews-section .section-headline { color: var(--white); margin-bottom: 8px; }
+        .reviews-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+        .stars-display { display: flex; gap: 3px; }
+        .stars-display i { color: var(--gold); font-size: 0.9rem; }
+        .reviews-rating-text { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .review-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius);
+            padding: 30px;
+            transition: border-color var(--transition), background var(--transition);
+            position: relative;
+        }
+        .review-card:hover { border-color: rgba(244,208,63,0.25); background: rgba(255,255,255,0.06); }
+        .review-card::before {
+            content: '\201C';
+            font-family: Georgia, serif;
+            font-size: 5rem;
+            line-height: 1;
+            color: rgba(244,208,63,0.08);
+            position: absolute;
+            top: 12px;
+            right: 20px;
+        }
+        .review-stars { display: flex; gap: 3px; margin-bottom: 16px; }
+        .review-stars i { color: var(--gold); font-size: 0.8rem; }
+        .review-text {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+        .review-author h4 { font-size: 0.9rem; font-weight: 700; color: var(--white); }
+        .review-author span { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
+        .reviews-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .reviews-cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(244,208,63,0.3);
+            padding-bottom: 3px;
+            transition: border-color var(--transition);
+        }
+        .reviews-cta a:hover { border-color: var(--gold); }
+
+        /* ═══════════════════════════════════════
+           CONTACT / FORM SECTION
+        ═══════════════════════════════════════ */
+        #contact { background: #111; padding: 100px 24px; }
         .contact-inner {
             max-width: 1100px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 70px;
             align-items: start;
         }
-        @media (max-width: 860px) {
-            .contact-inner { grid-template-columns: 1fr; gap: 40px; }
-        }
-
-        /* Left column — info */
+        .contact-info-col {}
+        .contact-info-col .section-tag { color: var(--gold); }
+        .contact-info-col .section-tag::before { background: var(--gold); }
         .contact-info-col h2 {
-            font-family: 'Inter', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 12px;
-            line-height: 1.2;
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-weight: 800;
+            color: var(--white);
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 16px;
         }
-        .contact-info-col h2 span { color: #f4d03f; }
-        .contact-info-col p {
-            color: #aaa;
-            font-size: 1rem;
+        .contact-info-col h2 span { color: var(--gold); }
+        .contact-info-col > p {
+            font-size: 0.92rem;
+            color: rgba(255,255,255,0.5);
             line-height: 1.7;
-            margin-bottom: 32px;
+            margin-bottom: 36px;
         }
         .contact-detail {
             display: flex;
@@ -163,104 +1053,87 @@
             margin-bottom: 18px;
         }
         .contact-detail-icon {
-            width: 42px;
-            height: 42px;
-            background: rgba(244,208,63,0.12);
-            border: 1px solid rgba(244,208,63,0.25);
+            width: 44px;
+            height: 44px;
+            background: rgba(244,208,63,0.1);
+            border: 1px solid rgba(244,208,63,0.2);
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
         }
-        .contact-detail-icon i { color: #f4d03f; font-size: 1rem; }
+        .contact-detail-icon i { color: var(--gold); font-size: 0.95rem; }
         .contact-detail-text { display: flex; flex-direction: column; }
-        .contact-detail-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #666; margin-bottom: 2px; }
-        .contact-detail-value { font-size: 1rem; font-weight: 600; color: #fff; text-decoration: none; }
-        .contact-detail-value:hover { color: #f4d03f; }
-        .trust-badges {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 36px;
-        }
+        .contact-detail-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 2px; }
+        .contact-detail-value { font-size: 1rem; font-weight: 600; color: var(--white); text-decoration: none; transition: color var(--transition); }
+        .contact-detail-value:hover { color: var(--gold); }
+        .trust-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 36px; }
         .trust-badge {
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: #888;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid #2d2d2d;
-            padding: 6px 12px;
-            border-radius: 4px;
-        }
-        .trust-badge i { color: #f4d03f; font-size: 0.75rem; }
-
-        /* Right column — form card */
-        .quote-form-card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 36px 32px;
-            box-shadow: 0 24px 60px rgba(0,0,0,0.4);
-        }
-        .quote-form-card h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.25rem;
+            font-size: 0.7rem;
             font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 4px;
-        }
-        .quote-form-card .form-subtitle {
-            font-size: 0.88rem;
-            color: #888;
-            margin-bottom: 24px;
-        }
-        .form-row-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
-        }
-        @media (max-width: 500px) {
-            .form-row-2 { grid-template-columns: 1fr; }
-            .quote-form-card { padding: 28px 20px; }
-        }
-        .form-field {
-            margin-bottom: 16px;
-        }
-        .form-field label {
-            display: block;
-            font-size: 0.75rem;
-            font-weight: 600;
             letter-spacing: 0.07em;
             text-transform: uppercase;
-            color: #666;
+            color: rgba(255,255,255,0.45);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 7px 12px;
+            border-radius: 4px;
+        }
+        .trust-badge i { color: var(--gold); font-size: 0.7rem; }
+
+        /* Form card */
+        .quote-form-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+        }
+        .quote-form-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--black);
+            letter-spacing: 0.02em;
+            margin-bottom: 4px;
+        }
+        .form-subtitle { font-size: 0.83rem; color: #999; margin-bottom: 28px; }
+        .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .form-field { margin-bottom: 16px; }
+        .form-field label {
+            display: block;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            color: #777;
             margin-bottom: 6px;
         }
         .form-field input,
         .form-field select,
         .form-field textarea {
             width: 100%;
-            padding: 11px 14px;
-            border: 1.5px solid #e0e0e0;
+            padding: 12px 14px;
+            border: 1.5px solid #e5e5e5;
             border-radius: 6px;
             background: #fafafa;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            color: #1a1a1a;
+            font-family: var(--font-body);
+            font-size: 0.92rem;
+            color: var(--dark);
             outline: none;
-            transition: border-color 0.15s, background 0.15s;
+            transition: border-color 0.15s, box-shadow 0.15s;
             appearance: none;
             -webkit-appearance: none;
         }
         .form-field input:focus,
         .form-field select:focus,
         .form-field textarea:focus {
-            border-color: #f4d03f;
-            background: #fff;
+            border-color: var(--gold);
+            background: var(--white);
             box-shadow: 0 0 0 3px rgba(244,208,63,0.15);
         }
         .form-field select {
@@ -270,109 +1143,206 @@
             padding-right: 36px;
             cursor: pointer;
         }
-        .form-field textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-        .form-field input::placeholder,
-        .form-field textarea::placeholder { color: #bbb; }
-
-        /* Services checkboxes */
-        .services-check-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            margin-top: 4px;
-        }
+        .form-field textarea { resize: vertical; min-height: 80px; }
+        .form-field input::placeholder, .form-field textarea::placeholder { color: #c0c0c0; }
+        .services-check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
         .check-item {
             display: flex;
             align-items: center;
             gap: 8px;
             cursor: pointer;
-            font-size: 0.88rem;
-            color: #444;
-            padding: 8px 10px;
+            font-size: 0.83rem;
+            color: #555;
+            padding: 9px 10px;
             border: 1.5px solid #e8e8e8;
             border-radius: 6px;
             transition: border-color 0.15s, background 0.15s;
             user-select: none;
         }
-        .check-item:hover { border-color: #f4d03f; background: #fffdf0; }
-        .check-item input[type="checkbox"] {
-            width: 16px;
-            height: 16px;
-            min-width: 16px;
-            accent-color: #d4a800;
-            cursor: pointer;
-            border: none;
-            padding: 0;
-            background: none;
-            box-shadow: none;
-        }
-        .check-item input[type="checkbox"]:focus { box-shadow: none; border: none; }
-        .check-item.checked { border-color: #f4d03f; background: #fffdf0; }
-
-        /* Submit button */
+        .check-item:hover { border-color: var(--gold); background: #fffdf0; }
+        .check-item.checked { border-color: var(--gold); background: #fffdf0; }
+        .check-item input[type="checkbox"] { width: 15px; height: 15px; min-width: 15px; accent-color: var(--gold-dark); cursor: pointer; border: none; padding: 0; background: none; box-shadow: none; }
         .btn-submit-quote {
             width: 100%;
-            background: #f4d03f;
-            color: #1a1a1a;
-            font-family: 'Inter', sans-serif;
+            background: var(--gold);
+            color: var(--black);
+            font-family: var(--font-body);
             font-weight: 700;
-            font-size: 1rem;
-            padding: 15px;
+            font-size: 0.95rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 16px;
             border: none;
             border-radius: 6px;
             cursor: pointer;
             margin-top: 8px;
-            transition: background 0.15s, transform 0.1s;
+            transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
         }
-        .btn-submit-quote:hover { background: #e6c200; }
+        .btn-submit-quote:hover { background: #ffe55a; box-shadow: 0 6px 20px rgba(244,208,63,0.35); }
         .btn-submit-quote:active { transform: scale(0.99); }
-        .form-note {
-            text-align: center;
-            font-size: 0.78rem;
-            color: #aaa;
-            margin-top: 10px;
-        }
-
-        /* Success state */
-        .form-success {
-            display: none;
-            text-align: center;
-            padding: 40px 20px;
-        }
+        .form-note { text-align: center; font-size: 0.73rem; color: #bbb; margin-top: 10px; }
+        .form-success { display: none; text-align: center; padding: 40px 20px; }
         .form-success.visible { display: block; }
-        .success-icon {
-            width: 64px;
-            height: 64px;
-            background: #f4d03f;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.5rem;
+        .success-icon { width: 64px; height: 64px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.5rem; }
+        .form-success h4 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; text-transform: uppercase; color: var(--dark); margin-bottom: 8px; }
+        .form-success p { font-size: 0.88rem; color: #666; line-height: 1.6; }
+
+        /* ═══════════════════════════════════════
+           FOOTER
+        ═══════════════════════════════════════ */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 70px 24px 30px;
+            border-top: 3px solid var(--gold);
         }
-        .form-success h4 { font-size: 1.3rem; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
-        .form-success p { font-size: 0.9rem; color: #666; line-height: 1.6; }
+        .footer * { color: var(--white) !important; opacity: 1 !important; }
+        .footer a { text-decoration: none; }
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+        .footer-brand { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+        .footer-brand img { width: 46px; height: auto; }
+        .footer-brand h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; text-transform: uppercase; }
+        .footer-brand span { font-size: 0.73rem; color: var(--gold) !important; letter-spacing: 0.06em; }
+        .footer-desc { color: rgba(255,255,255,0.45) !important; font-size: 0.87rem; line-height: 1.7; margin-bottom: 24px; }
+        .footer-contact-item { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 0.87rem; }
+        .footer-contact-item i { color: var(--gold) !important; width: 16px; flex-shrink: 0; }
+        .footer-contact-item a { color: rgba(255,255,255,0.8) !important; font-weight: 600; }
+        .footer-contact-item a:hover { color: var(--gold) !important; }
+        .footer-contact-item span { color: rgba(255,255,255,0.5) !important; }
+        .footer-col-title {
+            font-family: var(--font-display);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold) !important;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { font-size: 0.87rem; color: rgba(255,255,255,0.5) !important; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--white) !important; }
+        .footer-links .highlight { color: var(--gold) !important; }
+        .footer-zip {
+            max-width: 1200px;
+            margin: 0 auto 24px;
+            font-size: 0.73rem;
+            color: rgba(255,255,255,0.22) !important;
+            text-align: center;
+            letter-spacing: 0.04em;
+            line-height: 1.8;
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .footer-bottom p { font-size: 0.82rem; color: rgba(255,255,255,0.3) !important; }
+
+        /* ═══════════════════════════════════════
+           MOBILE STICKY CTA BAR
+        ═══════════════════════════════════════ */
+        .mobile-cta-bar { display: none; }
+
+        /* ═══════════════════════════════════════
+           RESPONSIVE
+        ═══════════════════════════════════════ */
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .counties-grid { grid-template-columns: repeat(3, 1fr); }
+            .why-inner { grid-template-columns: 1fr; gap: 50px; }
+            .why-divider { display: none; }
+            .about-inner { grid-template-columns: 1fr; gap: 40px; }
+            .about-sticky { position: static; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+            .reviews-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .tagline { display: none !important; }
+            .hamburger { display: flex !important; flex-direction: column; justify-content: center; }
+            .nav-menu {
+                position: fixed; top: 0; left: -100%; width: 100%; height: 100vh;
+                background: var(--dark); flex-direction: column; justify-content: flex-start;
+                align-items: center; transition: left 0.3s ease; z-index: 10000;
+                padding-top: 90px; padding-bottom: 40px; overflow-y: auto; gap: 0 !important;
+                display: flex !important;
+            }
+            .nav-menu.active { left: 0; }
+            .nav-menu > li { margin: 4px 0; width: 100%; text-align: center; }
+            .nav-menu a { font-size: 1.1rem; display: block; padding: 11px 0; }
+            .dropdown-menu { position: static; box-shadow: none; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.04); opacity: 1; visibility: visible; transform: none; padding: 6px; margin: 4px auto; width: 88%; border-radius: 8px; }
+            .dropdown-menu li a { padding: 9px; font-size: 0.95rem; }
+            .dropdown-toggle i { display: none; }
+            .hero-content-wrap { padding: 120px 24px 80px; }
+            .hero-headline { font-size: 2.8rem; }
+            .hero-trust { gap: 14px; }
+            .hero-slide-counter { bottom: 20px; right: 20px; }
+            .stats-inner { grid-template-columns: repeat(2, 1fr); }
+            .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+            .photo-strip { grid-template-columns: repeat(2, 1fr) !important; height: 300px !important; }
+            .services-grid { grid-template-columns: 1fr; }
+            .counties-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+            .gallery-item:first-child { grid-column: span 2; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+            .form-row-2 { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+            body { padding-bottom: 60px; }
+            .mobile-cta-bar {
+                display: flex !important;
+                position: fixed; bottom: 0; left: 0; right: 0;
+                z-index: 99999; height: 60px;
+                box-shadow: 0 -3px 20px rgba(0,0,0,0.25);
+            }
+            .mobile-cta-bar a {
+                flex: 1; display: flex; align-items: center; justify-content: center;
+                gap: 9px; font-family: var(--font-body); font-size: 0.9rem; font-weight: 700;
+                text-decoration: none; letter-spacing: 0.03em;
+                transition: filter 0.15s; -webkit-tap-highlight-color: transparent;
+            }
+            .mobile-cta-bar a:active { filter: brightness(0.88); }
+            .mobile-cta-bar .cta-call { background: var(--dark); color: var(--white); border-right: 1px solid rgba(255,255,255,0.1); }
+            .mobile-cta-bar .cta-email { background: var(--gold); color: var(--black); }
+            .quote-form-card { padding: 28px 22px; }
+        }
+        @media (max-width: 480px) {
+            .counties-grid { grid-template-columns: 1fr 1fr; }
+            .hero-trust { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .stats-inner { grid-template-columns: 1fr 1fr; }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <nav class="navbar">
-        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; width: 95%; max-width: 1100px; margin: 0 auto; padding: 10px 0;">
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
             <div class="nav-logo">
-                <a href="#home" style="text-decoration: none; color: inherit;">
-                    <div class="logo-container" style="display: flex; align-items: center; gap: 20px;">
-                        <img src="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" alt="LineMark Striping Logo — Parking Lot Striping Northwest Washington" class="company-logo" style="margin: 0;">
+                <a href="#home">
+                    <div class="logo-container">
+                        <img src="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" alt="LineMark Striping Logo — Parking Lot Striping Northwest Washington" class="company-logo">
                         <div class="logo-text">
-                            <h2 style="margin: 0;">LineMark Striping</h2>
+                            <h2>LineMark Striping</h2>
                             <span class="tagline">Professional Service. Professional Results.</span>
                         </div>
                     </div>
@@ -381,18 +1351,18 @@
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
-            <ul class="nav-menu" style="gap: 30px;">
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item dropdown">
                     <a href="#services" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="parking-lot-striping.html" class="editorial-link">Parking Lot Striping</a></li>
-                        <li><a href="commercial-striping.html" class="editorial-link">Commercial Striping</a></li>
-                        <li><a href="ada-compliance.html" class="editorial-link">ADA Compliance</a></li>
-                        <li><a href="sports-courts.html" class="editorial-link">Sports Courts</a></li>
-                        <li><a href="warehouse-factory-markings.html" class="editorial-link">Warehouse &amp; Factory Markings</a></li>
-                        <li><a href="fire-lanes.html" class="editorial-link">Fire Lanes &amp; Emergency Access</a></li>
+                        <li><a href="parking-lot-striping.html">Parking Lot Striping</a></li>
+                        <li><a href="commercial-striping.html">Commercial Striping</a></li>
+                        <li><a href="ada-compliance.html">ADA Compliance</a></li>
+                        <li><a href="sports-courts.html">Sports Courts</a></li>
+                        <li><a href="warehouse-factory-markings.html">Warehouse &amp; Factory Markings</a></li>
+                        <li><a href="fire-lanes.html">Fire Lanes &amp; Emergency Access</a></li>
                     </ul>
                 </li>
                 <li><a href="#gallery" class="nav-link">Gallery</a></li>
@@ -415,7 +1385,9 @@
 
 <main>
 
-    <!-- HERO with background slideshow -->
+    <!-- ══════════════════════════════════════
+         HERO — SLIDESHOW
+    ══════════════════════════════════════ -->
     <section id="home" class="hero">
         <div class="hero-slides">
             <div class="hero-slide active" style="background-image: url('Parking-lot-striping-lynden.webp');"></div>
@@ -425,7 +1397,8 @@
             <div class="hero-slide" style="background-image: url('Bellingham-parking-lot.webp');"></div>
             <div class="hero-slide" style="background-image: url('multi-sport-court-photo.avif');"></div>
         </div>
-        <div class="hero-controls">
+
+        <div class="hero-slide-counter">
             <div class="hero-dots">
                 <button class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
                 <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
@@ -436,37 +1409,71 @@
             </div>
             <button class="hero-next" id="heroNext">Next <i class="fas fa-arrow-right"></i></button>
         </div>
-        <div class="hero-container" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; width: 90%; flex-wrap: wrap; gap: 40px;">
-            <div class="hero-content" style="flex: 1; min-width: 300px; text-align: left;">
-                <h1 style="color: white; font-size: 3rem; margin-bottom: 20px; text-shadow: 2px 2px 4px #000000; line-height: 1.2;">Professional Line Striping Services</h1>
-                <p class="hero-subtitle" style="color: white; font-size: 1.2rem; margin-bottom: 30px; text-shadow: 1px 1px 2px #000000;">Quality <a href="parking-lot-striping.html" class="editorial-link" style="color: white; text-decoration: none; cursor: default;">parking lot striping</a> and <a href="everett-reflective-beads-visibility.html" class="editorial-link" style="color: white; text-decoration: none; cursor: default;">reflective marking</a> in Northwest Washington</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary" style="margin-right: 15px;">Get a Free Quote</a>
-                    <a href="#about" class="btn btn-secondary" style="color: white; background-color: rgba(255,255,255,0.1); border: 1px solid white;">Learn More</a>
-                </div>
+
+        <div class="hero-content-wrap">
+            <div class="hero-eyebrow"><span>Licensed &middot; Insured &middot; Bonded &middot; #LINEMS*750QM</span></div>
+            <h1 class="hero-headline">
+                Northwest<br>
+                Washington's<br>
+                <span class="accent">Line Striping</span><br>
+                Specialists
+            </h1>
+            <p class="hero-sub">
+                Professional <a href="parking-lot-striping.html">parking lot striping</a>, ADA compliance, fire lanes,
+                and <a href="everett-reflective-beads-visibility.html">reflective markings</a> across 5 counties.
+                Free quotes within 24 hours.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn-hero-primary"><i class="fas fa-paper-plane"></i> Get a Free Quote</a>
+                <a href="tel:360-739-9927" class="btn-hero-secondary"><i class="fas fa-phone"></i> 360-739-9927</a>
+            </div>
+            <div class="hero-trust">
+                <div class="hero-trust-item"><i class="fas fa-star"></i> 5-Star Rated on Google</div>
+                <div class="hero-trust-item"><i class="fas fa-map-marker-alt"></i> 5 Counties Served</div>
+                <div class="hero-trust-item"><i class="fas fa-shield-alt"></i> WA Licensed Contractor</div>
+                <div class="hero-trust-item"><i class="fas fa-clock"></i> Free Quote in 24hrs</div>
             </div>
         </div>
     </section>
 
-    <!-- 4-photo banner strip -->
-    <div class="photo-strip" style="display: grid; grid-template-columns: repeat(4, 1fr); height: 220px;">
-        <div style="overflow: hidden;">
-            <img src="linestriping-burlington.avif" alt="Line striping project in Burlington WA" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </div>
-        <div style="overflow: hidden;">
-            <img src="fire-lane-access.avif" alt="Fire lane access striping Northwest Washington" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </div>
-        <div style="overflow: hidden;">
-            <img src="everett-commercial-parkinglot.PNG" alt="Commercial parking lot striping Everett WA" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </div>
-        <div style="overflow: hidden;">
-            <img src="basketball-court-photo.avif" alt="Basketball court line striping Washington" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    <!-- ══════════════════════════════════════
+         STATS STRIP
+    ══════════════════════════════════════ -->
+    <div class="stats-strip">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Counties Served</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5★</div>
+                <div class="stat-label">Google Rating</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24hr</div>
+                <div class="stat-label">Quote Turnaround</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Licensed &amp; Insured</div>
+            </div>
         </div>
     </div>
 
+    <!-- ══════════════════════════════════════
+         4-PHOTO BANNER STRIP
+    ══════════════════════════════════════ -->
+    <div class="photo-strip">
+        <div><img src="linestriping-burlington.avif" alt="Line striping project in Burlington WA" loading="lazy"></div>
+        <div><img src="fire-lane-access.avif" alt="Fire lane access striping Northwest Washington" loading="lazy"></div>
+        <div><img src="everett-commercial-parkinglot.PNG" alt="Commercial parking lot striping Everett WA" loading="lazy"></div>
+        <div><img src="basketball-court-photo.avif" alt="Basketball court line striping Washington" loading="lazy"></div>
+    </div>
+
+    <!-- Trust logos -->
     <section class="trust-strip">
         <div class="trust-container">
-            <p class="trust-text">TRUSTED BY LOCALS &amp; POWERED BY INDUSTRY LEADERS</p>
+            <p class="trust-text">Trusted by locals &amp; powered by industry leaders</p>
             <div class="logo-grid">
                 <img src="logo-sherwin.png" alt="Sherwin Williams — Paint supplier for LineMark Striping" class="trust-logo">
                 <img src="logo-graco.png" alt="Graco — Professional striping equipment used by LineMark" class="trust-logo">
@@ -475,157 +1482,285 @@
         </div>
     </section>
 
-    <section id="about" class="about" style="background: #fff;">
-        <div class="container">
-            <div class="section-header" style="text-align: center !important; margin-bottom: 40px;">
-                <h2>About LineMark Striping</h2>
-                <p>Your trusted partner for professional line striping services</p>
-            </div>
-            <div class="about-content" style="display: block !important; width: 100% !important; padding: 0 !important;">
-                <div class="about-text" style="width: 100% !important; max-width: 900px !important; margin: 0 auto !important; text-align: center !important; float: none !important;">
-                    <h3 style="margin-bottom: 20px;">Quality Striping Solutions</h3>
-                    <p style="margin-bottom: 20px; line-height: 1.6; color: #444;">LineMark Striping is a <a href="restriping-frequency-pnw-mount-norton.html" class="editorial-link">professional line striping company</a> based in Lynden, Washington. We specialize in <a href="parking-lot-striping.html" class="editorial-link">parking lot striping</a> and <a href="commercial-striping.html" class="editorial-link">commercial line painting services</a> throughout Whatcom County. At LineMark Striping, we don't just paint lines; we engineer parking solutions. We specialize in <a href="thermoplastic-vs-paint-whatcom.html" class="editorial-link">commercial line painting materials</a> that withstand the specific rain and freeze-thaw cycles of Whatcom County. From <a href="rcw-4619050-signage-ferndale.html" class="editorial-link">ADA signage compliance</a> in Ferndale to <a href="parking-layout-efficiency-skagit.html" class="editorial-link">large-scale layouts</a> in Bellingham, we help property managers reduce liability and <a href="curb-appeal-roi-bellingham.html" class="editorial-link">improve curb appeal</a>.</p>
-                    <p style="margin-bottom: 25px; line-height: 1.6; color: #444;">We take pride in delivering clear, accurate, and professional results on every job. Using modern equipment and high-quality materials, we ensure each project is completed with care, durability, and attention to detail.
-                        <br><strong style="color: #333;"><i class="fas fa-shield-alt"></i> Licensed, Insured, and Bonded.</strong></p>
-                    <div class="contact-info" style="display: flex !important; flex-direction: column !important; align-items: center !important; gap: 15px; margin-top: 30px;">
-                        <div class="contact-item" style="width: 100%; max-width: 500px; display: flex; align-items: center; gap: 15px; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: left;">
-                            <i class="fas fa-phone" style="color: #f4d03f; font-size: 1.2rem; width: 25px;"></i>
-                            <a href="tel:360-739-9927" style="color: #333; text-decoration: none; font-weight: 500; font-size: 1.1rem;">360-739-9927</a>
-                        </div>
-                        <div class="contact-item" style="width: 100%; max-width: 500px; display: flex; align-items: center; gap: 15px; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: left;">
-                            <i class="fas fa-envelope" style="color: #f4d03f; font-size: 1.2rem; width: 25px;"></i>
-                            <span style="color: #333; font-weight: 500; font-size: 1.1rem;">estimating@lmstriping.com</span>
-                        </div>
-                        <div class="contact-item" style="width: 100%; max-width: 500px; display: flex; align-items: center; gap: 15px; padding: 15px 20px; background: #fff; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: left;">
-                            <i class="fas fa-map-marker-alt" style="color: #f4d03f; font-size: 1.2rem; width: 25px;"></i>
-                            <span style="color: #333; font-weight: 500; font-size: 1.1rem;">Lynden, WA</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- ══════════════════════════════════════
+         SERVICES
+    ══════════════════════════════════════ -->
+    <section id="services" class="services-section">
+        <div style="max-width:1200px; margin:0 auto;">
+            <div class="section-tag">What We Do</div>
+            <h2 class="section-headline">Professional Line Striping &amp;<br>Pavement Marking Services</h2>
+            <p class="section-sub">From Bellingham to Everett to the San Juan Islands — every stripe delivered with precision, durability, and professional results.</p>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2 style="margin-top: 40px;">Professional Line Striping &amp; Parking Lot Marking Services — Washington State</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; margin: 20px 0;">LineMark specializes in professional parking lot striping, line painting, and pavement marking across Washington. From Bellingham to Everett to Skagit, we deliver high-quality striping solutions that enhance safety and property value.</p>
-            <h2 style="margin-top: 40px;">Fast, Reliable Parking Lot Striping Quotes for All WA Counties</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; margin: 20px 0;">Get instant quotes for parking lot striping, fire lane markings, ADA compliance, and commercial striping. Our experienced crews work throughout Snohomish, Whatcom, Skagit, Island, San Juan, and King counties with rapid turnaround times.</p>
-            <h2 style="margin-top: 40px;">Improve Parking Lot Efficiency with Professional Striping Design</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; margin: 20px 0;">Maximize parking capacity and customer satisfaction through optimized lot layouts. Our striping experts analyze your facility and design efficient parking configurations that meet ADA standards and comply with local regulations.</p>
-            <h3 style="margin-top: 30px;">Same-Day Parking Lot Striping Available Across Washington — Emergency Services</h3>
-            <p style="font-size: 1.05rem; line-height: 1.8; margin: 20px 0;">Need urgent parking lot striping or restriping? LineMark provides rapid response services for retail parking emergencies, new construction striping, and maintenance projects across Bellingham, Mount Vernon, Everett, and surrounding areas.</p>
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Comprehensive line striping solutions for all your needs</p>
-            </div>
             <div class="services-grid">
                 <a href="parking-lot-striping.html" class="service-card">
-                    <div class="service-icon"><i class="fas fa-parking"></i></div>
+                    <div class="service-icon-wrap"><i class="fas fa-parking"></i></div>
                     <h3>Parking Lot Striping</h3>
-                    <p>Professional parking lot line painting for businesses, shopping centers, and commercial properties.</p>
+                    <p>Fresh line painting for businesses, shopping centers, and commercial properties throughout Northwest Washington.</p>
+                    <span class="card-arrow">Learn more <i class="fas fa-arrow-right"></i></span>
                 </a>
                 <a href="commercial-striping.html" class="service-card">
-                    <div class="service-icon"><i class="fas fa-building"></i></div>
+                    <div class="service-icon-wrap"><i class="fas fa-building"></i></div>
                     <h3>Commercial Striping</h3>
-                    <p>Comprehensive striping services for commercial and industrial facilities of all sizes.</p>
+                    <p>Comprehensive striping services for commercial and industrial facilities of all sizes across 5 counties.</p>
+                    <span class="card-arrow">Learn more <i class="fas fa-arrow-right"></i></span>
                 </a>
                 <a href="ada-compliance.html" class="service-card">
-                    <div class="service-icon"><i class="fas fa-wheelchair"></i></div>
+                    <div class="service-icon-wrap"><i class="fas fa-wheelchair"></i></div>
                     <h3>ADA Compliance</h3>
-                    <p>Handicap accessible parking spaces and ADA-compliant marking solutions.</p>
+                    <p>Properly sized and marked accessible parking with van-accessible spaces, access aisles, and required signage.</p>
+                    <span class="card-arrow">Learn more <i class="fas fa-arrow-right"></i></span>
                 </a>
                 <a href="sports-courts.html" class="service-card">
-                    <div class="service-icon"><i class="fas fa-table-tennis"></i></div>
+                    <div class="service-icon-wrap"><i class="fas fa-table-tennis"></i></div>
                     <h3>Sports Courts</h3>
-                    <p>Professional line striping for pickleball courts, tennis courts, basketball courts, and other sports facilities.</p>
+                    <p>Regulation line striping for pickleball courts, tennis courts, basketball courts, and multi-sport facilities.</p>
+                    <span class="card-arrow">Learn more <i class="fas fa-arrow-right"></i></span>
                 </a>
                 <a href="warehouse-factory-markings.html" class="service-card">
-                    <div class="service-icon"><i class="fas fa-warehouse"></i></div>
-                    <h3>Warehouse &amp; Factory Markings</h3>
-                    <p>Safety lines, forklift lanes, pedestrian walkways, loading zones, and hazard markings for industrial facilities.</p>
+                    <div class="service-icon-wrap"><i class="fas fa-warehouse"></i></div>
+                    <h3>Warehouse &amp; Factory</h3>
+                    <p>OSHA-compliant safety lines, forklift lanes, pedestrian walkways, loading zones, and hazard markings.</p>
+                    <span class="card-arrow">Learn more <i class="fas fa-arrow-right"></i></span>
                 </a>
                 <a href="fire-lanes.html" class="service-card">
-                    <div class="service-icon"><i class="fas fa-fire-extinguisher"></i></div>
-                    <h3>Fire Lanes &amp; Emergency Access</h3>
-                    <p>Emergency vehicle access routes for safety compliance.</p>
+                    <div class="service-icon-wrap"><i class="fas fa-fire-extinguisher"></i></div>
+                    <h3>Fire Lanes &amp; Access</h3>
+                    <p>IFC-compliant red curb painting, NO PARKING FIRE LANE stencils, and hydrant zone marking for emergency access.</p>
+                    <span class="card-arrow">Learn more <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+            <!-- SEO content block — crawlable, not visually dominant -->
+            <div class="seo-content-block">
+                <h2>Professional Line Striping &amp; Parking Lot Marking Services — Washington State</h2>
+                <p>LineMark specializes in professional parking lot striping, line painting, and pavement marking across Washington. From Bellingham to Everett to Skagit, we deliver high-quality striping solutions that enhance safety and property value.</p>
+                <h2>Fast, Reliable Parking Lot Striping Quotes for All WA Counties</h2>
+                <p>Get quotes for parking lot striping, fire lane markings, ADA compliance, and commercial striping. Our experienced crews work throughout Snohomish, Whatcom, Skagit, Island, San Juan, and surrounding counties with rapid turnaround times.</p>
+                <h2>Improve Parking Lot Efficiency with Professional Striping Design</h2>
+                <p>Maximize parking capacity and customer satisfaction through optimized lot layouts. Our striping experts analyze your facility and design efficient parking configurations that meet ADA standards and comply with local regulations.</p>
+                <h3>Same-Day Parking Lot Striping Available Across Washington</h3>
+                <p>Need urgent parking lot striping or restriping? LineMark provides rapid response services for retail parking emergencies, new construction striping, and maintenance projects across Bellingham, Mount Vernon, Everett, and surrounding areas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         WHY CHOOSE US
+    ══════════════════════════════════════ -->
+    <section class="why-section">
+        <div class="why-inner">
+            <div class="why-left">
+                <div class="section-tag">Why LineMark</div>
+                <h2 class="section-headline" style="color:var(--white); margin-bottom:20px;">The Dedicated<br>Striping Specialist</h2>
+                <p class="section-sub" style="color:rgba(255,255,255,0.5); margin-bottom:0;">Unlike asphalt companies that offer striping as a side service, striping is all we do — and that focus shows in every project.</p>
+            </div>
+            <div class="why-divider"></div>
+            <div class="why-list">
+                <div class="why-item">
+                    <div class="why-num">01</div>
+                    <div class="why-item-body">
+                        <h4>Striping Is Our Specialty</h4>
+                        <p>We don't do asphalt, sealcoating, or paving. We do one thing — line striping — and we do it at a level generalist contractors can't match.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-num">02</div>
+                    <div class="why-item-body">
+                        <h4>Pacific Northwest Materials</h4>
+                        <p>We use commercial-grade traffic paint selected for <a href="thermoplastic-vs-paint-whatcom.html" style="color:rgba(255,255,255,0.6); text-decoration:underline;">Whatcom County's rain and freeze-thaw cycles</a> — not standard-issue paint that fades in one PNW winter.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-num">03</div>
+                    <div class="why-item-body">
+                        <h4>Code-Compliant Every Time</h4>
+                        <p>From <a href="ada-compliance.html" style="color:rgba(255,255,255,0.6); text-decoration:underline;">ADA stall ratios</a> to <a href="rcw-4619050-signage-ferndale.html" style="color:rgba(255,255,255,0.6); text-decoration:underline;">RCW signage requirements</a> to IFC fire lane standards — we know what inspectors look for.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-num">04</div>
+                    <div class="why-item-body">
+                        <h4>Minimal Disruption</h4>
+                        <p>Fast-dry paint, flexible scheduling including nights and weekends, and efficient crew operations mean your business stays open during the job.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         ABOUT
+    ══════════════════════════════════════ -->
+    <section id="about" class="about-section">
+        <div class="about-inner">
+            <div class="about-sticky">
+                <div class="about-label">About Us</div>
+                <h2 class="about-headline">Lynden-Based.<br><span class="accent">Region-Wide</span><br>Coverage.</h2>
+                <div class="license-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    Licensed &middot; Bonded &middot; Insured &middot; #LINEMS*750QM
+                </div>
+                <div class="contact-cards" style="margin-top:32px;">
+                    <a href="tel:360-739-9927" class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-card-text">
+                            <span class="contact-card-label">Call directly</span>
+                            <span class="contact-card-value">360-739-9927</span>
+                        </div>
+                    </a>
+                    <a href="mailto:estimating@lmstriping.com" class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-card-text">
+                            <span class="contact-card-label">Email estimate</span>
+                            <span class="contact-card-value">estimating@lmstriping.com</span>
+                        </div>
+                    </a>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-card-text">
+                            <span class="contact-card-label">Based in</span>
+                            <span class="contact-card-value">Lynden, WA 98264</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-body">
+                <p>LineMark Striping is a <a href="restriping-frequency-pnw-mount-vernon.html">professional line striping company</a> based in Lynden, Washington. We specialize in <a href="parking-lot-striping.html">parking lot striping</a> and <a href="commercial-striping.html">commercial line painting services</a> throughout Northwest Washington.</p>
+                <p>At LineMark Striping, we don't just paint lines — we engineer parking solutions. We specialize in <a href="thermoplastic-vs-paint-whatcom.html">commercial line painting materials</a> that withstand the specific rain and freeze-thaw cycles of the Pacific Northwest. From <a href="rcw-4619050-signage-ferndale.html">ADA signage compliance</a> in Ferndale to <a href="parking-layout-efficiency-skagit.html">large-scale layouts</a> in Mount Vernon, we help property managers reduce liability and <a href="curb-appeal-roi-bellingham.html">improve curb appeal</a>.</p>
+                <p>We take pride in delivering clear, accurate, and professional results on every job. Using modern equipment and high-quality materials, we ensure each project is completed with care, durability, and attention to detail. Whether you manage a single retail location or a multi-property portfolio across Whatcom and Skagit counties, we offer the same level of precision and professionalism on every project.</p>
+                <p style="margin-top:24px;"><strong><i class="fas fa-check-circle" style="color: #d4a800; margin-right:6px;"></i>Licensed, Insured, and Bonded. Washington Contractor License #LINEMS*750QM.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SERVICE AREAS
+    ══════════════════════════════════════ -->
+    <section id="service-areas" class="areas-section">
+        <div class="areas-inner">
+            <div class="section-tag">Coverage</div>
+            <h2 class="section-headline">Professional Striping Throughout<br>Northwest Washington</h2>
+            <p class="section-sub">From your backyard in Whatcom County to the San Juan Islands — we coordinate ferry schedules, batch island trips, and serve all 5 counties with the same quality and reliability.</p>
+
+            <div class="counties-grid">
+                <a href="whatcom-county-parking-lot-striping.html" class="county-card">
+                    <div class="county-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="county-name">Whatcom County</div>
+                    <div class="county-cities">Bellingham &middot; Lynden &middot; Ferndale &middot; Blaine &middot; Birch Bay</div>
+                </a>
+                <a href="mount-vernon-parking-lot-striping.html" class="county-card">
+                    <div class="county-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="county-name">Skagit County</div>
+                    <div class="county-cities">Mount Vernon &middot; Burlington &middot; Anacortes &middot; Sedro-Woolley</div>
+                </a>
+                <a href="snohomish-county-parking-lot-striping.html" class="county-card">
+                    <div class="county-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="county-name">Snohomish County</div>
+                    <div class="county-cities">Everett &middot; Marysville &middot; Lynnwood &middot; Arlington &middot; Mukilteo</div>
+                </a>
+                <a href="island-county-parking-lot-striping.html" class="county-card">
+                    <div class="county-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="county-name">Island County</div>
+                    <div class="county-cities">Oak Harbor &middot; Coupeville &middot; Langley &middot; Camano Island</div>
+                </a>
+                <a href="san-juan-county-parking-lot-striping.html" class="county-card">
+                    <div class="county-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="county-name">San Juan County</div>
+                    <div class="county-cities">Friday Harbor &middot; Eastsound &middot; Lopez Island &middot; Roche Harbor</div>
+                </a>
+            </div>
+
+            <div class="areas-image-wrap">
+                <img src="Bellingham-parking-lot.webp" alt="ADA compliant parking lot with handicap spaces in Bellingham Northwest Washington" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         GALLERY
+    ══════════════════════════════════════ -->
+    <section id="gallery" class="gallery-section">
+        <div class="gallery-inner">
+            <div class="section-tag">Our Work</div>
+            <h2 class="section-headline" style="margin-bottom:8px;">Recent Projects</h2>
+            <p class="section-sub">From retail centers along Bellingham's Meridian corridor to industrial facilities in Ferndale to pickleball courts on Whidbey Island.</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="everett-commercial-parkinglot.PNG" alt="Commercial parking lot striping project in Everett WA" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Commercial Parking Lot</h4><p>Professional striping for retail center</p></div></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="line-striping-equipment.avif" alt="Professional line striping machine used by LineMark Striping" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Professional Equipment</h4><p>Modern striping machinery</p></div></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="parkinglot-painting.png" alt="Fresh parking lot line painting Northwest Washington" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Precision Line Work</h4><p>Accurate parking space marking</p></div></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="warehouse-industrial-striping-bellingham.png" alt="Industrial warehouse floor safety line marking Bellingham WA" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Industrial Project</h4><p>270 safety markings</p></div></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="ADA-compliant-NWashington.avif" alt="ADA compliant handicap parking space striping Northwest Washington" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>ADA Compliance</h4><p>Handicap accessible striping</p></div></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="sports-court-washington.jpg" alt="Pickleball and tennis court line striping Washington State" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Sports Courts</h4><p>Pickleball, tennis &amp; more</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         REVIEWS
+    ══════════════════════════════════════ -->
+    <section class="reviews-section">
+        <div class="reviews-inner">
+            <div class="section-tag">Reviews</div>
+            <h2 class="section-headline" style="color:var(--white);">Trusted by Locals</h2>
+            <div class="reviews-meta">
+                <div class="stars-display">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <span class="reviews-rating-text">5.0 average &middot; 12 Google reviews &middot; Northwest Washington property managers</span>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"Wonderful experience with great customer service. Timely quoting and quick communication for their availability. They were friendly and professional. Would recommend!"</p>
+                    <div class="review-author"><h4>Local Customer</h4><span>Google Review</span></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"LineMark striped 6 pickleball courts for me in Island County. We were dealing with weather, project requirements, and weekend work. Aaron was extremely responsive and worked to find a solution. Looking forward to my next project with Linemark!"</p>
+                    <div class="review-author"><h4>Project Manager</h4><span>Google Review — Island County</span></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"Nothing to say except five stars! Professional, quick, quality."</p>
+                    <div class="review-author"><h4>Property Manager</h4><span>Google Review</span></div>
+                </div>
+            </div>
+            <div class="reviews-cta">
+                <a href="https://g.page/r/CWGFIko-07qXEBE/review" target="_blank" rel="noopener noreferrer">
+                    Read all reviews on Google <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Work</h2>
-                <p>See examples of our professional striping projects</p>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="everett-commercial-parkinglot.PNG" alt="Commercial parking lot striping project in Everett WA" loading="lazy" width="600" height="400">
-                    <div class="gallery-overlay"><h4>Commercial Parking Lot</h4><p>Professional striping for retail center</p></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="line-striping-equipment.avif" alt="Professional line striping machine used by LineMark Striping" loading="lazy" width="600" height="400">
-                    <div class="gallery-overlay"><h4>Professional Equipment</h4><p>Modern striping machinery</p></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="parkinglot-painting.png" alt="Fresh parking lot line painting with numbered stalls Northwest Washington" loading="lazy" width="600" height="400">
-                    <div class="gallery-overlay"><h4>Precision Line Work</h4><p>Accurate parking space marking</p></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="warehouse-industrial-striping-bellingham.png" alt="Industrial warehouse floor safety line marking Bellingham WA" loading="lazy" width="600" height="400">
-                    <div class="gallery-overlay"><h4>Industrial Project</h4><p>270 safety markings</p></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="ADA-compliant-NWashington.avif" alt="ADA compliant handicap parking space striping Northwest Washington" loading="lazy" width="600" height="400">
-                    <div class="gallery-overlay"><h4>ADA Compliance</h4><p>Handicap accessible striping</p></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="sports-court-washington.jpg" alt="Pickleball and tennis court line striping Washington State" loading="lazy" width="600" height="400">
-                    <div class="gallery-overlay"><h4>Sports Courts</h4><p>Pickleball, Tennis and others</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="service-areas" class="service-areas">
-        <div class="container">
-            <div class="section-header">
-                <h2>Professional striping services throughout Northwest Washington</h2>
-            </div>
-            <div class="service-areas-content">
-                <div class="service-areas-text">
-                    <h3>Our Coverage Area</h3>
-                    <p>LineMark Striping provides professional line striping and parking lot marking services throughout <a href="restriping-frequency-pnw-mount-norton.html" class="editorial-link">Northwestern Washington</a>. We're proud to serve both commercial and residential clients in these counties:</p>
-                    <div class="areas-grid">
-                        <div class="area-item"><i class="fas fa-map-marker-alt"></i><a href="whatcom-county-parking-lot-striping.html"><span>Whatcom County</span></a></div>
-                        <div class="area-item"><i class="fas fa-map-marker-alt"></i><a href="mount-vernon-parking-lot-striping.html"><span>Skagit County</span></a></div>
-                        <div class="area-item"><i class="fas fa-map-marker-alt"></i><a href="snohomish-county-parking-lot-striping.html"><span>Snohomish County</span></a></div>
-                        <div class="area-item"><i class="fas fa-map-marker-alt"></i><a href="san-juan-county-parking-lot-striping.html"><span>San Juan County</span></a></div>
-                        <div class="area-item"><i class="fas fa-map-marker-alt"></i><a href="island-county-parking-lot-striping.html"><span>Island County</span></a></div>
-                    </div>
-                    <p>Don't see your area listed? Contact us to discuss your project — we may be able to accommodate special requests for nearby locations.</p>
-                </div>
-                <div class="service-areas-image">
-                    <img src="Bellingham-parking-lot.webp" alt="ADA compliant parking lot with handicap spaces in Bellingham Northwest Washington" loading="lazy" width="600" height="400">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         CONTACT & QUOTE FORM — Powered by Formspree
-    ══════════════════════════════════════════════ -->
+    <!-- ══════════════════════════════════════
+         CONTACT + FORM
+    ══════════════════════════════════════ -->
     <section id="contact">
         <div class="contact-inner">
-
-            <!-- Left: contact info -->
             <div class="contact-info-col">
-                <h2>Ready to Enhance<br><span>Your Property?</span></h2>
-                <p>Fill out the form and we'll get back to you within one business day — usually the same day. Free, no-obligation estimates for all projects.</p>
-
+                <div class="section-tag" style="color:var(--gold);">Get in Touch</div>
+                <h2>Ready to Enhance <span>Your Property?</span></h2>
+                <p>Fill out the form and we'll get back to you within one business day — usually the same day. Free, no-obligation estimates for all projects across Whatcom, Skagit, Snohomish, Island, and San Juan Counties.</p>
                 <div class="contact-detail">
                     <div class="contact-detail-icon"><i class="fas fa-phone"></i></div>
                     <div class="contact-detail-text">
@@ -647,7 +1782,6 @@
                         <span class="contact-detail-value">Lynden, WA — serving 5 counties</span>
                     </div>
                 </div>
-
                 <div class="trust-badges">
                     <div class="trust-badge"><i class="fas fa-shield-alt"></i> Licensed</div>
                     <div class="trust-badge"><i class="fas fa-shield-alt"></i> Bonded</div>
@@ -656,14 +1790,10 @@
                 </div>
             </div>
 
-            <!-- Right: form card -->
             <div class="quote-form-card">
                 <h3>Request a Free Estimate</h3>
                 <p class="form-subtitle">No obligation. We'll review your project and get back to you fast.</p>
-
-                <!-- Formspree form -->
                 <form id="quoteForm" action="https://formspree.io/f/mpqyelgb" method="POST">
-
                     <div class="form-row-2">
                         <div class="form-field">
                             <label for="first_name">First Name *</label>
@@ -674,248 +1804,114 @@
                             <input type="text" id="last_name" name="last_name" placeholder="Smith" required>
                         </div>
                     </div>
-
                     <div class="form-field">
                         <label for="email">Email Address *</label>
                         <input type="email" id="email" name="email" placeholder="you@company.com" required>
                     </div>
-
                     <div class="form-field">
                         <label for="phone">Phone Number *</label>
                         <input type="tel" id="phone" name="phone" placeholder="(360) 555-0100" required>
                     </div>
-
                     <div class="form-field">
                         <label for="property_name">Property / Company Name</label>
                         <input type="text" id="property_name" name="property_name" placeholder="Acme Property Management">
                     </div>
-
                     <div class="form-field">
                         <label for="address">Property Address</label>
                         <input type="text" id="address" name="address" placeholder="123 Main St, Bellingham, WA 98225">
                     </div>
-
                     <div class="form-field">
                         <label>Services Needed</label>
                         <div class="services-check-grid">
-                            <label class="check-item">
-                                <input type="checkbox" name="services" value="Parking Lot Striping">
-                                Parking Lot Striping
-                            </label>
-                            <label class="check-item">
-                                <input type="checkbox" name="services" value="ADA Compliance">
-                                ADA Compliance
-                            </label>
-                            <label class="check-item">
-                                <input type="checkbox" name="services" value="Sports Courts">
-                                Sports Courts
-                            </label>
-                            <label class="check-item">
-                                <input type="checkbox" name="services" value="Fire Lanes">
-                                Fire Lanes
-                            </label>
-                            <label class="check-item">
-                                <input type="checkbox" name="services" value="Warehouse Markings">
-                                Warehouse Markings
-                            </label>
-                            <label class="check-item">
-                                <input type="checkbox" name="services" value="Commercial Striping">
-                                Commercial Striping
-                            </label>
+                            <label class="check-item"><input type="checkbox" name="services" value="Parking Lot Striping"> Parking Lot Striping</label>
+                            <label class="check-item"><input type="checkbox" name="services" value="ADA Compliance"> ADA Compliance</label>
+                            <label class="check-item"><input type="checkbox" name="services" value="Sports Courts"> Sports Courts</label>
+                            <label class="check-item"><input type="checkbox" name="services" value="Fire Lanes"> Fire Lanes</label>
+                            <label class="check-item"><input type="checkbox" name="services" value="Warehouse Markings"> Warehouse Markings</label>
+                            <label class="check-item"><input type="checkbox" name="services" value="Commercial Striping"> Commercial Striping</label>
                         </div>
                     </div>
-
                     <div class="form-field">
                         <label for="notes">Additional Notes</label>
                         <textarea id="notes" name="notes" placeholder="Lot size, number of stalls, any special requirements..."></textarea>
                     </div>
-
-                    <!-- Hidden honeypot to block spam -->
                     <input type="text" name="_gotcha" style="display:none">
-
                     <button type="submit" class="btn-submit-quote">
-                        <i class="fas fa-paper-plane"></i>
-                        Send My Estimate Request
+                        <i class="fas fa-paper-plane"></i> Send My Estimate Request
                     </button>
                 </form>
-
-                <!-- Success message shown after submission -->
                 <div class="form-success" id="formSuccess">
                     <div class="success-icon"><i class="fas fa-check" style="color:#1a1a1a;"></i></div>
                     <h4>Request Received!</h4>
                     <p>Thanks for reaching out. Aaron will review your project and be in touch within one business day — usually the same day.</p>
-                    <p style="margin-top:12px; font-size:0.85rem;">In a hurry? Call us directly at <a href="tel:3607399927" style="color:#d4a800; font-weight:600;">(360) 739-9927</a></p>
+                    <p style="margin-top:12px; font-size:0.85rem;">In a hurry? Call us at <a href="tel:3607399927" style="color:var(--gold-dark); font-weight:600;">(360) 739-9927</a></p>
                 </div>
-
                 <p class="form-note"><i class="fas fa-lock" style="font-size:0.7rem;"></i> Your information is private and never shared.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="reviews" style="background-color: #f9f9f9; padding: 80px 20px;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
-            <h2 style="margin-bottom: 10px; color: #1a1a1a;">Trusted by Locals</h2>
-            <p style="margin-bottom: 50px; color: #666;">See why property managers in Northwest Washington choose us.</p>
-            <div class="review-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; text-align: left;">
-                <div class="review-card" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                    <div class="stars" style="color: #f4d03f; margin-bottom: 15px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p style="font-style: italic; color: #555; line-height: 1.6; margin-bottom: 20px;">"Wonderful experience with great customer service. Timely quoting and quick communication for their availability. They were friendly and professional. Would recommend!"</p>
-                    <div><h4 style="color: #333; margin: 0; font-weight: 700;">Local Customer</h4><span style="font-size: 0.85rem; color: #888;">Google Review</span></div>
-                </div>
-                <div class="review-card" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                    <div class="stars" style="color: #f4d03f; margin-bottom: 15px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p style="font-style: italic; color: #555; line-height: 1.6; margin-bottom: 20px;">"LineMark striped 6 pickleball courts for me in Island County. We were dealing with a majority of challenges such as weather, project requirements, and weekend work. Aaron was extremely responsive and worked to find a solution to get the project completed. Looking forward to my next project with Linemark!"</p>
-                    <div><h4 style="color: #333; margin: 0; font-weight: 700;">Project Manager</h4><span style="font-size: 0.85rem; color: #888;">Google Review</span></div>
-                </div>
-                <div class="review-card" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                    <div class="stars" style="color: #f4d03f; margin-bottom: 15px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p style="font-style: italic; color: #555; line-height: 1.6; margin-bottom: 20px;">"Nothing to say except five stars! Professional, quick, quality."</p>
-                    <div><h4 style="color: #333; margin: 0; font-weight: 700;">Property Manager</h4><span style="font-size: 0.85rem; color: #888;">Google Review</span></div>
-                </div>
-            </div>
-            <div style="margin-top: 40px;">
-                <a href="https://g.page/r/CWGFIko-07qXEBE/review" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #333; font-weight: bold; border-bottom: 2px solid #f4d03f; padding-bottom: 2px;">
-                    Read more reviews on Google <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 5px;"></i>
-                </a>
             </div>
         </div>
     </section>
 
 </main>
 
-<footer class="footer" style="background: #1a1a1a; color: #fff; padding: 60px 20px 30px; border-top: 4px solid #f4d03f;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
-        <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px;">
-            <div class="footer-col">
-                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                    <img src="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" alt="LineMark Striping Logo" style="width: 50px; height: auto;">
-                    <div>
-                        <h3 style="margin: 0; font-size: 1.4rem; color: #fff;">LineMark Striping</h3>
-                        <span style="font-size: 0.9rem; color: #f4d03f;">Professional Results.</span>
-                    </div>
-                </div>
-                <p style="color: #bbb; line-height: 1.6; margin-bottom: 25px;">Your trusted partner for professional parking lot striping and pavement marking in Northwest Washington.</p>
-                <div class="contact-links">
-                    <p style="margin: 10px 0; display: flex; align-items: center; gap: 10px;"><i class="fas fa-phone" style="color: #f4d03f;"></i><a href="tel:360-739-9927" style="color: #fff; text-decoration: none; font-weight: bold;">360-739-9927</a></p>
-                    <p style="margin: 10px 0; display: flex; align-items: center; gap: 10px;"><i class="fas fa-envelope" style="color: #f4d03f;"></i><a href="mailto:estimating@lmstriping.com" style="color: #bbb; text-decoration: none;">estimating@lmstriping.com</a></p>
-                    <p style="margin: 10px 0; display: flex; align-items: center; gap: 10px;"><i class="fas fa-map-marker-alt" style="color: #f4d03f;"></i><span style="color: #bbb;">Lynden, WA</span></p>
-                    <p style="margin: 10px 0; display: flex; align-items: center; gap: 10px;"><span style="color: #bbb;">Contractor: #LINEMS*750QM</span></p>
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div>
+            <div class="footer-brand">
+                <img src="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" alt="LineMark Striping Logo">
+                <div>
+                    <h3>LineMark Striping</h3>
+                    <span>Professional Results.</span>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4 style="color: #f4d03f; letter-spacing: 1px; margin-bottom: 25px; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; display: inline-block;">Our Services</h4>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 12px;"><a href="parking-lot-striping.html" style="color: #bbb; text-decoration: none;">Parking Lot Striping</a></li>
-                    <li style="margin-bottom: 12px;"><a href="commercial-striping.html" style="color: #bbb; text-decoration: none;">Commercial Striping</a></li>
-                    <li style="margin-bottom: 12px;"><a href="ada-compliance.html" style="color: #bbb; text-decoration: none;">ADA Compliance</a></li>
-                    <li style="margin-bottom: 12px;"><a href="sports-courts.html" style="color: #bbb; text-decoration: none;">Sports Courts</a></li>
-                    <li style="margin-bottom: 12px;"><a href="warehouse-factory-markings.html" style="color: #bbb; text-decoration: none;">Warehouse Markings</a></li>
-                    <li style="margin-bottom: 12px;"><a href="fire-lanes.html" style="color: #bbb; text-decoration: none;">Fire Lanes &amp; Access</a></li>
-                    <li style="margin-bottom: 12px;"><a href="projects.html" style="color: #f4d03f; text-decoration: none;">Recent Projects</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4 style="color: #f4d03f; letter-spacing: 1px; margin-bottom: 25px; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; display: inline-block;">Service Areas</h4>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 12px;"><a href="whatcom-county-parking-lot-striping.html" style="color: #bbb; text-decoration: none;">Whatcom County</a></li>
-                    <li style="margin-bottom: 12px;"><a href="mount-vernon-parking-lot-striping.html" style="color: #bbb; text-decoration: none;">Skagit County</a></li>
-                    <li style="margin-bottom: 12px;"><a href="snohomish-county-parking-lot-striping.html" style="color: #bbb; text-decoration: none;">Snohomish County</a></li>
-                    <li style="margin-bottom: 12px;"><a href="san-juan-county-parking-lot-striping.html" style="color: #bbb; text-decoration: none;">San Juan County</a></li>
-                    <li style="margin-bottom: 12px;"><a href="island-county-parking-lot-striping.html" style="color: #bbb; text-decoration: none;">Island County</a></li>
-                </ul>
-            </div>
+            <p class="footer-desc">Your trusted partner for professional parking lot striping and pavement marking in Northwest Washington. Serving Whatcom, Skagit, Snohomish, Island, and San Juan Counties.</p>
+            <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:360-739-9927">360-739-9927</a></div>
+            <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:estimating@lmstriping.com">estimating@lmstriping.com</a></div>
+            <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Lynden, WA 98264</span></div>
+            <div class="footer-contact-item"><i class="fas fa-id-card"></i><span>Contractor: #LINEMS*750QM</span></div>
         </div>
-        <p style="color: #444; font-size: 0.78rem; text-align: center; margin-bottom: 20px; letter-spacing: 0.04em;">
-            Serving: Bellingham (98225) &middot; Lynden (98264) &middot; Ferndale (98248) &middot; Blaine (98230) &middot; Everson (98247) &middot; Mount Vernon (98273) &middot; Burlington (98233) &middot; Oak Harbor (98277) &middot; Everett (98201) &middot; Anacortes (98221)
-        </p>
-        <div style="border-top: 1px solid #333; padding-top: 30px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; text-align: center; gap: 20px;">
-            <p style="color: #666; margin: 0; font-size: 0.9rem;">&copy; 2026 LineMark Striping. All rights reserved.</p>
-            <p style="color: #666; margin: 0; font-size: 0.9rem;">Licensed &middot; Bonded &middot; Insured</p>
+        <div>
+            <div class="footer-col-title">Our Services</div>
+            <ul class="footer-links">
+                <li><a href="parking-lot-striping.html">Parking Lot Striping</a></li>
+                <li><a href="commercial-striping.html">Commercial Striping</a></li>
+                <li><a href="ada-compliance.html">ADA Compliance</a></li>
+                <li><a href="sports-courts.html">Sports Courts</a></li>
+                <li><a href="warehouse-factory-markings.html">Warehouse Markings</a></li>
+                <li><a href="fire-lanes.html">Fire Lanes &amp; Access</a></li>
+                <li><a href="projects.html" class="highlight">Recent Projects</a></li>
+                <li><a href="resources.html">Resources Hub</a></li>
+            </ul>
         </div>
+        <div>
+            <div class="footer-col-title">Service Areas</div>
+            <ul class="footer-links">
+                <li><a href="whatcom-county-parking-lot-striping.html">Whatcom County</a></li>
+                <li><a href="mount-vernon-parking-lot-striping.html">Skagit County</a></li>
+                <li><a href="snohomish-county-parking-lot-striping.html">Snohomish County</a></li>
+                <li><a href="san-juan-county-parking-lot-striping.html">San Juan County</a></li>
+                <li><a href="island-county-parking-lot-striping.html">Island County</a></li>
+                <li><a href="bellingham-parking-lot-striping.html">Bellingham</a></li>
+                <li><a href="everett-parking-lot-striping.html">Everett</a></li>
+                <li><a href="blaine-parking-lot-striping.html">Blaine &amp; Birch Bay</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="footer-zip">
+        Serving: Bellingham (98225) &middot; Lynden (98264) &middot; Ferndale (98248) &middot; Blaine (98230) &middot; Everson (98247) &middot;
+        Mount Vernon (98273) &middot; Burlington (98233) &middot; Oak Harbor (98277) &middot; Everett (98201) &middot; Anacortes (98221)
+    </p>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 LineMark Striping. All rights reserved.</p>
+        <p>Licensed &middot; Bonded &middot; Insured &middot; #LINEMS*750QM</p>
     </div>
 </footer>
 
-<script src="script.js" defer></script>
-<script>
-    // ── Hero slideshow ──
-    (function() {
-        const slides = document.querySelectorAll('.hero-slide');
-        const dots = document.querySelectorAll('.hero-dot');
-        const nextBtn = document.getElementById('heroNext');
-        if (!slides.length) return;
-        let current = 0, timer;
-        function goTo(index) {
-            slides[current].classList.remove('active');
-            dots[current].classList.remove('active');
-            current = (index + slides.length) % slides.length;
-            slides[current].classList.add('active');
-            dots[current].classList.add('active');
-        }
-        function startTimer() { clearInterval(timer); timer = setInterval(function() { goTo(current + 1); }, 5000); }
-        dots.forEach(function(dot) { dot.addEventListener('click', function() { goTo(parseInt(this.dataset.index)); startTimer(); }); });
-        if (nextBtn) { nextBtn.addEventListener('click', function() { goTo(current + 1); startTimer(); }); }
-        startTimer();
-    })();
-
-    // ── Formspree AJAX submit — shows success message without page reload ──
-    (function() {
-        var form = document.getElementById('quoteForm');
-        var success = document.getElementById('formSuccess');
-        if (!form) return;
-
-        // Highlight check-item when its checkbox is checked
-        form.querySelectorAll('.check-item input[type="checkbox"]').forEach(function(cb) {
-            cb.addEventListener('change', function() {
-                this.closest('.check-item').classList.toggle('checked', this.checked);
-            });
-        });
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            var btn = form.querySelector('.btn-submit-quote');
-            btn.disabled = true;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
-            // Collect checkbox values as comma-separated string
-            var checked = Array.from(form.querySelectorAll('input[name="services"]:checked')).map(function(c) { return c.value; });
-            var data = new FormData(form);
-            // Remove individual checkbox entries and replace with joined string
-            data.delete('services');
-            if (checked.length) data.append('services', checked.join(', '));
-
-            fetch(form.action, {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            }).then(function(res) {
-                if (res.ok) {
-                    form.style.display = 'none';
-                    success.classList.add('visible');
-                    // Fire GA4 conversion event
-                    if (typeof gtag === 'function') {
-                        gtag('event', 'form_submit', { event_category: 'lead', event_label: 'quote_request' });
-                    }
-                } else {
-                    btn.disabled = false;
-                    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send My Estimate Request';
-                    alert('Something went wrong. Please call us at (360) 739-9927 or email estimating@lmstriping.com.');
-                }
-            }).catch(function() {
-                btn.disabled = false;
-                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send My Estimate Request';
-                alert('Something went wrong. Please call us at (360) 739-9927 or email estimating@lmstriping.com.');
-            });
-        });
-    })();
-</script>
-
-<noscript>
-    <div style="text-align:center; padding:20px;">
-        <p>Contact us at <a href="tel:360-739-9927">360-739-9927</a> or <a href="mailto:estimating@lmstriping.com">estimating@lmstriping.com</a></p>
-    </div>
-</noscript>
-
+<!-- Mobile CTA Bar -->
 <div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
     <a href="tel:360-739-9927" class="cta-call" aria-label="Call LineMark Striping">
         <i class="fas fa-phone"></i> Call Us
@@ -926,6 +1922,104 @@
     </a>
     <!--/email_off-->
 </div>
+
+<script src="script.js" defer></script>
+<script>
+// ── Navbar scroll effect ──
+(function() {
+    var nav = document.getElementById('navbar');
+    window.addEventListener('scroll', function() {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+})();
+
+// ── Hamburger menu ──
+(function() {
+    var btn = document.getElementById('hamburger');
+    var menu = document.getElementById('navMenu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', function() {
+        menu.classList.toggle('active');
+        btn.setAttribute('aria-expanded', menu.classList.contains('active'));
+    });
+    document.addEventListener('click', function(e) {
+        if (!btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.remove('active');
+        }
+    });
+})();
+
+// ── Hero slideshow ──
+(function() {
+    var slides = document.querySelectorAll('.hero-slide');
+    var dots = document.querySelectorAll('.hero-dot');
+    var nextBtn = document.getElementById('heroNext');
+    if (!slides.length) return;
+    var current = 0, timer;
+    function goTo(index) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+    }
+    function startTimer() { clearInterval(timer); timer = setInterval(function() { goTo(current + 1); }, 5000); }
+    dots.forEach(function(dot) {
+        dot.addEventListener('click', function() { goTo(parseInt(this.dataset.index)); startTimer(); });
+    });
+    if (nextBtn) { nextBtn.addEventListener('click', function() { goTo(current + 1); startTimer(); }); }
+    startTimer();
+})();
+
+// ── Formspree AJAX submit ──
+(function() {
+    var form = document.getElementById('quoteForm');
+    var success = document.getElementById('formSuccess');
+    if (!form) return;
+    form.querySelectorAll('.check-item input[type="checkbox"]').forEach(function(cb) {
+        cb.addEventListener('change', function() {
+            this.closest('.check-item').classList.toggle('checked', this.checked);
+        });
+    });
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = form.querySelector('.btn-submit-quote');
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        var checked = Array.from(form.querySelectorAll('input[name="services"]:checked')).map(function(c) { return c.value; });
+        var data = new FormData(form);
+        data.delete('services');
+        if (checked.length) data.append('services', checked.join(', '));
+        fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        }).then(function(res) {
+            if (res.ok) {
+                form.style.display = 'none';
+                success.classList.add('visible');
+                if (typeof gtag === 'function') {
+                    gtag('event', 'form_submit', { event_category: 'lead', event_label: 'quote_request' });
+                }
+            } else {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send My Estimate Request';
+                alert('Something went wrong. Please call us at (360) 739-9927.');
+            }
+        }).catch(function() {
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send My Estimate Request';
+            alert('Something went wrong. Please call us at (360) 739-9927.');
+        });
+    });
+})();
+</script>
+
+<noscript>
+    <div style="text-align:center; padding:20px;">
+        <p>Contact us at <a href="tel:360-739-9927">360-739-9927</a> or <a href="mailto:estimating@lmstriping.com">estimating@lmstriping.com</a></p>
+    </div>
+</noscript>
 
 </body>
 </html>
