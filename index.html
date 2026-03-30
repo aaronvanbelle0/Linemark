@@ -221,18 +221,27 @@
         /* ═══════════════════════════════════════
            NAVIGATION
         ═══════════════════════════════════════ */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(17,17,17,0.97);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(244,208,63,0.15);
-            transition: background var(--transition), box-shadow var(--transition);
-        }
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(17,17,17,0.97) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(244,208,63,0.15) !important;
+    transition: background var(--transition), box-shadow var(--transition);
+}
+.navbar * {
+    background-color: transparent !important;
+}
+.nav-link {
+    color: rgba(255,255,255,0.82) !important;
+}
+.logo-text h2 {
+    color: #ffffff !important;
+}
         .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
         .nav-container {
             display: flex;
