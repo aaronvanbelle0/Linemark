@@ -69,15 +69,12 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-    /* ✅ FIXED: Changed from rgba(254,254,254,0.95) — was causing white navbar
-       on homepage. Dark is now the base; other pages override inline if needed. */
-    background: rgba(17, 17, 17, 0.97);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(254, 254, 254, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 0;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.35);
-    border-bottom: 1px solid rgba(244,208,63,0.15);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
 }
 
 .nav-logo { text-decoration: none; }
