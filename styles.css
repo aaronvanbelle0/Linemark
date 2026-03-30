@@ -1,4 +1,6 @@
-/* CSS Custom Properties for Color Scheme */
+/* ═══════════════════════════════════════════════
+   CSS Custom Properties
+═══════════════════════════════════════════════ */
 :root {
     --primary-color: #f4d03f;
     --secondary-color: #2c3e50;
@@ -13,8 +15,10 @@
     --shadow-hover: 0 5px 20px rgba(0,0,0,0.15);
 }
 
-/* Reset and Base Styles */
-* {
+/* ═══════════════════════════════════════════════
+   Reset & Base
+═══════════════════════════════════════════════ */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -39,7 +43,9 @@ body {
     padding: 0 20px;
 }
 
-/* Typography */
+/* ═══════════════════════════════════════════════
+   Typography
+═══════════════════════════════════════════════ */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     line-height: 1.2;
@@ -55,16 +61,23 @@ p {
     color: #555;
 }
 
-/* ── Navigation ── */
+/* ═══════════════════════════════════════════════
+   NAVIGATION — Dark by default
+   (service/city pages override with inline styles)
+═══════════════════════════════════════════════ */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(254, 254, 254, 0.95);
-    backdrop-filter: blur(10px);
+    /* ✅ FIXED: Changed from rgba(254,254,254,0.95) — was causing white navbar
+       on homepage. Dark is now the base; other pages override inline if needed. */
+    background: rgba(17, 17, 17, 0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
-    padding: 1.5rem 0;
-    box-shadow: var(--shadow);
+    padding: 0;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.35);
+    border-bottom: 1px solid rgba(244,208,63,0.15);
 }
 
 .nav-logo { text-decoration: none; }
@@ -72,69 +85,87 @@ p {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    height: 70px;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 14px;
 }
 
 .company-logo {
-    height: 45px;
+    height: 40px;
     width: auto;
     object-fit: contain;
 }
 
 .logo-text h2 {
-    color: var(--text-dark);
+    /* ✅ FIXED: Was var(--text-dark) = dark on dark bg = invisible.
+       White for dark navbar. */
+    color: #ffffff;
     margin: 0;
-    font-size: 1.5rem;
-    line-height: 1.2;
+    font-size: 1.4rem;
+    line-height: 1.1;
 }
 
-.logo-text { margin-bottom: 15px; }
+.logo-text { margin-bottom: 0; }
 
 .tagline {
-    font-size: 0.8rem;
-    color: var(--accent-color);
-    font-weight: 500;
+    font-size: 0.72rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     display: block;
-    margin-top: 10px;
+    margin-top: 3px;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 2px;
     margin: 0;
+    align-items: center;
 }
 
 .nav-link {
     text-decoration: none;
-    color: var(--text-dark);
+    /* ✅ FIXED: Was var(--text-dark) — invisible on dark navbar */
+    color: rgba(255, 255, 255, 0.82);
     font-weight: 500;
-    transition: color 0.3s ease;
+    font-size: 0.88rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+    transition: color 0.22s ease, background 0.22s ease;
+    white-space: nowrap;
 }
 
-.nav-link:hover { color: var(--accent-color); }
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
 
-/* Dropdown */
+/* ═══════════════════════════════════════════════
+   DROPDOWN — Dark background
+═══════════════════════════════════════════════ */
 .nav-item { position: relative; }
 
 .dropdown-toggle {
     display: flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: 5px;
+    cursor: pointer;
 }
 
 .dropdown-toggle i {
-    font-size: 0.7rem;
-    transition: transform 0.3s ease;
+    font-size: 0.65rem;
+    transition: transform 0.25s ease;
 }
 
 .nav-item.dropdown:hover .dropdown-toggle i {
@@ -143,18 +174,22 @@ p {
 
 .dropdown-menu {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 10px);
     left: 0;
-    background-color: #ffffff;
-    min-width: 220px;
-    padding: 0.5rem 0;
+    /* ✅ FIXED: Was #ffffff — invisible white-on-white dropdown.
+       Now dark to match navbar. */
+    background: #1a1a1a;
+    border: 1px solid rgba(244, 208, 63, 0.2);
+    min-width: 230px;
+    padding: 8px;
     border-radius: 8px;
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.55);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    z-index: 1000;
+    transform: translateY(-6px);
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+    /* ✅ CRITICAL: Must be above navbar z-index */
+    z-index: 9999;
     list-style: none;
 }
 
@@ -168,41 +203,51 @@ p {
 
 .dropdown-menu li a {
     display: block;
-    padding: 0.75rem 1.25rem;
-    color: var(--text-dark);
-    background-color: #ffffff;
+    padding: 9px 14px;
+    /* ✅ FIXED: Was var(--text-dark) on white bg — both now match dark theme */
+    color: rgba(255, 255, 255, 0.75);
+    background: transparent;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.87rem;
     font-weight: 500;
-    transition: all 0.2s ease;
+    border-radius: 5px;
+    transition: background 0.18s ease, color 0.18s ease;
 }
 
 .dropdown-menu li a:hover {
-    background-color: var(--light-gray);
-    color: var(--accent-color);
-    padding-left: 1.5rem;
+    background: rgba(244, 208, 63, 0.12);
+    color: var(--primary-color);
+    padding-left: 18px;
 }
 
-/* Hamburger */
+/* ═══════════════════════════════════════════════
+   Hamburger
+═══════════════════════════════════════════════ */
 .hamburger {
     display: none;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 8px;
     z-index: 10001;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hamburger span {
     display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: #333;
+    width: 24px;
+    height: 2px;
+    /* ✅ FIXED: Was #333 — invisible on dark navbar */
+    background: #ffffff;
+    margin: 5px 0;
+    border-radius: 2px;
     transition: all 0.3s ease-in-out;
 }
 
-/* ── Buttons ── */
+/* ═══════════════════════════════════════════════
+   Buttons
+═══════════════════════════════════════════════ */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -251,7 +296,6 @@ p {
     color: var(--text-dark);
 }
 
-/* Focus states */
 .btn:focus,
 input:focus,
 select:focus,
@@ -260,7 +304,9 @@ textarea:focus {
     outline-offset: 2px;
 }
 
-/* ── Hero Section ── */
+/* ═══════════════════════════════════════════════
+   Hero Section
+═══════════════════════════════════════════════ */
 .hero {
     padding: 160px 20px 80px;
     background-image: url('Gemini_Generated_Image_fm4903fm4903fm49.png');
@@ -322,7 +368,7 @@ textarea:focus {
     box-shadow: var(--shadow-hover);
 }
 
-/* Override for service page hero (no background image) */
+/* Service page hero override */
 #service-hero {
     background-image: none !important;
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
@@ -334,7 +380,9 @@ textarea:focus {
     content: none !important;
 }
 
-/* ── Sections ── */
+/* ═══════════════════════════════════════════════
+   Sections
+═══════════════════════════════════════════════ */
 section { padding: 80px 0; }
 
 .section-header {
@@ -354,7 +402,9 @@ section { padding: 80px 0; }
     margin: 0 auto;
 }
 
-/* ── About ── */
+/* ═══════════════════════════════════════════════
+   About
+═══════════════════════════════════════════════ */
 .about { background-color: var(--light-gray); }
 
 .about-content {
@@ -394,7 +444,9 @@ section { padding: 80px 0; }
     box-shadow: var(--shadow);
 }
 
-/* ── Services ── */
+/* ═══════════════════════════════════════════════
+   Services
+═══════════════════════════════════════════════ */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -439,7 +491,9 @@ section { padding: 80px 0; }
     color: var(--text-dark);
 }
 
-/* ── Gallery ── */
+/* ═══════════════════════════════════════════════
+   Gallery
+═══════════════════════════════════════════════ */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -484,7 +538,9 @@ section { padding: 80px 0; }
 .gallery-overlay h4 { margin-bottom: 0.5rem; }
 .gallery-overlay p { color: #ccc; margin: 0; }
 
-/* ── Service Areas ── */
+/* ═══════════════════════════════════════════════
+   Service Areas
+═══════════════════════════════════════════════ */
 .service-areas { background-color: var(--light-gray); }
 
 .service-areas-content {
@@ -522,7 +578,9 @@ section { padding: 80px 0; }
     box-shadow: var(--shadow);
 }
 
-/* ── Contact ── */
+/* ═══════════════════════════════════════════════
+   Contact
+═══════════════════════════════════════════════ */
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -556,19 +614,15 @@ section { padding: 80px 0; }
     color: var(--text-dark);
 }
 
-.contact-form {
+.contact-form,
+.contact-form-container {
     background-color: var(--cream-white);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
 }
 
-.contact-form-container {
-    background-color: var(--cream-white);
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-}
+.contact-form-container { padding: 2.5rem; }
 
 .contact-form h3 {
     margin-bottom: 2rem;
@@ -659,7 +713,9 @@ section { padding: 80px 0; }
     border-color: var(--primary-color);
 }
 
-/* ── Footer ── */
+/* ═══════════════════════════════════════════════
+   Footer
+═══════════════════════════════════════════════ */
 .footer {
     background-color: #1a1a1a;
     color: #ffffff;
@@ -735,7 +791,54 @@ section { padding: 80px 0; }
     color: #888888;
 }
 
-/* ── Modal ── */
+/* ═══════════════════════════════════════════════
+   Trust Strip
+═══════════════════════════════════════════════ */
+.trust-strip {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    border-bottom: 4px solid #f4d03f;
+}
+
+.trust-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.trust-text {
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.logo-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.trust-logo {
+    max-height: 50px;
+    width: auto;
+    filter: grayscale(100%) opacity(0.6);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.trust-logo:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.1);
+}
+
+/* ═══════════════════════════════════════════════
+   Modal
+═══════════════════════════════════════════════ */
 .modal {
     display: none;
     position: fixed;
@@ -781,50 +884,9 @@ section { padding: 80px 0; }
     flex-wrap: wrap;
 }
 
-/* ── Trust Strip ── */
-.trust-strip {
-    background-color: #f5f5f5;
-    padding: 40px 20px;
-    border-bottom: 4px solid #f4d03f;
-}
-
-.trust-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.trust-text {
-    color: #333;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-}
-
-.logo-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 50px;
-}
-
-.trust-logo {
-    max-height: 50px;
-    width: auto;
-    filter: grayscale(100%) opacity(0.6);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.trust-logo:hover {
-    filter: grayscale(0%) opacity(1);
-    transform: scale(1.1);
-}
-
-/* ── Editorial links ── */
+/* ═══════════════════════════════════════════════
+   Editorial Links
+═══════════════════════════════════════════════ */
 .hero-subtitle a,
 .about-text a,
 .service-areas-text a {
@@ -840,18 +902,22 @@ section { padding: 80px 0; }
     opacity: 0.8;
 }
 
-/* ── Images ── */
+/* ═══════════════════════════════════════════════
+   Images
+═══════════════════════════════════════════════ */
 img { transition: opacity 0.3s ease; }
 img[loading="lazy"] { opacity: 0; }
 img[loading="lazy"].loaded { opacity: 1; }
 
-/* ── Responsive — 768px ── */
+/* ═══════════════════════════════════════════════
+   Responsive — 768px
+═══════════════════════════════════════════════ */
 @media (max-width: 768px) {
     .tagline { display: none !important; }
     .logo-text h2 { font-size: 1.1rem; }
     .company-logo { height: 35px; }
 
-    .hamburger { display: block !important; }
+    .hamburger { display: flex !important; }
 
     .nav-menu {
         position: fixed;
@@ -859,40 +925,65 @@ img[loading="lazy"].loaded { opacity: 1; }
         left: -100%;
         width: 100%;
         height: 100vh;
-        background-color: #ffffff;
+        /* Mobile menu can be dark too for consistency */
+        background: #1a1a1a;
         display: flex !important;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        transition: 0.3s ease-in-out;
+        transition: left 0.3s ease-in-out;
         z-index: 10000;
-        padding-top: 80px;
+        padding-top: 90px;
         padding-bottom: 40px;
         overflow-y: auto;
         gap: 0 !important;
     }
 
     .nav-menu.active { left: 0; }
-    .nav-menu > li { margin: 5px 0; width: 100%; text-align: center; }
-    .nav-menu a { font-size: 1.2rem; display: block; padding: 10px 0; }
 
+    .nav-menu > li {
+        margin: 4px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        font-size: 1.1rem;
+        display: block;
+        padding: 11px 0;
+        color: rgba(255,255,255,0.85);
+    }
+
+    .nav-menu a:hover { color: var(--primary-color); }
+
+    /* Mobile dropdown — static, visible */
     .dropdown-menu {
         position: static;
         box-shadow: none;
-        border: 1px solid #eee;
-        background: #f9f9f9;
+        border: 1px solid rgba(255,255,255,0.1);
+        background: rgba(255,255,255,0.05);
         opacity: 1;
         visibility: visible;
         transform: none;
-        padding: 0;
-        margin: 5px auto;
-        width: 90%;
+        padding: 6px;
+        margin: 4px auto;
+        width: 88%;
+        border-radius: 6px;
+        z-index: auto;
     }
 
     .dropdown-menu li a {
-        padding: 10px 0;
-        font-size: 1rem;
-        background-color: #f9f9f9;
+        padding: 9px 0;
+        font-size: 0.95rem;
+        color: rgba(255,255,255,0.65);
+        background: transparent;
+        border-radius: 4px;
+    }
+
+    .dropdown-menu li a:hover {
+        color: var(--primary-color);
+        background: rgba(244,208,63,0.08);
+        padding-left: 0;
     }
 
     .dropdown-toggle i { display: none; }
@@ -902,7 +993,6 @@ img[loading="lazy"].loaded { opacity: 1; }
 
     .logo-container { gap: 0.5rem; }
     .logo-text h2 { font-size: 1.3rem; }
-    .tagline { font-size: 0.75rem; }
 
     .footer-logo { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
     .footer-logo-image { height: 30px; }
@@ -928,7 +1018,9 @@ img[loading="lazy"].loaded { opacity: 1; }
     .trust-logo { max-height: 35px; }
 }
 
-/* ── Responsive — 480px ── */
+/* ═══════════════════════════════════════════════
+   Responsive — 480px
+═══════════════════════════════════════════════ */
 @media (max-width: 480px) {
     .container { padding: 0 15px; }
     .nav-container { padding: 0 15px; }
@@ -942,7 +1034,9 @@ img[loading="lazy"].loaded { opacity: 1; }
     .contact-card { padding: 1.5rem; }
 }
 
-/* ── Print ── */
+/* ═══════════════════════════════════════════════
+   Print
+═══════════════════════════════════════════════ */
 @media print {
     .navbar, .hero-buttons, .modal { display: none; }
     body { font-size: 12pt; line-height: 1.4; }
