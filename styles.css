@@ -1030,13 +1030,19 @@ img[loading="lazy"].loaded { opacity: 1; }
 }
 
 /* Ensure the navbar is always dark and has the gold border on all pages */
+/* Update this in your styles.css */
 .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background: rgba(17, 17, 17, 0.97) !important;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(244, 208, 63, 0.15) !important;
+    
+    /* This ensures it stays on top of all images and hero sections */
+    z-index: 9999 !important; 
 }
-
 /* Ensure Logo text and Nav links are white/visible */
 .logo-text h2 {
     color: #ffffff !important;
