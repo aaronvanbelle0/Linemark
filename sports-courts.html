@@ -104,25 +104,6 @@
     }
     </script>
 
-
-        /* ── Mobile Sticky CTA Bar ── */
-        .mobile-cta-bar { display: none; }
-        @media (max-width: 768px) {
-            #pickleball-courts .container > div,
-            #tennis-courts .container > div,
-            #basketball-courts .container > div,
-            #multi-sport-courts .container > div { grid-template-columns: 1fr !important; }
-            #tennis-courts .container > div > div:first-child,
-            #multi-sport-courts .container > div > div:first-child { order: 2; }
-            #tennis-courts .container > div > div:last-child,
-            #multi-sport-courts .container > div > div:last-child { order: 1; }
-            .mobile-cta-bar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 99999; height: 60px; box-shadow: 0 -3px 16px rgba(0,0,0,0.18); }
-            body { padding-bottom: 60px; }
-            .mobile-cta-bar a { flex: 1; display: flex; align-items: center; justify-content: center; gap: 9px; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; text-decoration: none; -webkit-tap-highlight-color: transparent; }
-            .mobile-cta-bar a:active { filter: brightness(0.88); }
-            .mobile-cta-bar .cta-call { background-color: #1a1a1a; color: #ffffff; border-right: 1px solid #333; }
-            .mobile-cta-bar .cta-email { background-color: #f4d03f; color: #1a1a1a; }
-        }
     </style>
 </head>
 <body>
