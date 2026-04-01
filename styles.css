@@ -65,17 +65,6 @@ p {
    NAVIGATION — Dark by default
    (service/city pages override with inline styles)
 ═══════════════════════════════════════════════ */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(254, 254, 254, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    z-index: 1000;
-    padding: 0;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-}
 
 .nav-logo { text-decoration: none; }
 
@@ -1038,4 +1027,21 @@ img[loading="lazy"].loaded { opacity: 1; }
     .navbar, .hero-buttons, .modal { display: none; }
     body { font-size: 12pt; line-height: 1.4; }
     h1, h2, h3 { page-break-after: avoid; }
+}
+
+/* Ensure the navbar is always dark and has the gold border on all pages */
+.navbar {
+    background: rgba(17, 17, 17, 0.97) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(244, 208, 63, 0.15) !important;
+}
+
+/* Ensure Logo text and Nav links are white/visible */
+.logo-text h2 {
+    color: #ffffff !important;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.82) !important;
 }
