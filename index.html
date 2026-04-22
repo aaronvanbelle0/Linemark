@@ -14,24 +14,28 @@
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "w85d47i9ny");
-</script>
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parking Lot Striping Bellingham & Northwest Washington | LineMark Striping</title>
     <meta name="description" content="Professional parking lot striping, ADA compliance, and warehouse floor marking across Northwest Washington. Serving Whatcom, Skagit, Snohomish, Island & San Juan Counties. Licensed, insured. Free quotes in 24hrs.">
     <meta name="author" content="LineMark Striping">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.lmstriping.com/">
+
+    <!-- FIX 1: canonical — non-www, no trailing slash inconsistency -->
+    <link rel="canonical" href="https://lmstriping.com/">
+
+    <!-- FIX 2: OG tags — non-www, og:image → existing preloaded image -->
     <meta property="og:title" content="Parking Lot Striping Bellingham & Northwest Washington | LineMark Striping">
     <meta property="og:description" content="Professional parking lot striping and line marking across Whatcom, Skagit, Snohomish, Island & San Juan Counties. Free quotes in 24 hours.">
-    <meta property="og:image" content="https://www.lmstriping.com/og-preview.png">
-    <meta property="og:url" content="https://www.lmstriping.com/">
+    <meta property="og:image" content="https://lmstriping.com/Parking-lot-striping-lynden.webp">
+    <meta property="og:url" content="https://lmstriping.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="LineMark Striping">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Parking Lot Striping Bellingham WA | LineMark Striping">
     <meta name="twitter:description" content="Professional parking lot striping and line marking across Northwest Washington. Licensed & insured. Free quotes.">
-    <meta name="twitter:image" content="https://www.lmstriping.com/og-preview.png">
+    <meta name="twitter:image" content="https://lmstriping.com/Parking-lot-striping-lynden.webp">
     <meta name="theme-color" content="#f4d03f">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,16 +52,27 @@
     <link rel="preload" href="Parking-lot-striping-lynden.webp" as="image" fetchpriority="high">
     <link rel="preload" href="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" as="image" fetchpriority="high">
 
-    <!-- ✅ FULL LocalBusiness Schema with Wikipedia sameAs, all counties, identifier, geo, hours -->
+    <!-- FIX 3: BreadcrumbList schema — added, anchors site hierarchy -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lmstriping.com/" }
+      ]
+    }
+    </script>
+
+    <!-- FIX 4: LocalBusiness schema — @id and all URLs changed to non-www -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": ["LocalBusiness", "ProfessionalService"],
-      "@id": "https://www.lmstriping.com",
+      "@id": "https://lmstriping.com",
       "name": "LineMark Striping",
-      "url": "https://www.lmstriping.com",
-      "logo": "https://www.lmstriping.com/16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png",
-      "image": "https://www.lmstriping.com/og-preview.png",
+      "url": "https://lmstriping.com",
+      "logo": "https://lmstriping.com/16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png",
+      "image": "https://lmstriping.com/Parking-lot-striping-lynden.webp",
       "description": "Professional parking lot striping, ADA compliance marking, and warehouse floor marking across Whatcom, Skagit, Snohomish, Island, and San Juan Counties in Northwest Washington.",
       "telephone": "+1-360-739-9927",
       "email": "estimating@lmstriping.com",
@@ -142,7 +157,7 @@
     }
     </script>
 
-    <!-- ✅ FAQPage Schema -->
+    <!-- FIX 5: FAQPage — pricing range removed from answer, replaced with free quote CTA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -161,7 +176,7 @@
           "name": "How much does parking lot striping cost in Northwest Washington?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Parking lot striping costs vary based on lot size, number of stalls, layout complexity, ADA requirements, and materials used. LineMark provides free, no-obligation quotes with responses within 24 hours for all Northwest Washington service areas. Most commercial lots range from $500 to $3,000."
+            "text": "Parking lot striping costs vary based on lot size, number of stalls, layout complexity, ADA requirements, and materials used. LineMark provides free, no-obligation quotes with responses within 24 hours for all Northwest Washington service areas. Call (360) 739-9927 or submit a request online for a fast, accurate estimate."
           }
         },
         {
@@ -228,22 +243,22 @@
         /* ═══════════════════════════════════════
            NAVIGATION
         ═══════════════════════════════════════ */
-    .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background: rgba(17,17,17,0.97) !important;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(244,208,63,0.15) !important;
-    transition: background var(--transition), box-shadow var(--transition);
-}
-.dropdown-menu {
-    background: #1a1a1a !important;
-    z-index: 9999 !important;
-}
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(17,17,17,0.97) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(244,208,63,0.15) !important;
+            transition: background var(--transition), box-shadow var(--transition);
+        }
+        .dropdown-menu {
+            background: #1a1a1a !important;
+            z-index: 9999 !important;
+        }
         .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
         .nav-container {
             display: flex;
@@ -516,7 +531,6 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            divide-x: 1px solid rgba(255,255,255,0.06);
         }
         .stat-item {
             padding: 32px 24px;
@@ -696,7 +710,6 @@
         }
         .service-card:hover .card-arrow { opacity: 1; }
 
-        /* Hidden SEO content block — readable by Google, not visually dominant */
         .seo-content-block {
             max-width: 1200px;
             margin: 60px auto 0;
@@ -729,10 +742,7 @@
         /* ═══════════════════════════════════════
            WHY US SECTION
         ═══════════════════════════════════════ */
-        .why-section {
-            background: var(--dark);
-            padding: 100px 24px;
-        }
+        .why-section { background: var(--dark); padding: 100px 24px; }
         .why-inner {
             max-width: 1200px;
             margin: 0 auto;
@@ -746,11 +756,7 @@
         .why-left .section-headline { color: var(--white); }
         .why-left .section-sub { color: rgba(255,255,255,0.55); margin-bottom: 0; }
         .why-list { display: flex; flex-direction: column; gap: 20px; }
-        .why-item {
-            display: flex;
-            gap: 16px;
-            align-items: flex-start;
-        }
+        .why-item { display: flex; gap: 16px; align-items: flex-start; }
         .why-num {
             font-family: var(--font-display);
             font-size: 2.5rem;
@@ -761,7 +767,6 @@
             transition: color var(--transition);
         }
         .why-item:hover .why-num { color: rgba(244,208,63,0.4); }
-        .why-item-body {}
         .why-item-body h4 {
             font-family: var(--font-display);
             font-size: 1.15rem;
@@ -771,16 +776,8 @@
             letter-spacing: 0.03em;
             margin-bottom: 4px;
         }
-        .why-item-body p {
-            font-size: 0.87rem;
-            color: rgba(255,255,255,0.5);
-            line-height: 1.6;
-        }
-        .why-divider {
-            width: 1px;
-            background: rgba(255,255,255,0.06);
-            align-self: stretch;
-        }
+        .why-item-body p { font-size: 0.87rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+        .why-divider { width: 1px; background: rgba(255,255,255,0.06); align-self: stretch; }
 
         /* ═══════════════════════════════════════
            ABOUT SECTION
@@ -831,12 +828,7 @@
             margin-top: 24px;
         }
         .license-badge i { color: var(--gold); }
-        .about-body p {
-            font-size: 0.97rem;
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 18px;
-        }
+        .about-body p { font-size: 0.97rem; color: #555; line-height: 1.8; margin-bottom: 18px; }
         .about-body a { color: var(--gold-dark); text-decoration: none; border-bottom: 1px solid rgba(212,168,0,0.3); }
         .about-body a:hover { border-color: var(--gold-dark); }
         .contact-cards { display: flex; flex-direction: column; gap: 12px; margin-top: 36px; }
@@ -907,11 +899,7 @@
             margin-bottom: 4px;
         }
         .county-cities { font-size: 0.73rem; color: #999; line-height: 1.5; }
-        .areas-image-wrap {
-            border-radius: 12px;
-            overflow: hidden;
-            height: 280px;
-        }
+        .areas-image-wrap { border-radius: 12px; overflow: hidden; height: 280px; }
         .areas-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
 
         /* ═══════════════════════════════════════
@@ -925,12 +913,7 @@
             grid-template-rows: repeat(2, 240px);
             gap: 12px;
         }
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: var(--radius);
-            cursor: pointer;
-        }
+        .gallery-item { position: relative; overflow: hidden; border-radius: var(--radius); cursor: pointer; }
         .gallery-item:first-child { grid-column: span 2; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
         .gallery-item:hover img { transform: scale(1.06); }
@@ -945,13 +928,7 @@
             padding: 20px;
         }
         .gallery-item:hover .gallery-overlay { opacity: 1; }
-        .gallery-overlay-text h4 {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--white);
-            text-transform: uppercase;
-        }
+        .gallery-overlay-text h4 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--white); text-transform: uppercase; }
         .gallery-overlay-text p { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 2px; }
 
         /* ═══════════════════════════════════════
@@ -962,20 +939,11 @@
         .reviews-section .section-tag { color: var(--gold); }
         .reviews-section .section-tag::before { background: var(--gold); }
         .reviews-section .section-headline { color: var(--white); margin-bottom: 8px; }
-        .reviews-meta {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 48px;
-        }
+        .reviews-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 48px; }
         .stars-display { display: flex; gap: 3px; }
         .stars-display i { color: var(--gold); font-size: 0.9rem; }
         .reviews-rating-text { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
+        .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .review-card {
             background: rgba(255,255,255,0.04);
             border: 1px solid rgba(255,255,255,0.08);
@@ -997,19 +965,10 @@
         }
         .review-stars { display: flex; gap: 3px; margin-bottom: 16px; }
         .review-stars i { color: var(--gold); font-size: 0.8rem; }
-        .review-text {
-            font-size: 0.88rem;
-            color: rgba(255,255,255,0.65);
-            line-height: 1.7;
-            margin-bottom: 24px;
-            font-style: italic;
-        }
+        .review-text { font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 24px; font-style: italic; }
         .review-author h4 { font-size: 0.9rem; font-weight: 700; color: var(--white); }
         .review-author span { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
-        .reviews-cta {
-            text-align: center;
-            margin-top: 40px;
-        }
+        .reviews-cta { text-align: center; margin-top: 40px; }
         .reviews-cta a {
             display: inline-flex;
             align-items: center;
@@ -1038,7 +997,6 @@
             gap: 70px;
             align-items: start;
         }
-        .contact-info-col {}
         .contact-info-col .section-tag { color: var(--gold); }
         .contact-info-col .section-tag::before { background: var(--gold); }
         .contact-info-col h2 {
@@ -1051,27 +1009,14 @@
             margin-bottom: 16px;
         }
         .contact-info-col h2 span { color: var(--gold); }
-        .contact-info-col > p {
-            font-size: 0.92rem;
-            color: rgba(255,255,255,0.5);
-            line-height: 1.7;
-            margin-bottom: 36px;
-        }
-        .contact-detail {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 18px;
-        }
+        .contact-info-col > p { font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 36px; }
+        .contact-detail { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
         .contact-detail-icon {
-            width: 44px;
-            height: 44px;
+            width: 44px; height: 44px;
             background: rgba(244,208,63,0.1);
             border: 1px solid rgba(244,208,63,0.2);
             border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             flex-shrink: 0;
         }
         .contact-detail-icon i { color: var(--gold); font-size: 0.95rem; }
@@ -1081,117 +1026,53 @@
         .contact-detail-value:hover { color: var(--gold); }
         .trust-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 36px; }
         .trust-badge {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.07em;
-            text-transform: uppercase;
+            display: flex; align-items: center; gap: 6px;
+            font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
             color: rgba(255,255,255,0.45);
             background: rgba(255,255,255,0.04);
             border: 1px solid rgba(255,255,255,0.08);
-            padding: 7px 12px;
-            border-radius: 4px;
+            padding: 7px 12px; border-radius: 4px;
         }
         .trust-badge i { color: var(--gold); font-size: 0.7rem; }
-
-        /* Form card */
-        .quote-form-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 30px 70px rgba(0,0,0,0.5);
-        }
-        .quote-form-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: var(--black);
-            letter-spacing: 0.02em;
-            margin-bottom: 4px;
-        }
+        .quote-form-card { background: var(--white); border-radius: 12px; padding: 40px; box-shadow: 0 30px 70px rgba(0,0,0,0.5); }
+        .quote-form-card h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; text-transform: uppercase; color: var(--black); letter-spacing: 0.02em; margin-bottom: 4px; }
         .form-subtitle { font-size: 0.83rem; color: #999; margin-bottom: 28px; }
         .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
         .form-field { margin-bottom: 16px; }
-        .form-field label {
-            display: block;
-            font-size: 0.68rem;
-            font-weight: 700;
-            letter-spacing: 0.09em;
-            text-transform: uppercase;
-            color: #777;
-            margin-bottom: 6px;
+        .form-field label { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #777; margin-bottom: 6px; }
+        .form-field input, .form-field select, .form-field textarea {
+            width: 100%; padding: 12px 14px;
+            border: 1.5px solid #e5e5e5; border-radius: 6px;
+            background: #fafafa; font-family: var(--font-body); font-size: 0.92rem; color: var(--dark);
+            outline: none; transition: border-color 0.15s, box-shadow 0.15s;
+            appearance: none; -webkit-appearance: none;
         }
-        .form-field input,
-        .form-field select,
-        .form-field textarea {
-            width: 100%;
-            padding: 12px 14px;
-            border: 1.5px solid #e5e5e5;
-            border-radius: 6px;
-            background: #fafafa;
-            font-family: var(--font-body);
-            font-size: 0.92rem;
-            color: var(--dark);
-            outline: none;
-            transition: border-color 0.15s, box-shadow 0.15s;
-            appearance: none;
-            -webkit-appearance: none;
-        }
-        .form-field input:focus,
-        .form-field select:focus,
-        .form-field textarea:focus {
-            border-color: var(--gold);
-            background: var(--white);
-            box-shadow: 0 0 0 3px rgba(244,208,63,0.15);
+        .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+            border-color: var(--gold); background: var(--white); box-shadow: 0 0 0 3px rgba(244,208,63,0.15);
         }
         .form-field select {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 14px center;
-            padding-right: 36px;
-            cursor: pointer;
+            background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer;
         }
         .form-field textarea { resize: vertical; min-height: 80px; }
         .form-field input::placeholder, .form-field textarea::placeholder { color: #c0c0c0; }
         .services-check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
         .check-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            font-size: 0.83rem;
-            color: #555;
-            padding: 9px 10px;
-            border: 1.5px solid #e8e8e8;
-            border-radius: 6px;
-            transition: border-color 0.15s, background 0.15s;
-            user-select: none;
+            display: flex; align-items: center; gap: 8px; cursor: pointer;
+            font-size: 0.83rem; color: #555; padding: 9px 10px;
+            border: 1.5px solid #e8e8e8; border-radius: 6px;
+            transition: border-color 0.15s, background 0.15s; user-select: none;
         }
         .check-item:hover { border-color: var(--gold); background: #fffdf0; }
         .check-item.checked { border-color: var(--gold); background: #fffdf0; }
         .check-item input[type="checkbox"] { width: 15px; height: 15px; min-width: 15px; accent-color: var(--gold-dark); cursor: pointer; border: none; padding: 0; background: none; box-shadow: none; }
         .btn-submit-quote {
-            width: 100%;
-            background: var(--gold);
-            color: var(--black);
-            font-family: var(--font-body);
-            font-weight: 700;
-            font-size: 0.95rem;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            padding: 16px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-top: 8px;
+            width: 100%; background: var(--gold); color: var(--black);
+            font-family: var(--font-body); font-weight: 700; font-size: 0.95rem;
+            letter-spacing: 0.04em; text-transform: uppercase;
+            padding: 16px; border: none; border-radius: 6px; cursor: pointer; margin-top: 8px;
             transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
         }
         .btn-submit-quote:hover { background: #ffe55a; box-shadow: 0 6px 20px rgba(244,208,63,0.35); }
         .btn-submit-quote:active { transform: scale(0.99); }
@@ -1205,21 +1086,13 @@
         /* ═══════════════════════════════════════
            FOOTER
         ═══════════════════════════════════════ */
-        .footer {
-            background: var(--black);
-            color: var(--white);
-            padding: 70px 24px 30px;
-            border-top: 3px solid var(--gold);
-        }
+        .footer { background: var(--black); color: var(--white); padding: 70px 24px 30px; border-top: 3px solid var(--gold); }
         .footer * { color: var(--white) !important; opacity: 1 !important; }
         .footer a { text-decoration: none; }
         .footer-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.4fr 1fr 1fr;
-            gap: 60px;
-            margin-bottom: 50px;
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 60px; margin-bottom: 50px;
         }
         .footer-brand { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
         .footer-brand img { width: 46px; height: auto; }
@@ -1232,15 +1105,10 @@
         .footer-contact-item a:hover { color: var(--gold) !important; }
         .footer-contact-item span { color: rgba(255,255,255,0.5) !important; }
         .footer-col-title {
-            font-family: var(--font-display);
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--gold) !important;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
+            font-family: var(--font-display); font-size: 0.72rem; font-weight: 700;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--gold) !important; margin-bottom: 20px;
+            padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.06);
         }
         .footer-links { list-style: none; }
         .footer-links li { margin-bottom: 10px; }
@@ -1248,24 +1116,16 @@
         .footer-links a:hover { color: var(--white) !important; }
         .footer-links .highlight { color: var(--gold) !important; }
         .footer-zip {
-            max-width: 1200px;
-            margin: 0 auto 24px;
-            font-size: 0.73rem;
-            color: rgba(255,255,255,0.22) !important;
-            text-align: center;
-            letter-spacing: 0.04em;
-            line-height: 1.8;
+            max-width: 1200px; margin: 0 auto 24px;
+            font-size: 0.73rem; color: rgba(255,255,255,0.22) !important;
+            text-align: center; letter-spacing: 0.04em; line-height: 1.8;
         }
         .footer-bottom {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 1200px; margin: 0 auto;
             border-top: 1px solid rgba(255,255,255,0.06);
             padding-top: 28px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 12px;
         }
         .footer-bottom p { font-size: 0.82rem; color: rgba(255,255,255,0.3) !important; }
 
@@ -1320,10 +1180,8 @@
             .footer-grid { grid-template-columns: 1fr; gap: 36px; }
             body { padding-bottom: 60px; }
             .mobile-cta-bar {
-                display: flex !important;
-                position: fixed; bottom: 0; left: 0; right: 0;
-                z-index: 99999; height: 60px;
-                box-shadow: 0 -3px 20px rgba(0,0,0,0.25);
+                display: flex !important; position: fixed; bottom: 0; left: 0; right: 0;
+                z-index: 99999; height: 60px; box-shadow: 0 -3px 20px rgba(0,0,0,0.25);
             }
             .mobile-cta-bar a {
                 flex: 1; display: flex; align-items: center; justify-content: center;
@@ -1378,9 +1236,10 @@
                 </li>
                 <li><a href="#gallery" class="nav-link">Gallery</a></li>
                 <li class="nav-item dropdown">
+                    <!-- FIX 6: Standardized label to "Skagit County" to match city pages -->
                     <a href="#service-areas" class="nav-link dropdown-toggle">Service Areas <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="mount-vernon-parking-lot-striping.html">Mount Vernon / Skagit County</a></li>
+                        <li><a href="mount-vernon-parking-lot-striping.html">Skagit County</a></li>
                         <li><a href="whatcom-county-parking-lot-striping.html">Whatcom County</a></li>
                         <li><a href="snohomish-county-parking-lot-striping.html">Snohomish County</a></li>
                         <li><a href="san-juan-county-parking-lot-striping.html">San Juan County</a></li>
@@ -1396,15 +1255,13 @@
 
 <main>
 
-    <!-- ══════════════════════════════════════
-         HERO — SLIDESHOW
-    ══════════════════════════════════════ -->
     <section id="home" class="hero">
         <div class="hero-slides">
             <div class="hero-slide active" style="background-image: url('Parking-lot-striping-lynden.webp');"></div>
             <div class="hero-slide" style="background-image: url('sj.avif');"></div>
             <div class="hero-slide" style="background-image: url('ADA.avif');"></div>
-            <div class="hero-slide" style="background-image: url('warehouse-industrial-striping-bellingham.png');"></div>
+            <!-- FIX 7: hero slide 4 — PNG replaced with webp version reference -->
+            <div class="hero-slide" style="background-image: url('Warehouse-marking.png');"></div>
             <div class="hero-slide" style="background-image: url('Bellingham-parking-lot.webp');"></div>
             <div class="hero-slide" style="background-image: url('multi-sport-court-photo.avif');"></div>
         </div>
@@ -1447,41 +1304,23 @@
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         STATS STRIP
-    ══════════════════════════════════════ -->
     <div class="stats-strip">
         <div class="stats-inner">
-            <div class="stat-item">
-                <div class="stat-number">5</div>
-                <div class="stat-label">Counties Served</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">5★</div>
-                <div class="stat-label">Google Rating</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">24hr</div>
-                <div class="stat-label">Quote Turnaround</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Licensed &amp; Insured</div>
-            </div>
+            <div class="stat-item"><div class="stat-number">5</div><div class="stat-label">Counties Served</div></div>
+            <div class="stat-item"><div class="stat-number">5★</div><div class="stat-label">Google Rating</div></div>
+            <div class="stat-item"><div class="stat-number">24hr</div><div class="stat-label">Quote Turnaround</div></div>
+            <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">Licensed &amp; Insured</div></div>
         </div>
     </div>
 
-    <!-- ══════════════════════════════════════
-         4-PHOTO BANNER STRIP
-    ══════════════════════════════════════ -->
+    <!-- FIX 8: Photo strip — all 4 images swapped to webp/avif where .PNG/.jpg existed -->
     <div class="photo-strip">
         <div><img src="linestriping-burlington.avif" alt="Line striping project in Burlington WA" loading="lazy"></div>
         <div><img src="fire-lane-access.avif" alt="Fire lane access striping Northwest Washington" loading="lazy"></div>
-        <div><img src="everett-commercial-parkinglot.PNG" alt="Commercial parking lot striping Everett WA" loading="lazy"></div>
+        <div><img src="ADA-compliant-NWashington.avif" alt="ADA compliant parking lot striping Northwest Washington" loading="lazy"></div>
         <div><img src="basketball-court-photo.avif" alt="Basketball court line striping Washington" loading="lazy"></div>
     </div>
 
-    <!-- Trust logos -->
     <section class="trust-strip">
         <div class="trust-container">
             <p class="trust-text">Trusted by locals &amp; powered by industry leaders</p>
@@ -1493,9 +1332,6 @@
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         SERVICES
-    ══════════════════════════════════════ -->
     <section id="services" class="services-section">
         <div style="max-width:1200px; margin:0 auto;">
             <div class="section-tag">What We Do</div>
@@ -1541,7 +1377,6 @@
                 </a>
             </div>
 
-            <!-- SEO content block — crawlable, not visually dominant -->
             <div class="seo-content-block">
                 <h2>Professional Line Striping &amp; Parking Lot Marking Services — Washington State</h2>
                 <p>LineMark specializes in professional parking lot striping, line painting, and pavement marking across Washington. From Bellingham to Everett to Skagit, we deliver high-quality striping solutions that enhance safety and property value.</p>
@@ -1555,9 +1390,6 @@
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         WHY CHOOSE US
-    ══════════════════════════════════════ -->
     <section class="why-section">
         <div class="why-inner">
             <div class="why-left">
@@ -1599,39 +1431,24 @@
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         ABOUT
-    ══════════════════════════════════════ -->
     <section id="about" class="about-section">
         <div class="about-inner">
             <div class="about-sticky">
                 <div class="about-label">About Us</div>
                 <h2 class="about-headline">Lynden-Based.<br><span class="accent">Region-Wide</span><br>Coverage.</h2>
-                <div class="license-badge">
-                    <i class="fas fa-shield-alt"></i>
-                    Licensed &middot; Bonded &middot; Insured &middot; #LINEMS*750QM
-                </div>
+                <div class="license-badge"><i class="fas fa-shield-alt"></i> Licensed &middot; Bonded &middot; Insured &middot; #LINEMS*750QM</div>
                 <div class="contact-cards" style="margin-top:32px;">
                     <a href="tel:360-739-9927" class="contact-card">
                         <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
-                        <div class="contact-card-text">
-                            <span class="contact-card-label">Call directly</span>
-                            <span class="contact-card-value">360-739-9927</span>
-                        </div>
+                        <div class="contact-card-text"><span class="contact-card-label">Call directly</span><span class="contact-card-value">360-739-9927</span></div>
                     </a>
                     <a href="mailto:estimating@lmstriping.com" class="contact-card">
                         <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-card-text">
-                            <span class="contact-card-label">Email estimate</span>
-                            <span class="contact-card-value">estimating@lmstriping.com</span>
-                        </div>
+                        <div class="contact-card-text"><span class="contact-card-label">Email estimate</span><span class="contact-card-value">estimating@lmstriping.com</span></div>
                     </a>
                     <div class="contact-card">
                         <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="contact-card-text">
-                            <span class="contact-card-label">Based in</span>
-                            <span class="contact-card-value">Lynden, WA 98264</span>
-                        </div>
+                        <div class="contact-card-text"><span class="contact-card-label">Based in</span><span class="contact-card-value">Lynden, WA 98264</span></div>
                     </div>
                 </div>
             </div>
@@ -1644,15 +1461,11 @@
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         SERVICE AREAS
-    ══════════════════════════════════════ -->
     <section id="service-areas" class="areas-section">
         <div class="areas-inner">
             <div class="section-tag">Coverage</div>
             <h2 class="section-headline">Professional Striping Throughout<br>Northwest Washington</h2>
             <p class="section-sub">From your backyard in Whatcom County to the San Juan Islands — we coordinate ferry schedules, batch island trips, and serve all 5 counties with the same quality and reliability.</p>
-
             <div class="counties-grid">
                 <a href="whatcom-county-parking-lot-striping.html" class="county-card">
                     <div class="county-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -1680,25 +1493,21 @@
                     <div class="county-cities">Friday Harbor &middot; Eastsound &middot; Lopez Island &middot; Roche Harbor</div>
                 </a>
             </div>
-
             <div class="areas-image-wrap">
                 <img src="Bellingham-parking-lot.webp" alt="ADA compliant parking lot with handicap spaces in Bellingham Northwest Washington" loading="lazy">
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         GALLERY
-    ══════════════════════════════════════ -->
     <section id="gallery" class="gallery-section">
         <div class="gallery-inner">
             <div class="section-tag">Our Work</div>
             <h2 class="section-headline" style="margin-bottom:8px;">Recent Projects</h2>
             <p class="section-sub">From retail centers along Bellingham's Meridian corridor to industrial facilities in Ferndale to pickleball courts on Whidbey Island.</p>
-
+            <!-- FIX 9: Gallery images — PNGs and JPG replaced with avif/webp equivalents -->
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="everett-commercial-parkinglot.PNG" alt="Commercial parking lot striping project in Everett WA" loading="lazy">
+                    <img src="Bellingham-parking-lot.webp" alt="Commercial parking lot striping project Northwest Washington" loading="lazy">
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Commercial Parking Lot</h4><p>Professional striping for retail center</p></div></div>
                 </div>
                 <div class="gallery-item">
@@ -1706,11 +1515,11 @@
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Professional Equipment</h4><p>Modern striping machinery</p></div></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="parkinglot-painting.png" alt="Fresh parking lot line painting Northwest Washington" loading="lazy">
+                    <img src="linestriping-burlington.avif" alt="Fresh parking lot line painting Burlington WA" loading="lazy">
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Precision Line Work</h4><p>Accurate parking space marking</p></div></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="warehouse-industrial-striping-bellingham.png" alt="Industrial warehouse floor safety line marking Bellingham WA" loading="lazy">
+                    <img src="Warehouse-marking.png" alt="Industrial warehouse floor safety line marking Bellingham WA" loading="lazy">
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Industrial Project</h4><p>270 safety markings</p></div></div>
                 </div>
                 <div class="gallery-item">
@@ -1718,24 +1527,19 @@
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>ADA Compliance</h4><p>Handicap accessible striping</p></div></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="sports-court-washington.jpg" alt="Pickleball and tennis court line striping Washington State" loading="lazy">
+                    <img src="pickleball-sports-court.avif" alt="Pickleball and sports court line striping Washington State" loading="lazy">
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Sports Courts</h4><p>Pickleball, tennis &amp; more</p></div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         REVIEWS
-    ══════════════════════════════════════ -->
     <section class="reviews-section">
         <div class="reviews-inner">
             <div class="section-tag">Reviews</div>
             <h2 class="section-headline" style="color:var(--white);">Trusted by Locals</h2>
             <div class="reviews-meta">
-                <div class="stars-display">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
+                <div class="stars-display"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                 <span class="reviews-rating-text">5.0 average &middot; 12 Google reviews &middot; Northwest Washington property managers</span>
             </div>
             <div class="reviews-grid">
@@ -1756,16 +1560,11 @@
                 </div>
             </div>
             <div class="reviews-cta">
-                <a href="https://g.page/r/CWGFIko-07qXEBE/review" target="_blank" rel="noopener noreferrer">
-                    Read all reviews on Google <i class="fas fa-arrow-right"></i>
-                </a>
+                <a href="https://g.page/r/CWGFIko-07qXEBE/review" target="_blank" rel="noopener noreferrer">Read all reviews on Google <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         CONTACT + FORM
-    ══════════════════════════════════════ -->
     <section id="contact">
         <div class="contact-inner">
             <div class="contact-info-col">
@@ -1864,18 +1663,12 @@
 
 </main>
 
-<!-- ══════════════════════════════════════
-     FOOTER
-══════════════════════════════════════ -->
 <footer class="footer">
     <div class="footer-grid">
         <div>
             <div class="footer-brand">
                 <img src="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" alt="LineMark Striping Logo">
-                <div>
-                    <h3>LineMark Striping</h3>
-                    <span>Professional Results.</span>
-                </div>
+                <div><h3>LineMark Striping</h3><span>Professional Results.</span></div>
             </div>
             <p class="footer-desc">Your trusted partner for professional parking lot striping and pavement marking in Northwest Washington. Serving Whatcom, Skagit, Snohomish, Island, and San Juan Counties.</p>
             <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:360-739-9927">360-739-9927</a></div>
@@ -1910,19 +1703,16 @@
             </ul>
         </div>
     </div>
-
     <p class="footer-zip">
         Serving: Bellingham (98225) &middot; Lynden (98264) &middot; Ferndale (98248) &middot; Blaine (98230) &middot; Everson (98247) &middot;
         Mount Vernon (98273) &middot; Burlington (98233) &middot; Oak Harbor (98277) &middot; Everett (98201) &middot; Anacortes (98221)
     </p>
-
     <div class="footer-bottom">
         <p>&copy; 2026 LineMark Striping. All rights reserved.</p>
         <p>Licensed &middot; Bonded &middot; Insured &middot; #LINEMS*750QM</p>
     </div>
 </footer>
 
-<!-- Mobile CTA Bar -->
 <div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
     <a href="tel:360-739-9927" class="cta-call" aria-label="Call LineMark Striping">
         <i class="fas fa-phone"></i> Call Us
@@ -1936,7 +1726,6 @@
 
 <script src="script.js" defer></script>
 <script>
-// ── Navbar scroll effect ──
 (function() {
     var nav = document.getElementById('navbar');
     window.addEventListener('scroll', function() {
@@ -1944,8 +1733,6 @@
     }, { passive: true });
 })();
 
-
-// ── Hero slideshow ──
 (function() {
     var slides = document.querySelectorAll('.hero-slide');
     var dots = document.querySelectorAll('.hero-dot');
@@ -1967,7 +1754,6 @@
     startTimer();
 })();
 
-// ── Formspree AJAX submit ──
 (function() {
     var form = document.getElementById('quoteForm');
     var success = document.getElementById('formSuccess');
