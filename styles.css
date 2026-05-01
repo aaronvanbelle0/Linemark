@@ -354,16 +354,11 @@ textarea:focus {
     box-shadow: var(--shadow-hover);
 }
 
-/* Service page hero override */
+/* Service page hero — allow inline background-image to show */
 #service-hero {
-    background-image: none !important;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
-}
-
-#service-hero::before,
-#service-hero::after {
-    display: none !important;
-    content: none !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* ═══════════════════════════════════════════════
