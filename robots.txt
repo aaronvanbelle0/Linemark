@@ -1,0 +1,8 @@
+# robots.txt — LineMark Striping
+# https://lmstriping.com
+
+User-agent: *
+Allow: /
+Disallow: /cgi-bin/
+
+Sitemap: https://lmstriping.com/sitemap.xml
