@@ -575,6 +575,52 @@
         .photo-strip div:hover img { transform: scale(1.06); }
 
         /* ═══════════════════════════════════════
+           TOP INQUIRY FORM SECTION (below photo strip)
+        ═══════════════════════════════════════ */
+        .top-inquiry-section {
+            background: #111;
+            padding: 80px 24px;
+        }
+        .top-inquiry-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .top-inquiry-intro .section-tag { color: var(--gold); }
+        .top-inquiry-intro .section-tag::before { background: var(--gold); }
+        .top-inquiry-intro h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+            font-weight: 800;
+            color: var(--white);
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+        .top-inquiry-intro h2 span { color: var(--gold); }
+        .top-inquiry-intro p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+        .top-inquiry-quick {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+        .top-inquiry-quick .contact-detail { margin-bottom: 0; }
+        .top-inquiry-trust {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        /* ═══════════════════════════════════════
            TRUST STRIP
         ═══════════════════════════════════════ */
         .trust-strip {
@@ -992,12 +1038,9 @@
         .contact-inner {
             max-width: 1100px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1.1fr;
-            gap: 70px;
-            align-items: start;
         }
-        .contact-info-col .section-tag { color: var(--gold); }
+        .contact-info-col { max-width: 800px; margin: 0 auto; text-align: center; }
+        .contact-info-col .section-tag { color: var(--gold); justify-content: center; }
         .contact-info-col .section-tag::before { background: var(--gold); }
         .contact-info-col h2 {
             font-family: var(--font-display);
@@ -1010,7 +1053,22 @@
         }
         .contact-info-col h2 span { color: var(--gold); }
         .contact-info-col > p { font-size: 0.92rem; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 36px; }
-        .contact-detail { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+        .contact-details-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 36px;
+        }
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 8px;
+            text-align: left;
+        }
         .contact-detail-icon {
             width: 44px; height: 44px;
             background: rgba(244,208,63,0.1);
@@ -1024,7 +1082,7 @@
         .contact-detail-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 2px; }
         .contact-detail-value { font-size: 1rem; font-weight: 600; color: var(--white); text-decoration: none; transition: color var(--transition); }
         .contact-detail-value:hover { color: var(--gold); }
-        .trust-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 36px; }
+        .trust-badges { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
         .trust-badge {
             display: flex; align-items: center; gap: 6px;
             font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
@@ -1146,6 +1204,8 @@
             .about-sticky { position: static; }
             .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
             .reviews-grid { grid-template-columns: 1fr 1fr; }
+            .top-inquiry-inner { grid-template-columns: 1fr; gap: 40px; }
+            .contact-details-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) {
             .tagline { display: none !important; }
@@ -1170,12 +1230,12 @@
             .stats-inner { grid-template-columns: repeat(2, 1fr); }
             .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
             .photo-strip { grid-template-columns: repeat(2, 1fr) !important; height: 300px !important; }
+            .top-inquiry-section { padding: 50px 20px; }
             .services-grid { grid-template-columns: 1fr; }
             .counties-grid { grid-template-columns: repeat(2, 1fr); }
             .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
             .gallery-item:first-child { grid-column: span 2; }
             .reviews-grid { grid-template-columns: 1fr; }
-            .contact-inner { grid-template-columns: 1fr; gap: 40px; }
             .form-row-2 { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; gap: 36px; }
             body { padding-bottom: 60px; }
@@ -1320,6 +1380,109 @@
         <div><img src="ADA-compliant-NWashington.avif" alt="ADA compliant parking lot striping Northwest Washington" loading="lazy"></div>
         <div><img src="basketball-court-photo.avif" alt="Basketball court line striping Washington" loading="lazy"></div>
     </div>
+
+    <!-- ═══════════════════════════════════════
+         TOP INQUIRY FORM — sits directly below the 4 photos
+    ═══════════════════════════════════════ -->
+    <section id="contact" class="top-inquiry-section">
+        <div class="top-inquiry-inner">
+            <div class="top-inquiry-intro">
+                <div class="section-tag">Get in Touch</div>
+                <h2>Ready to Enhance <span>Your Property?</span></h2>
+                <p>Fill out the form and we'll get back to you within one business day — usually the same day. Free, no-obligation estimates for projects across Whatcom, Skagit, Snohomish, Island, and San Juan Counties.</p>
+
+                <div class="top-inquiry-quick">
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-detail-text">
+                            <span class="contact-detail-label">Call us</span>
+                            <a href="tel:3607399927" class="contact-detail-value">(360) 739-9927</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-detail-text">
+                            <span class="contact-detail-label">Email</span>
+                            <a href="mailto:estimating@lmstriping.com" class="contact-detail-value">estimating@lmstriping.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-detail-text">
+                            <span class="contact-detail-label">Based in</span>
+                            <span class="contact-detail-value">Lynden, WA — serving 5 counties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="top-inquiry-trust">
+                    <div class="trust-badge"><i class="fas fa-shield-alt"></i> Licensed</div>
+                    <div class="trust-badge"><i class="fas fa-shield-alt"></i> Bonded</div>
+                    <div class="trust-badge"><i class="fas fa-shield-alt"></i> Insured</div>
+                    <div class="trust-badge"><i class="fas fa-star"></i> 5-Star Rated</div>
+                </div>
+            </div>
+
+            <div class="quote-form-card">
+                <h3>Request a Free Estimate</h3>
+                <p class="form-subtitle">No obligation. We'll review your project and get back to you fast.</p>
+                <form id="quoteForm" action="https://formspree.io/f/mpqyelgb" method="POST">
+                    <div class="form-row-2">
+                        <div class="form-field">
+                            <label for="first_name">First Name *</label>
+                            <input type="text" id="first_name" name="first_name" placeholder="Aaron" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="last_name">Last Name *</label>
+                            <input type="text" id="last_name" name="last_name" placeholder="Smith" required>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(360) 555-0100" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="property_name">Property / Company Name</label>
+                        <input type="text" id="property_name" name="property_name" placeholder="Acme Property Management">
+                    </div>
+                    <div class="form-field">
+                        <label for="address">Property Address</label>
+                        <input type="text" id="address" name="address" placeholder="123 Main St, Bellingham, WA 98225">
+                    </div>
+                    <div class="form-field">
+                        <label>Services Needed</label>
+                        <div class="services-check-grid">
+                            <label class="check-item"><input type="checkbox" name="services" value="Parking Lot Striping"> Parking Lot Striping</label>
+                            <label class="check-item"><input type="checkbox" name="services" value="ADA Compliance"> ADA Compliance</label>
+                            <label class="check-item"><input type="checkbox" name="services" value="Sports Courts"> Sports Courts</label>
+                            <label class="check-item"><input type="checkbox" name="services" value="Fire Lanes"> Fire Lanes</label>
+                            <label class="check-item"><input type="checkbox" name="services" value="Warehouse Markings"> Warehouse Markings</label>
+                            <label class="check-item"><input type="checkbox" name="services" value="Commercial Striping"> Commercial Striping</label>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="notes">Additional Notes</label>
+                        <textarea id="notes" name="notes" placeholder="Lot size, number of stalls, any special requirements..."></textarea>
+                    </div>
+                    <input type="text" name="_gotcha" style="display:none">
+                    <button type="submit" class="btn-submit-quote">
+                        <i class="fas fa-paper-plane"></i> Send My Estimate Request
+                    </button>
+                </form>
+                <div class="form-success" id="formSuccess">
+                    <div class="success-icon"><i class="fas fa-check" style="color:#1a1a1a;"></i></div>
+                    <h4>Request Received!</h4>
+                    <p>Thanks for reaching out. Aaron will review your project and be in touch within one business day — usually the same day.</p>
+                    <p style="margin-top:12px; font-size:0.85rem;">In a hurry? Call us at <a href="tel:3607399927" style="color:var(--gold-dark); font-weight:600;">(360) 739-9927</a></p>
+                </div>
+                <p class="form-note"><i class="fas fa-lock" style="font-size:0.7rem;"></i> Your information is private and never shared.</p>
+            </div>
+        </div>
+    </section>
 
     <section class="trust-strip">
         <div class="trust-container">
@@ -1561,102 +1724,6 @@
             </div>
             <div class="reviews-cta">
                 <a href="https://g.page/r/CWGFIko-07qXEBE/review" target="_blank" rel="noopener noreferrer">Read all reviews on Google <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="contact-inner">
-            <div class="contact-info-col">
-                <div class="section-tag" style="color:var(--gold);">Get in Touch</div>
-                <h2>Ready to Enhance <span>Your Property?</span></h2>
-                <p>Fill out the form and we'll get back to you within one business day — usually the same day. Free, no-obligation estimates for all projects across Whatcom, Skagit, Snohomish, Island, and San Juan Counties.</p>
-                <div class="contact-detail">
-                    <div class="contact-detail-icon"><i class="fas fa-phone"></i></div>
-                    <div class="contact-detail-text">
-                        <span class="contact-detail-label">Call us</span>
-                        <a href="tel:3607399927" class="contact-detail-value">(360) 739-9927</a>
-                    </div>
-                </div>
-                <div class="contact-detail">
-                    <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
-                    <div class="contact-detail-text">
-                        <span class="contact-detail-label">Email</span>
-                        <a href="mailto:estimating@lmstriping.com" class="contact-detail-value">estimating@lmstriping.com</a>
-                    </div>
-                </div>
-                <div class="contact-detail">
-                    <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <div class="contact-detail-text">
-                        <span class="contact-detail-label">Based in</span>
-                        <span class="contact-detail-value">Lynden, WA — serving 5 counties</span>
-                    </div>
-                </div>
-                <div class="trust-badges">
-                    <div class="trust-badge"><i class="fas fa-shield-alt"></i> Licensed</div>
-                    <div class="trust-badge"><i class="fas fa-shield-alt"></i> Bonded</div>
-                    <div class="trust-badge"><i class="fas fa-shield-alt"></i> Insured</div>
-                    <div class="trust-badge"><i class="fas fa-star"></i> 5-Star Rated</div>
-                </div>
-            </div>
-
-            <div class="quote-form-card">
-                <h3>Request a Free Estimate</h3>
-                <p class="form-subtitle">No obligation. We'll review your project and get back to you fast.</p>
-                <form id="quoteForm" action="https://formspree.io/f/mpqyelgb" method="POST">
-                    <div class="form-row-2">
-                        <div class="form-field">
-                            <label for="first_name">First Name *</label>
-                            <input type="text" id="first_name" name="first_name" placeholder="Aaron" required>
-                        </div>
-                        <div class="form-field">
-                            <label for="last_name">Last Name *</label>
-                            <input type="text" id="last_name" name="last_name" placeholder="Smith" required>
-                        </div>
-                    </div>
-                    <div class="form-field">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" placeholder="you@company.com" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(360) 555-0100" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="property_name">Property / Company Name</label>
-                        <input type="text" id="property_name" name="property_name" placeholder="Acme Property Management">
-                    </div>
-                    <div class="form-field">
-                        <label for="address">Property Address</label>
-                        <input type="text" id="address" name="address" placeholder="123 Main St, Bellingham, WA 98225">
-                    </div>
-                    <div class="form-field">
-                        <label>Services Needed</label>
-                        <div class="services-check-grid">
-                            <label class="check-item"><input type="checkbox" name="services" value="Parking Lot Striping"> Parking Lot Striping</label>
-                            <label class="check-item"><input type="checkbox" name="services" value="ADA Compliance"> ADA Compliance</label>
-                            <label class="check-item"><input type="checkbox" name="services" value="Sports Courts"> Sports Courts</label>
-                            <label class="check-item"><input type="checkbox" name="services" value="Fire Lanes"> Fire Lanes</label>
-                            <label class="check-item"><input type="checkbox" name="services" value="Warehouse Markings"> Warehouse Markings</label>
-                            <label class="check-item"><input type="checkbox" name="services" value="Commercial Striping"> Commercial Striping</label>
-                        </div>
-                    </div>
-                    <div class="form-field">
-                        <label for="notes">Additional Notes</label>
-                        <textarea id="notes" name="notes" placeholder="Lot size, number of stalls, any special requirements..."></textarea>
-                    </div>
-                    <input type="text" name="_gotcha" style="display:none">
-                    <button type="submit" class="btn-submit-quote">
-                        <i class="fas fa-paper-plane"></i> Send My Estimate Request
-                    </button>
-                </form>
-                <div class="form-success" id="formSuccess">
-                    <div class="success-icon"><i class="fas fa-check" style="color:#1a1a1a;"></i></div>
-                    <h4>Request Received!</h4>
-                    <p>Thanks for reaching out. Aaron will review your project and be in touch within one business day — usually the same day.</p>
-                    <p style="margin-top:12px; font-size:0.85rem;">In a hurry? Call us at <a href="tel:3607399927" style="color:var(--gold-dark); font-weight:600;">(360) 739-9927</a></p>
-                </div>
-                <p class="form-note"><i class="fas fa-lock" style="font-size:0.7rem;"></i> Your information is private and never shared.</p>
             </div>
         </div>
     </section>
