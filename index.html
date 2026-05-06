@@ -22,10 +22,8 @@
     <meta name="author" content="LineMark Striping">
     <meta name="robots" content="index, follow">
 
-    <!-- FIX 1: canonical — non-www, no trailing slash inconsistency -->
     <link rel="canonical" href="https://lmstriping.com/">
 
-    <!-- FIX 2: OG tags — non-www, og:image → existing preloaded image -->
     <meta property="og:title" content="Parking Lot Striping Bellingham & Northwest Washington | LineMark Striping">
     <meta property="og:description" content="Professional parking lot striping and line marking across Whatcom, Skagit, Snohomish, Island & San Juan Counties. Free quotes in 24 hours.">
     <meta property="og:image" content="https://lmstriping.com/Parking-lot-striping-lynden.webp">
@@ -52,7 +50,6 @@
     <link rel="preload" href="Parking-lot-striping-lynden.webp" as="image" fetchpriority="high">
     <link rel="preload" href="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" as="image" fetchpriority="high">
 
-    <!-- FIX 3: BreadcrumbList schema — added, anchors site hierarchy -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -63,7 +60,6 @@
     }
     </script>
 
-    <!-- FIX 4: LocalBusiness schema — @id and all URLs changed to non-www -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -157,7 +153,6 @@
     }
     </script>
 
-    <!-- FIX 5: FAQPage — pricing range removed from answer, replaced with free quote CTA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -208,9 +203,6 @@
     </script>
 
     <style>
-        /* ═══════════════════════════════════════
-           CSS CUSTOM PROPERTIES
-        ═══════════════════════════════════════ */
         :root {
             --gold: #f4d03f;
             --gold-dark: #d4a800;
@@ -231,18 +223,12 @@
             --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* ═══════════════════════════════════════
-           BASE RESETS
-        ═══════════════════════════════════════ */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         body { font-family: var(--font-body); color: var(--dark); background: var(--white); -webkit-font-smoothing: antialiased; }
         img { max-width: 100%; display: block; }
         a { color: inherit; }
 
-        /* ═══════════════════════════════════════
-           NAVIGATION
-        ═══════════════════════════════════════ */
         .navbar {
             position: fixed;
             top: 0;
@@ -342,13 +328,9 @@
         }
         .dropdown-menu li a:hover { background: rgba(244,208,63,0.12); color: var(--gold); }
 
-        /* Hamburger */
         .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 10001; }
         .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); margin: 5px 0; transition: all 0.3s; border-radius: 2px; }
 
-        /* ═══════════════════════════════════════
-           HERO SLIDESHOW
-        ═══════════════════════════════════════ */
         #home.hero {
             position: relative;
             min-height: 100vh;
@@ -518,9 +500,6 @@
         }
         .hero-next:hover { background: rgba(255,255,255,0.2); }
 
-        /* ═══════════════════════════════════════
-           STATS STRIP
-        ═══════════════════════════════════════ */
         .stats-strip {
             background: var(--dark);
             border-top: 3px solid var(--gold);
@@ -556,9 +535,6 @@
             margin-top: 6px;
         }
 
-        /* ═══════════════════════════════════════
-           PHOTO STRIP
-        ═══════════════════════════════════════ */
         .photo-strip {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -574,9 +550,6 @@
         }
         .photo-strip div:hover img { transform: scale(1.06); }
 
-        /* ═══════════════════════════════════════
-           TOP INQUIRY FORM SECTION (below photo strip)
-        ═══════════════════════════════════════ */
         .top-inquiry-section {
             background: #111;
             padding: 80px 24px;
@@ -620,9 +593,6 @@
             flex-wrap: wrap;
         }
 
-        /* ═══════════════════════════════════════
-           TRUST STRIP
-        ═══════════════════════════════════════ */
         .trust-strip {
             background: var(--light);
             border-top: 1px solid var(--border);
@@ -650,9 +620,6 @@
         .trust-logo { height: 34px; width: auto; object-fit: contain; filter: grayscale(100%) opacity(0.55); transition: filter 0.3s; }
         .trust-logo:hover { filter: grayscale(0%) opacity(1); }
 
-        /* ═══════════════════════════════════════
-           SERVICES SECTION
-        ═══════════════════════════════════════ */
         .services-section { padding: 100px 24px; background: var(--white); }
         .section-tag {
             display: inline-flex;
@@ -785,9 +752,6 @@
             margin-bottom: 8px;
         }
 
-        /* ═══════════════════════════════════════
-           WHY US SECTION
-        ═══════════════════════════════════════ */
         .why-section { background: var(--dark); padding: 100px 24px; }
         .why-inner {
             max-width: 1200px;
@@ -825,9 +789,6 @@
         .why-item-body p { font-size: 0.87rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
         .why-divider { width: 1px; background: rgba(255,255,255,0.06); align-self: stretch; }
 
-        /* ═══════════════════════════════════════
-           ABOUT SECTION
-        ═══════════════════════════════════════ */
         .about-section { padding: 100px 24px; background: var(--white); }
         .about-inner {
             max-width: 1200px;
@@ -896,9 +857,6 @@
         .contact-card-label { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #999; }
         .contact-card-value { font-size: 0.97rem; font-weight: 600; color: var(--dark); }
 
-        /* ═══════════════════════════════════════
-           SERVICE AREAS SECTION
-        ═══════════════════════════════════════ */
         .areas-section { padding: 100px 24px; background: var(--light); }
         .areas-inner { max-width: 1200px; margin: 0 auto; }
         .areas-section .section-headline { margin-bottom: 8px; }
@@ -949,19 +907,39 @@
         .areas-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
 
         /* ═══════════════════════════════════════
-           GALLERY
+           GALLERY — EXPANDED 20-IMAGE LAYOUT
         ═══════════════════════════════════════ */
         .gallery-section { padding: 100px 24px; background: var(--white); }
-        .gallery-inner { max-width: 1200px; margin: 0 auto; }
+        .gallery-inner { max-width: 1300px; margin: 0 auto; }
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 240px);
+            grid-template-columns: repeat(4, 1fr);
             gap: 12px;
         }
-        .gallery-item { position: relative; overflow: hidden; border-radius: var(--radius); cursor: pointer; }
-        .gallery-item:first-child { grid-column: span 2; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius);
+            cursor: pointer;
+            aspect-ratio: 4 / 3;
+        }
+        /* Featured items span 2 columns/rows for visual variety */
+        .gallery-item.gallery-feature {
+            grid-column: span 2;
+            grid-row: span 2;
+            aspect-ratio: auto;
+        }
+        .gallery-item.gallery-wide {
+            grid-column: span 2;
+            aspect-ratio: 8 / 3;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            display: block;
+        }
         .gallery-item:hover img { transform: scale(1.06); }
         .gallery-overlay {
             position: absolute;
@@ -971,15 +949,37 @@
             transition: opacity var(--transition);
             display: flex;
             align-items: flex-end;
-            padding: 20px;
+            padding: 18px;
         }
         .gallery-item:hover .gallery-overlay { opacity: 1; }
-        .gallery-overlay-text h4 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--white); text-transform: uppercase; }
-        .gallery-overlay-text p { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 2px; }
+        .gallery-overlay-text h4 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 0.03em; }
+        .gallery-overlay-text p { font-size: 0.78rem; color: rgba(255,255,255,0.7); margin-top: 2px; }
+        .gallery-cta-row {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .gallery-cta-row a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--dark);
+            color: var(--white);
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background var(--transition), transform var(--transition);
+        }
+        .gallery-cta-row a:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: translateY(-2px);
+        }
 
-        /* ═══════════════════════════════════════
-           REVIEWS
-        ═══════════════════════════════════════ */
         .reviews-section { padding: 100px 24px; background: var(--dark); }
         .reviews-inner { max-width: 1200px; margin: 0 auto; }
         .reviews-section .section-tag { color: var(--gold); }
@@ -1031,9 +1031,6 @@
         }
         .reviews-cta a:hover { border-color: var(--gold); }
 
-        /* ═══════════════════════════════════════
-           CONTACT / FORM SECTION
-        ═══════════════════════════════════════ */
         #contact { background: #111; padding: 100px 24px; }
         .contact-inner {
             max-width: 1100px;
@@ -1141,9 +1138,6 @@
         .form-success h4 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; text-transform: uppercase; color: var(--dark); margin-bottom: 8px; }
         .form-success p { font-size: 0.88rem; color: #666; line-height: 1.6; }
 
-        /* ═══════════════════════════════════════
-           FOOTER
-        ═══════════════════════════════════════ */
         .footer { background: var(--black); color: var(--white); padding: 70px 24px 30px; border-top: 3px solid var(--gold); }
         .footer * { color: var(--white) !important; opacity: 1 !important; }
         .footer a { text-decoration: none; }
@@ -1187,14 +1181,8 @@
         }
         .footer-bottom p { font-size: 0.82rem; color: rgba(255,255,255,0.3) !important; }
 
-        /* ═══════════════════════════════════════
-           MOBILE STICKY CTA BAR
-        ═══════════════════════════════════════ */
         .mobile-cta-bar { display: none; }
 
-        /* ═══════════════════════════════════════
-           RESPONSIVE
-        ═══════════════════════════════════════ */
         @media (max-width: 1024px) {
             .services-grid { grid-template-columns: repeat(2, 1fr); }
             .counties-grid { grid-template-columns: repeat(3, 1fr); }
@@ -1206,6 +1194,9 @@
             .reviews-grid { grid-template-columns: 1fr 1fr; }
             .top-inquiry-inner { grid-template-columns: 1fr; gap: 40px; }
             .contact-details-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+            .gallery-item.gallery-feature { grid-column: span 2; grid-row: span 2; }
+            .gallery-item.gallery-wide { grid-column: span 3; aspect-ratio: 12 / 4; }
         }
         @media (max-width: 768px) {
             .tagline { display: none !important; }
@@ -1233,8 +1224,9 @@
             .top-inquiry-section { padding: 50px 20px; }
             .services-grid { grid-template-columns: 1fr; }
             .counties-grid { grid-template-columns: repeat(2, 1fr); }
-            .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
-            .gallery-item:first-child { grid-column: span 2; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+            .gallery-item.gallery-feature { grid-column: span 2; grid-row: span 1; aspect-ratio: 4 / 3; }
+            .gallery-item.gallery-wide { grid-column: span 2; aspect-ratio: 8 / 3; }
             .reviews-grid { grid-template-columns: 1fr; }
             .form-row-2 { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -1296,7 +1288,6 @@
                 </li>
                 <li><a href="#gallery" class="nav-link">Gallery</a></li>
                 <li class="nav-item dropdown">
-                    <!-- FIX 6: Standardized label to "Skagit County" to match city pages -->
                     <a href="#service-areas" class="nav-link dropdown-toggle">Service Areas <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="mount-vernon-parking-lot-striping.html">Skagit County</a></li>
@@ -1320,7 +1311,6 @@
             <div class="hero-slide active" style="background-image: url('Parking-lot-striping-lynden.webp');"></div>
             <div class="hero-slide" style="background-image: url('sj.avif');"></div>
             <div class="hero-slide" style="background-image: url('ADA.avif');"></div>
-            <!-- FIX 7: hero slide 4 — PNG replaced with webp version reference -->
             <div class="hero-slide" style="background-image: url('Warehouse-marking.png');"></div>
             <div class="hero-slide" style="background-image: url('IMG_4408.jpeg');"></div>
             <div class="hero-slide" style="background-image: url('multi-sport-court-photo.avif');"></div>
@@ -1373,17 +1363,13 @@
         </div>
     </div>
 
-    <!-- FIX 8: Photo strip — all 4 images swapped to webp/avif where .PNG/.jpg existed -->
     <div class="photo-strip">
-        <div><img src="IMG_4408" alt="Line striping project in Burlington WA" loading="lazy"></div>
+        <div><img src="IMG_4408.jpeg" alt="Commercial parking lot striping Northwest Washington" loading="lazy"></div>
         <div><img src="fire-lane-access.avif" alt="Fire lane access striping Northwest Washington" loading="lazy"></div>
         <div><img src="ADA-compliant-NWashington.avif" alt="ADA compliant parking lot striping Northwest Washington" loading="lazy"></div>
         <div><img src="basketball-court-photo.avif" alt="Basketball court line striping Washington" loading="lazy"></div>
     </div>
 
-    <!-- ═══════════════════════════════════════
-         TOP INQUIRY FORM — sits directly below the 4 photos
-    ═══════════════════════════════════════ -->
     <section id="contact" class="top-inquiry-section">
         <div class="top-inquiry-inner">
             <div class="top-inquiry-intro">
@@ -1662,37 +1648,113 @@
         </div>
     </section>
 
+    <!-- ═══════════════════════════════════════
+         GALLERY — 20 IMAGES FROM GITHUB
+    ═══════════════════════════════════════ -->
     <section id="gallery" class="gallery-section">
         <div class="gallery-inner">
             <div class="section-tag">Our Work</div>
             <h2 class="section-headline" style="margin-bottom:8px;">Recent Projects</h2>
             <p class="section-sub">From retail centers along Bellingham's Meridian corridor to industrial facilities in Ferndale to pickleball courts on Whidbey Island.</p>
-            <!-- FIX 9: Gallery images — PNGs and JPG replaced with avif/webp equivalents -->
+
             <div class="gallery-grid">
-                <div class="gallery-item">
+                <!-- Featured large tile -->
+                <div class="gallery-item gallery-feature">
                     <img src="IMG_4408.jpeg" alt="Commercial parking lot striping project Northwest Washington" loading="lazy">
-                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Commercial Parking Lot</h4><p>Professional striping for retail center</p></div></div>
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Commercial Parking Lot</h4><p>Fresh striping &amp; ADA layout</p></div></div>
+                </div>
+
+                <!-- Row 1 -->
+                <div class="gallery-item">
+                    <img src="line-striping-equipment.avif" alt="Professional line striping machine and truck" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Pro Equipment</h4><p>Truck &amp; rig setup</p></div></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="line-striping-equipment.avif" alt="Professional line striping machine used by LineMark Striping" loading="lazy">
-                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Professional Equipment</h4><p>Modern striping machinery</p></div></div>
+                    <img src="linestriping-burlington.avif" alt="Fresh parking lot line painting Burlington WA" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Burlington</h4><p>Fresh restripe</p></div></div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="gallery-item">
+                    <img src="ADA-compliant-NWashington.avif" alt="ADA compliant handicap parking space striping" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>ADA Compliance</h4><p>Van-accessible stalls</p></div></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="IMG_4408" alt="Fresh parking lot line painting Burlington WA" loading="lazy">
-                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Precision Line Work</h4><p>Accurate parking space marking</p></div></div>
+                    <img src="fire-lane-access.avif" alt="Fire lane access striping Northwest Washington" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Fire Lanes</h4><p>IFC-compliant access</p></div></div>
+                </div>
+
+                <!-- Row 3 — Sports courts -->
+                <div class="gallery-item">
+                    <img src="pickleball-court-photo.avif" alt="Pickleball court line striping Washington" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Pickleball Court</h4><p>Regulation lines</p></div></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="Warehouse-marking.png" alt="Industrial warehouse floor safety line marking Bellingham WA" loading="lazy">
-                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Industrial Project</h4><p>270 safety markings</p></div></div>
+                    <img src="tennis-court-photo.avif" alt="Tennis court line striping Northwest Washington" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Tennis Court</h4><p>Pro-grade striping</p></div></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="ADA-compliant-NWashington.avif" alt="ADA compliant handicap parking space striping Northwest Washington" loading="lazy">
-                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>ADA Compliance</h4><p>Handicap accessible striping</p></div></div>
+                    <img src="basketball-court-photo.avif" alt="Basketball court line striping Washington" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Basketball Court</h4><p>Full-court layout</p></div></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="pickleball-sports-court.avif" alt="Pickleball and sports court line striping Washington State" loading="lazy">
-                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Sports Courts</h4><p>Pickleball, tennis &amp; more</p></div></div>
+                    <img src="multi-sport-court-photo.avif" alt="Multi-sport court line striping Washington" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Multi-Sport Court</h4><p>Combined surfaces</p></div></div>
                 </div>
+
+                <!-- Row 4 — Mt. Vernon courts -->
+                <div class="gallery-item">
+                    <img src="mt-vernon-tennis-court.avif" alt="Mt Vernon tennis court striping Skagit County" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Mt. Vernon Tennis</h4><p>Skagit County</p></div></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="mt-vernon-basketball-court.avif" alt="Mt Vernon basketball court striping" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Mt. Vernon Hoops</h4><p>Basketball court</p></div></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="mt-vernon-multiuse-court.avif" alt="Mt Vernon multiuse court striping" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Mt. Vernon Multiuse</h4><p>Combined court</p></div></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="pickleballcourt-mt-vernon.avif" alt="Pickleball court Mt Vernon striping" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Pickleball — Mt. Vernon</h4><p>Fresh court lines</p></div></div>
+                </div>
+
+                <!-- Row 5 — Stencil & specialty work -->
+                <div class="gallery-item">
+                    <img src="Stencil work.avif" alt="Custom stencil pavement work Washington" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Stencil Work</h4><p>Custom pavement marking</p></div></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Stencil work 2.0.avif" alt="Custom stencil pavement work" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Stencil Work II</h4><p>Symbols &amp; markings</p></div></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Chevron.avif" alt="Chevron parking lot striping project" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Chevron</h4><p>Fuel station lot</p></div></div>
+                </div>
+
+                <!-- Row 6 — Branded retail clients -->
+                <div class="gallery-item">
+                    <img src="Starbucks.avif" alt="Starbucks parking lot striping project" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Starbucks</h4><p>Drive-thru lot</p></div></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Starbucks 2.avif" alt="Starbucks parking lot striping second location" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Starbucks #2</h4><p>Restripe project</p></div></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="bellingham-tennis-court.avif" alt="Bellingham tennis court line striping" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Bellingham Tennis</h4><p>Whatcom County</p></div></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="pickleballcourt-bellingham.avif" alt="Bellingham pickleball court striping" loading="lazy">
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Bellingham Pickleball</h4><p>Court conversion</p></div></div>
+                </div>
+            </div>
+
+            <div class="gallery-cta-row">
+                <a href="projects.html"><i class="fas fa-images"></i> View All Projects</a>
             </div>
         </div>
     </section>
