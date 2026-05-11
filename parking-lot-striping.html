@@ -11,10 +11,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ✅ IMPROVED: Expanded title covering all 5 counties, not just Bellingham -->h
+    <!-- ✅ IMPROVED: Expanded title covering all 5 counties, not just Bellingham -->
     <title>Parking Lot Striping Services Northwest Washington | LineMark Striping</title>
 
-    <!-- ✅ IMPROVED: Fuller meta description with all counties and trust signahls -->
+    <!-- ✅ IMPROVED: Fuller meta description with all counties and trust signals -->
     <meta name="description" content="Professional parking lot striping for commercial properties across Whatcom, Skagit, Snohomish, Island & San Juan Counties. ADA compliance, restriping, thermoplastic. Licensed & insured. Free quotes in 24hrs.">
 
     <!-- ✅ IMPROVED: Expanded keywords to cover all service counties -->
@@ -40,7 +40,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="preload" href="image4.jpg" as="image">
+    <!-- Preload the first hero slide for fast LCP -->
+    <link rel="preload" href="IMG_4392.jpeg" as="image" fetchpriority="high">
     <link rel="preload" href="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" as="image">
 
     <!-- ✅ FULLY REBUILT SCHEMA: LocalBusiness with @id, identifier, geo, openingHours,
@@ -187,6 +188,170 @@
     </script>
 
     <style>
+  /* ── Rotating Hero ── */
+  .service-hero {
+      position: relative;
+      min-height: 520px;
+      padding: 100px 20px 60px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .hero-slides-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+  }
+  .hero-slide-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+  }
+  .hero-slide-bg.active { opacity: 1; }
+  .hero-slide-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,10,10,0.78) 0%, rgba(10,10,10,0.55) 60%, rgba(10,10,10,0.4) 100%);
+  }
+  .service-hero .container {
+      position: relative;
+      z-index: 2;
+  }
+  .hero-dots-strip {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      gap: 7px;
+  }
+  .hero-dot-btn {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.35);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.3s, width 0.3s;
+  }
+  .hero-dot-btn.active {
+      background: #f4d03f;
+      width: 24px;
+      border-radius: 4px;
+  }
+
+  /* ── Inline Gallery (visible right under hero) ── */
+  .plot-gallery-section {
+      padding: 60px 20px 40px;
+      background: #fff;
+  }
+  .plot-gallery-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+  }
+  .plot-gallery-head {
+      text-align: center;
+      margin-bottom: 36px;
+  }
+  .plot-gallery-eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #d4a800;
+      margin-bottom: 10px;
+  }
+  .plot-gallery-eyebrow::before {
+      content: '— ';
+      color: #f4d03f;
+  }
+  .plot-gallery-head h2 {
+      font-size: 2.2em;
+      margin: 0 0 8px;
+      color: #1a1a1a;
+  }
+  .plot-gallery-head p {
+      font-size: 1rem;
+      color: #666;
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.6;
+  }
+  .plot-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+  }
+  .plot-gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      aspect-ratio: 4 / 3;
+      cursor: pointer;
+  }
+  .plot-gallery-item.feature {
+      grid-column: span 2;
+      grid-row: span 2;
+      aspect-ratio: auto;
+  }
+  .plot-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
+  }
+  .plot-gallery-item:hover img { transform: scale(1.06); }
+  .plot-gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,10,10,0.82) 0%, rgba(10,10,10,0.15) 55%, transparent 80%);
+      opacity: 0;
+      transition: opacity 0.22s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 16px;
+  }
+  .plot-gallery-item:hover .plot-gallery-overlay { opacity: 1; }
+  .plot-gallery-overlay h4 {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0 0 2px;
+      letter-spacing: 0.02em;
+  }
+  .plot-gallery-overlay p {
+      color: rgba(255,255,255,0.78);
+      font-size: 0.78rem;
+      margin: 0;
+  }
+  /* Always-visible caption strip on mobile (no hover) */
+  @media (hover: none) {
+      .plot-gallery-overlay {
+          opacity: 1;
+          background: linear-gradient(to top, rgba(10,10,10,0.78) 0%, transparent 50%);
+      }
+  }
+
+  @media (max-width: 1024px) {
+      .plot-gallery-grid { grid-template-columns: repeat(3, 1fr); }
+      .plot-gallery-item.feature { grid-column: span 2; grid-row: span 2; }
+  }
+  @media (max-width: 640px) {
+      .plot-gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .plot-gallery-item.feature { grid-column: span 2; grid-row: span 1; aspect-ratio: 4 / 3; }
+      .plot-gallery-head h2 { font-size: 1.7em; }
+  }
+
   /* ── Mobile Sticky CTA Bar ── */
   .mobile-cta-bar {
     display: none; /* hidden by default on all screens */
@@ -309,8 +474,18 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="service-hero" class="hero" style="background-image: url('IMG_4392.jpeg'); background-size: cover; background-position: center; padding: 100px 20px 60px;">
+    <!-- ✅ Hero Section — now with rotating background slideshow -->
+    <section id="service-hero" class="service-hero">
+        <div class="hero-slides-bg">
+            <div class="hero-slide-bg active" style="background-image: url('IMG_4392.jpeg');"></div>
+            <div class="hero-slide-bg" style="background-image: url('Parking-lot-striping-lynden.webp');"></div>
+            <div class="hero-slide-bg" style="background-image: url('parkinglot-painting.png');"></div>
+            <div class="hero-slide-bg" style="background-image: url('Starbucks.avif');"></div>
+            <div class="hero-slide-bg" style="background-image: url('Chevron.avif');"></div>
+            <div class="hero-slide-bg" style="background-image: url('ADA-compliant-NWashington.avif');"></div>
+            <div class="hero-slide-bg" style="background-image: url('Burlington-line-painting.jpg');"></div>
+        </div>
+
         <div class="container">
             <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto;">
                 <h1 style="font-size: 3em; margin-bottom: 20px; color: #fff;">Professional Parking Lot Striping Services</h1>
@@ -323,19 +498,127 @@
                 </div>
             </div>
         </div>
+
+        <div class="hero-dots-strip" id="heroDotsStrip">
+            <button class="hero-dot-btn active" data-index="0" aria-label="Slide 1"></button>
+            <button class="hero-dot-btn" data-index="1" aria-label="Slide 2"></button>
+            <button class="hero-dot-btn" data-index="2" aria-label="Slide 3"></button>
+            <button class="hero-dot-btn" data-index="3" aria-label="Slide 4"></button>
+            <button class="hero-dot-btn" data-index="4" aria-label="Slide 5"></button>
+            <button class="hero-dot-btn" data-index="5" aria-label="Slide 6"></button>
+            <button class="hero-dot-btn" data-index="6" aria-label="Slide 7"></button>
+        </div>
     </section>
 
-    
-<!-- Work Photo Strip -->
-<div style="display:flex;height:160px;border-top:3px solid #f4d03f;">
-  <div style="flex:1;overflow:hidden;"><img src="IMG_4392.jpeg" alt="Parking lot striping Bellingham WA" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
-  <div style="flex:1;overflow:hidden;"><img src="Parking-lot-striping-lynden.webp" alt="Parking lot striping Lynden WA" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
-  <div style="flex:1;overflow:hidden;"><img src="Starbucks.avif" alt="Commercial parking lot striping" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
-  <div style="flex:1;overflow:hidden;"><img src="parkinglot-painting.png" alt="Parking lot line painting" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
-  <div style="flex:1;overflow:hidden;"><img src="Burlington-line-painting.jpg" alt="Line painting Burlington WA" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
-</div>
-<!-- Service Overview Section -->
-    <section id="service-overview" style="padding: 80px 20px; background: #fff;">
+    <!-- ✅ NEW: Parking Lot Striping Gallery — 13 images, visible right after hero -->
+    <section id="plot-gallery" class="plot-gallery-section">
+        <div class="plot-gallery-inner">
+            <div class="plot-gallery-head">
+                <div class="plot-gallery-eyebrow">Recent Parking Lot Projects</div>
+                <h2>Our Work Across Northwest Washington</h2>
+                <p>Fresh stripes, ADA layouts, fire lanes, and stencil work from retail centers, fuel stations, and commercial properties throughout Whatcom, Skagit, and Snohomish Counties.</p>
+            </div>
+
+            <div class="plot-gallery-grid">
+                <!-- Featured large tile -->
+                <div class="plot-gallery-item feature">
+                    <img src="IMG_4408.jpeg" alt="Commercial parking lot striping project Northwest Washington" loading="lazy">
+                    <div class="plot-gallery-overlay">
+                        <div><h4>Commercial Parking Lot</h4><p>Fresh striping &amp; ADA layout</p></div>
+                    </div>
+                </div>
+
+                <!-- Row 1 -->
+                <div class="plot-gallery-item">
+                    <img src="Starbucks.avif" alt="Starbucks parking lot striping project Bellingham" loading="lazy">
+                    <div class="plot-gallery-overlay">
+                        <div><h4>Starbucks</h4><p>Drive-thru lot restripe</p></div>
+                    </div>
+                </div>
+                <div class="plot-gallery-item">
+                    <img src="Chevron.avif" alt="Chevron fuel station parking lot striping" loading="lazy">
+                    <div class="plot-gallery-overlay">
+                        <div><h4>Chevron</h4><p>Fuel station lot</p></div>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="plot-gallery-item">
+                    <img src="ADA-compliant-NWashington.avif" alt="ADA compliant accessible parking space striping" loading="lazy">
+                    <div class="plot-gallery-overlay">
+                        <div><h4>ADA Compliance</h4><p>Van-accessible stalls</p></div>
+                    </div>
+                </div>
+                <div class="plot-gallery-item">
+                    <img src="fire-lane-access.avif" alt="Fire lane access striping Northwest Washington" loading="lazy">
+                    <div class="plot-gallery-overlay">
+                        <div><h4>Fire Lanes</h4><p>IFC-compliant access</p></div>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="plot-gallery-item">
+                    <img src="Parking-lot-striping-lynden.webp" alt="Parking lot striping Lynden Whatcom County" loading="lazy">
+                    <div class="plot-gallery-overlay">
+                        <div><h4>Lynden</h4><p>Whatcom County lot</p></div>
+                    </div>
+                </div>
+                <div class="plot-gallery-item">
+                    <img src="linestriping-burlington.avif" alt="Fresh line striping Burlington WA Skagit County" loading="lazy">
+                    <div class="plot-gallery-overlay">
+                        <div><h4>Burlington</h4><p>Fresh restripe</p></div>
+                    </div>
+                </div>
+                <div class="plot-gallery-item">
+                    <img src="Burlington-line-painting.jpg" alt="Line painting Burlington Skagit County WA" loading="lazy">
+                    <div class="plot-gallery-overlay">
+                        <div><h4>Burlington II</h4><p>Line painting</p></div>
+                    </div>
+                </div>
+                <div class="plot-gallery-item">
+                    <img src="Stencil work.avif" alt="Custom stencil pavement marking work Washington" loading="lazy">
+                    <div class="plot-gallery-overlay">
+                        <div><h4>Stencil Work</h4><p>Custom pavement marking</p></div>
+                    </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="plot-gallery-item">
+                    <img src="Stencil work 2.0.avif" alt="Pavement stencil symbols and markings" loading="lazy">
+                    <div class="plot-gallery-overlay">
+                        <div><h4>Stencil Work II</h4><p>Symbols &amp; markings</p></div>
+                    </div>
+                </div>
+                <div class="plot-gallery-item">
+                    <img src="Starbucks 2.avif" alt="Starbucks parking lot restriping second location" loading="lazy">
+                    <div class="plot-gallery-overlay">
+                        <div><h4>Starbucks #2</h4><p>Restripe project</p></div>
+                    </div>
+                </div>
+                <div class="plot-gallery-item">
+                    <img src="parkinglot-painting.png" alt="Commercial parking lot painting Northwest Washington" loading="lazy">
+                    <div class="plot-gallery-overlay">
+                        <div><h4>Commercial Repaint</h4><p>Full-lot refresh</p></div>
+                    </div>
+                </div>
+                <div class="plot-gallery-item">
+                    <img src="line-striping-equipment.avif" alt="Professional line striping truck and equipment" loading="lazy">
+                    <div class="plot-gallery-overlay">
+                        <div><h4>Pro Equipment</h4><p>Truck &amp; rig setup</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 36px;">
+                <a href="projects.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 13px 28px; background: #1a1a1a; color: #fff; text-decoration: none; border-radius: 4px; font-weight: 700; font-size: 0.92em; letter-spacing: 0.04em; text-transform: uppercase;">
+                    <i class="fas fa-images"></i> View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview Section -->
+    <section id="service-overview" style="padding: 80px 20px; background: #f9f9f9;">
         <div class="container">
             <div class="section-header" style="text-align: center; margin-bottom: 60px;">
                 <h2 style="font-size: 2.5em; margin-bottom: 15px;">Expert Parking Lot Striping Services</h2>
@@ -343,19 +626,19 @@
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
-                <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f;">
+                <div style="background: #fff; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f;">
                     <div style="font-size: 2.5em; color: #f4d03f; margin-bottom: 15px;"><i class="fas fa-building"></i></div>
                     <h3 style="margin-bottom: 15px;">Commercial Properties</h3>
                     <p style="color: #666;">Professional striping for office buildings, business parks, and corporate facilities.</p>
                 </div>
 
-                <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f;">
+                <div style="background: #fff; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f;">
                     <div style="font-size: 2.5em; color: #f4d03f; margin-bottom: 15px;"><i class="fas fa-shopping-cart"></i></div>
                     <h3 style="margin-bottom: 15px;">Retail Centers</h3>
                     <p style="color: #666;">Clear parking space markings for shopping centers, malls, and retail complexes.</p>
                 </div>
 
-                <div style="background: #f9f9f9; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f;">
+                <div style="background: #fff; padding: 30px; border-radius: 10px; border-left: 4px solid #f4d03f;">
                     <div style="font-size: 2.5em; color: #f4d03f; margin-bottom: 15px;"><i class="fas fa-hospital"></i></div>
                     <h3 style="margin-bottom: 15px;">Healthcare Facilities</h3>
                     <p style="color: #666;">ADA-compliant striping for hospitals, clinics, and medical centers.</p>
@@ -365,7 +648,7 @@
     </section>
 
     <!-- Detailed Service Description -->
-    <section id="service-details" style="padding: 80px 20px; background: #f9f9f9;">
+    <section id="service-details" style="padding: 80px 20px; background: #fff;">
         <div class="container" style="max-width: 1100px; margin: 0 auto;">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
                 <div>
@@ -408,22 +691,22 @@
     <div class="container" style="max-width: 1000px; margin: 0 auto;">
         <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.3em; color: #1a1a1a;">Our Zero-Hassle Striping Process</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-            
+
             <div style="text-align: center; padding: 20px;">
                 <div style="background: #f4d03f; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.5em; font-weight: bold; color: #1a1a1a;">1</div>
-                <h3 style="margin-bottom: 10px;">Assess & Schedule</h3>
+                <h3 style="margin-bottom: 10px;">Assess &amp; Schedule</h3>
                 <p style="color: #666; line-height: 1.6;">We evaluate your lot, verify ADA compliance, and schedule a striping time (including night shifts) that minimizes tenant disruption.</p>
             </div>
 
             <div style="text-align: center; padding: 20px;">
                 <div style="background: #f4d03f; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.5em; font-weight: bold; color: #1a1a1a;">2</div>
-                <h3 style="margin-bottom: 10px;">Prep & Clean</h3>
+                <h3 style="margin-bottom: 10px;">Prep &amp; Clean</h3>
                 <p style="color: #666; line-height: 1.6;">We barricade the active zones, thoroughly sweep the asphalt, and wire-brush debris to ensure maximum paint adhesion.</p>
             </div>
 
             <div style="text-align: center; padding: 20px;">
                 <div style="background: #f4d03f; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.5em; font-weight: bold; color: #1a1a1a;">3</div>
-                <h3 style="margin-bottom: 10px;">Stripe & Cure</h3>
+                <h3 style="margin-bottom: 10px;">Stripe &amp; Cure</h3>
                 <p style="color: #666; line-height: 1.6;">Using high-solids, rapid-dry traffic paint, we lay crisp lines that cure in minutes, allowing you to reopen your lot immediately.</p>
             </div>
 
@@ -554,12 +837,41 @@
             </p>
 
             <div style="border-top: 1px solid #333; padding-top: 30px; text-align: center;">
-                <p style="color: #888; margin: 0;">&copy; 2025 LineMark Striping. All rights reserved.</p>
+                <p style="color: #888; margin: 0;">&copy; 2026 LineMark Striping. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js" defer></script>
+
+    <!-- ✅ Hero rotation script -->
+    <script>
+    (function() {
+        var slides = document.querySelectorAll('.hero-slide-bg');
+        var dots = document.querySelectorAll('.hero-dot-btn');
+        if (!slides.length) return;
+        var current = 0, timer;
+        function goTo(index) {
+            slides[current].classList.remove('active');
+            if (dots[current]) dots[current].classList.remove('active');
+            current = (index + slides.length) % slides.length;
+            slides[current].classList.add('active');
+            if (dots[current]) dots[current].classList.add('active');
+        }
+        function startTimer() {
+            clearInterval(timer);
+            timer = setInterval(function() { goTo(current + 1); }, 5000);
+        }
+        dots.forEach(function(dot) {
+            dot.addEventListener('click', function() {
+                goTo(parseInt(this.dataset.index));
+                startTimer();
+            });
+        });
+        startTimer();
+    })();
+    </script>
+
     <div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
   <a href="tel:360-739-9927" class="cta-call" aria-label="Call LineMark Striping">
     <i class="fas fa-phone"></i> Call Us
