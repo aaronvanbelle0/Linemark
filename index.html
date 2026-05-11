@@ -17,7 +17,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parking Lot Striping Bellingham & Northwest Washington | LineMark Striping</title>
+    <title>Parking Lot Striping Bellingham & NW Washington | LineMark Striping</title>
     <meta name="description" content="Professional parking lot striping, ADA compliance, and warehouse floor marking across Northwest Washington. Serving Whatcom, Skagit, Snohomish, Island & San Juan Counties. Licensed, insured. Free quotes in 24hrs.">
     <meta name="author" content="LineMark Striping">
     <meta name="robots" content="index, follow">
@@ -398,6 +398,17 @@
             text-transform: uppercase;
         }
         .hero-headline .accent { color: var(--gold); }
+        .hero-eyebrow-tag {
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.55);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+            padding-left: 16px;
+            border-left: 2px solid var(--gold);
+        }
         .hero-sub {
             font-size: clamp(1rem, 1.8vw, 1.2rem);
             color: rgba(255,255,255,0.75);
@@ -1092,9 +1103,9 @@
         .quote-form-card { background: var(--white); border-radius: 12px; padding: 40px; box-shadow: 0 30px 70px rgba(0,0,0,0.5); }
         .quote-form-card h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; text-transform: uppercase; color: var(--black); letter-spacing: 0.02em; margin-bottom: 4px; }
         .form-subtitle { font-size: 0.83rem; color: #999; margin-bottom: 28px; }
-        .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
         .form-field { margin-bottom: 16px; }
         .form-field label { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #777; margin-bottom: 6px; }
+        .form-field label .optional { color: #b8b8b8; font-weight: 500; text-transform: none; letter-spacing: 0; margin-left: 4px; }
         .form-field input, .form-field select, .form-field textarea {
             width: 100%; padding: 12px 14px;
             border: 1.5px solid #e5e5e5; border-radius: 6px;
@@ -1105,22 +1116,8 @@
         .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
             border-color: var(--gold); background: var(--white); box-shadow: 0 0 0 3px rgba(244,208,63,0.15);
         }
-        .form-field select {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-            background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer;
-        }
-        .form-field textarea { resize: vertical; min-height: 80px; }
+        .form-field textarea { resize: vertical; min-height: 90px; }
         .form-field input::placeholder, .form-field textarea::placeholder { color: #c0c0c0; }
-        .services-check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
-        .check-item {
-            display: flex; align-items: center; gap: 8px; cursor: pointer;
-            font-size: 0.83rem; color: #555; padding: 9px 10px;
-            border: 1.5px solid #e8e8e8; border-radius: 6px;
-            transition: border-color 0.15s, background 0.15s; user-select: none;
-        }
-        .check-item:hover { border-color: var(--gold); background: #fffdf0; }
-        .check-item.checked { border-color: var(--gold); background: #fffdf0; }
-        .check-item input[type="checkbox"] { width: 15px; height: 15px; min-width: 15px; accent-color: var(--gold-dark); cursor: pointer; border: none; padding: 0; background: none; box-shadow: none; }
         .btn-submit-quote {
             width: 100%; background: var(--gold); color: var(--black);
             font-family: var(--font-body); font-weight: 700; font-size: 0.95rem;
@@ -1228,7 +1225,6 @@
             .gallery-item.gallery-feature { grid-column: span 2; grid-row: span 1; aspect-ratio: 4 / 3; }
             .gallery-item.gallery-wide { grid-column: span 2; aspect-ratio: 8 / 3; }
             .reviews-grid { grid-template-columns: 1fr; }
-            .form-row-2 { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; gap: 36px; }
             body { padding-bottom: 60px; }
             .mobile-cta-bar {
@@ -1329,17 +1325,18 @@
         </div>
 
         <div class="hero-content-wrap">
-            <div class="hero-eyebrow"><span>Licensed &middot; Insured &middot; Bonded &middot; #LINEMS*750QM</span></div>
+            <div class="hero-eyebrow"><span><i class="fas fa-star" style="font-size:0.65rem; margin-right:4px;"></i> 5.0 on Google &middot; 12 reviews &middot; Licensed &amp; Insured</span></div>
             <h1 class="hero-headline">
-                Northwest<br>
-                Washington's<br>
-                <span class="accent">Line Striping</span><br>
-                Specialists
+                Parking Lot<br>
+                <span class="accent">Striping</span> in<br>
+                Bellingham &amp;<br>
+                NW Washington
             </h1>
+            <p class="hero-eyebrow-tag">Northwest Washington's Line Striping Specialists</p>
             <p class="hero-sub">
-                Professional <a href="parking-lot-striping.html">parking lot striping</a>, ADA compliance, fire lanes,
-                and <a href="everett-reflective-beads-visibility.html">reflective markings</a> across 5 counties.
-                Free quotes within 24 hours.
+                Free quote in 24 hours. Licensed, bonded, and insured.
+                <a href="parking-lot-striping.html">Parking lot striping</a>, ADA compliance, fire lanes,
+                and <a href="everett-reflective-beads-visibility.html">reflective markings</a> across Whatcom, Skagit, Snohomish, Island &amp; San Juan Counties.
             </p>
             <div class="hero-actions">
                 <a href="#contact" class="btn-hero-primary"><i class="fas fa-paper-plane"></i> Get a Free Quote</a>
@@ -1375,7 +1372,7 @@
             <div class="top-inquiry-intro">
                 <div class="section-tag">Get in Touch</div>
                 <h2>Ready to Enhance <span>Your Property?</span></h2>
-                <p>Fill out the form and we'll get back to you within one business day — usually the same day. Free, no-obligation estimates for projects across Whatcom, Skagit, Snohomish, Island, and San Juan Counties.</p>
+                <p>Tell us about your project — we'll respond within one business day, usually the same day. Free, no-obligation estimates for projects across Whatcom, Skagit, Snohomish, Island, and San Juan Counties.</p>
 
                 <div class="top-inquiry-quick">
                     <div class="contact-detail">
@@ -1410,49 +1407,29 @@
             </div>
 
             <div class="quote-form-card">
-                <h3>Request a Free Estimate</h3>
-                <p class="form-subtitle">No obligation. We'll review your project and get back to you fast.</p>
+                <h3>Get Your Free Quote</h3>
+                <p class="form-subtitle">Takes 30 seconds. We'll respond within one business day.</p>
                 <form id="quoteForm" action="https://formspree.io/f/mpqyelgb" method="POST">
-                    <div class="form-row-2">
-                        <div class="form-field">
-                            <label for="first_name">First Name *</label>
-                            <input type="text" id="first_name" name="first_name" placeholder="Aaron" required>
-                        </div>
-                        <div class="form-field">
-                            <label for="last_name">Last Name *</label>
-                            <input type="text" id="last_name" name="last_name" placeholder="Smith" required>
-                        </div>
+                    <input type="hidden" name="_subject" value="New Quote Request — lmstriping.com">
+                    <div class="form-field">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Aaron Smith" autocomplete="name" required>
                     </div>
                     <div class="form-field">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(360) 555-0100" autocomplete="tel" required>
                     </div>
                     <div class="form-field">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(360) 555-0100" required>
+                        <label for="address">Property Address *</label>
+                        <input type="text" id="address" name="property_address" placeholder="Street, City — e.g. 1234 Main St, Bellingham" autocomplete="street-address" required>
                     </div>
                     <div class="form-field">
-                        <label for="property_name">Property / Company Name</label>
-                        <input type="text" id="property_name" name="property_name" placeholder="Acme Property Management">
+                        <label for="project">What do you need? *</label>
+                        <textarea id="project" name="project_details" placeholder="e.g. Restripe ~80-stall lot, ADA spaces, fire lane refresh" required></textarea>
                     </div>
                     <div class="form-field">
-                        <label for="address">Property Address</label>
-                        <input type="text" id="address" name="address" placeholder="123 Main St, Bellingham, WA 98225">
-                    </div>
-                    <div class="form-field">
-                        <label>Services Needed</label>
-                        <div class="services-check-grid">
-                            <label class="check-item"><input type="checkbox" name="services" value="Parking Lot Striping"> Parking Lot Striping</label>
-                            <label class="check-item"><input type="checkbox" name="services" value="ADA Compliance"> ADA Compliance</label>
-                            <label class="check-item"><input type="checkbox" name="services" value="Sports Courts"> Sports Courts</label>
-                            <label class="check-item"><input type="checkbox" name="services" value="Fire Lanes"> Fire Lanes</label>
-                            <label class="check-item"><input type="checkbox" name="services" value="Warehouse Markings"> Warehouse Markings</label>
-                            <label class="check-item"><input type="checkbox" name="services" value="Commercial Striping"> Commercial Striping</label>
-                        </div>
-                    </div>
-                    <div class="form-field">
-                        <label for="notes">Additional Notes</label>
-                        <textarea id="notes" name="notes" placeholder="Lot size, number of stalls, any special requirements..."></textarea>
+                        <label for="email">Email <span class="optional">(optional — for written estimate)</span></label>
+                        <input type="email" id="email" name="email" placeholder="you@company.com" autocomplete="email">
                     </div>
                     <input type="text" name="_gotcha" style="display:none">
                     <button type="submit" class="btn-submit-quote">
@@ -1887,20 +1864,12 @@
     var form = document.getElementById('quoteForm');
     var success = document.getElementById('formSuccess');
     if (!form) return;
-    form.querySelectorAll('.check-item input[type="checkbox"]').forEach(function(cb) {
-        cb.addEventListener('change', function() {
-            this.closest('.check-item').classList.toggle('checked', this.checked);
-        });
-    });
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         var btn = form.querySelector('.btn-submit-quote');
         btn.disabled = true;
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        var checked = Array.from(form.querySelectorAll('input[name="services"]:checked')).map(function(c) { return c.value; });
         var data = new FormData(form);
-        data.delete('services');
-        if (checked.length) data.append('services', checked.join(', '));
         fetch(form.action, {
             method: 'POST',
             body: data,
