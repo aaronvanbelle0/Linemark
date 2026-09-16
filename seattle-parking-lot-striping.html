@@ -14,7 +14,7 @@
 
     <title>Parking Lot Striping Seattle WA | LineMark</title>
 
-    <meta name="description" content="Professional parking lot striping in Seattle WA. Serving SoDo, Ballard, Northgate, Aurora Ave &amp; First Hill. ADA compliance, fire lanes &amp; warehouse marking. Call (206) 486-5029.">
+    <meta name="description" content="Parking lot striping in Seattle WA for SoDo, Ballard, Northgate &amp; First Hill. ADA compliance, fire lanes &amp; warehouse marking. Call (206) 486-5029.">
 
     <meta name="keywords" content="parking lot striping Seattle WA, line marking Seattle, pavement marking Seattle, SoDo warehouse striping, Ballard parking lot striping, Northgate parking lot striping, Aurora Avenue striping Seattle, ADA compliance Seattle parking, fire lane marking Seattle, First Hill medical parking lot striping, Georgetown industrial line marking, night striping Seattle WA, King County parking lot striping">
     <meta name="author" content="LineMark Striping">
@@ -35,11 +35,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- SEATTLE SCHEMA: Separate @id from the Lynden listing so the Seattle GBP has its own entity.
-         Telephone matches the Seattle Google Business Profile (206) 486-5029.
-         Street address intentionally omitted (service-area business). If the Seattle GBP shows a
-         public street address, add streetAddress + postalCode below so it matches the profile exactly.
-         TODO once the Seattle GBP is live: add its share link to "hasMap" and "sameAs". -->
+    <!-- SEATTLE SCHEMA: separate @id from the Lynden listing so the Seattle GBP has its own entity.
+         Telephone, hours and areaServed match the Seattle Google Business Profile.
+         Street address intentionally omitted (service-area business). -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -51,8 +49,10 @@
       "url": "https://lmstriping.com/seattle-parking-lot-striping.html",
       "logo": "https://lmstriping.com/16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png",
       "image": "https://lmstriping.com/parkinglot-painting.png",
-      "description": "Professional parking lot striping and line marking services for retail centers, warehouses, medical offices, and apartment communities in Seattle WA and north King County. Rain-ready traffic coatings, ADA compliance, fire lane marking, and night striping for SoDo, Georgetown, Ballard, Northgate, Aurora Avenue, and First Hill. Licensed, insured, and bonded.",
+      "description": "Professional parking lot striping and line marking services for retail centers, warehouses, medical offices, and apartment communities in Seattle WA and the greater Seattle area, including Bellevue, Kent, Renton, and Tacoma. Rain-ready traffic coatings, ADA compliance, fire lane marking, and night striping for SoDo, Georgetown, Ballard, Northgate, Aurora Avenue, and First Hill. Licensed, insured, and bonded.",
       "telephone": "+1-206-486-5029",
+      "hasMap": "https://maps.google.com/maps?cid=17428024810520533404",
+      "sameAs": ["https://maps.google.com/maps?cid=17428024810520533404"],
       "email": "estimating@lmstriping.com",
 
       "parentOrganization": { "@id": "https://lmstriping.com/#business" },
@@ -78,8 +78,14 @@
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "06:30",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
           "opens": "07:00",
-          "closes": "18:00"
+          "closes": "19:00"
         }
       ],
       "priceRange": "$$",
@@ -91,6 +97,22 @@
         { "@type": "City", "name": "Lake Forest Park", "sameAs": "https://en.wikipedia.org/wiki/Lake_Forest_Park,_Washington" },
         { "@type": "City", "name": "Edmonds", "sameAs": "https://en.wikipedia.org/wiki/Edmonds,_Washington" },
         { "@type": "City", "name": "Lynnwood", "sameAs": "https://en.wikipedia.org/wiki/Lynnwood,_Washington" },
+        { "@type": "City", "name": "Bellevue", "sameAs": "https://en.wikipedia.org/wiki/Bellevue,_Washington" },
+        { "@type": "City", "name": "Kent", "sameAs": "https://en.wikipedia.org/wiki/Kent,_Washington" },
+        { "@type": "City", "name": "Renton", "sameAs": "https://en.wikipedia.org/wiki/Renton,_Washington" },
+        { "@type": "City", "name": "Tacoma", "sameAs": "https://en.wikipedia.org/wiki/Tacoma,_Washington" },
+        { "@type": "City", "name": "Kirkland", "sameAs": "https://en.wikipedia.org/wiki/Kirkland,_Washington" },
+        { "@type": "City", "name": "Redmond", "sameAs": "https://en.wikipedia.org/wiki/Redmond,_Washington" },
+        { "@type": "City", "name": "Bothell", "sameAs": "https://en.wikipedia.org/wiki/Bothell,_Washington" },
+        { "@type": "City", "name": "Mountlake Terrace", "sameAs": "https://en.wikipedia.org/wiki/Mountlake_Terrace,_Washington" },
+        { "@type": "City", "name": "Sammamish", "sameAs": "https://en.wikipedia.org/wiki/Sammamish,_Washington" },
+        { "@type": "City", "name": "Issaquah", "sameAs": "https://en.wikipedia.org/wiki/Issaquah,_Washington" },
+        { "@type": "City", "name": "Mercer Island", "sameAs": "https://en.wikipedia.org/wiki/Mercer_Island,_Washington" },
+        { "@type": "City", "name": "Tukwila", "sameAs": "https://en.wikipedia.org/wiki/Tukwila,_Washington" },
+        { "@type": "City", "name": "Burien", "sameAs": "https://en.wikipedia.org/wiki/Burien,_Washington" },
+        { "@type": "City", "name": "SeaTac", "sameAs": "https://en.wikipedia.org/wiki/SeaTac,_Washington" },
+        { "@type": "City", "name": "Auburn", "sameAs": "https://en.wikipedia.org/wiki/Auburn,_Washington" },
+        { "@type": "City", "name": "Federal Way", "sameAs": "https://en.wikipedia.org/wiki/Federal_Way,_Washington" },
         { "@type": "Neighborhood", "name": "SoDo" },
         { "@type": "Neighborhood", "name": "Georgetown" },
         { "@type": "Neighborhood", "name": "Ballard" },
@@ -112,26 +134,11 @@
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fire Lane Marking Seattle", "description": "Red curb painting and NO PARKING FIRE LANE stencils to keep emergency access clear at Seattle commercial and multifamily properties" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Night Striping Seattle", "description": "After-hours parking lot striping for Seattle businesses that can't close their lot during the day" } }
         ]
-      },
-
-      "review": [
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "author": { "@type": "Person", "name": "Local Customer" },
-          "reviewBody": "Wonderful experience with great customer service. Timely quoting and quick communication for their availability. They were friendly and professional. Would recommend!"
-        },
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "author": { "@type": "Person", "name": "Property Manager" },
-          "reviewBody": "Nothing to say except five stars! Professional, quick, quality."
-        }
-      ]
+      }
     }
     </script>
 
-    <!-- FAQPage Schema matching all 3 on-page FAQ questions -->
+    <!-- FAQPage Schema matching all 6 on-page FAQ questions -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -159,6 +166,30 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Absolutely. LineMark handles forklift lanes, pedestrian walkways, loading dock markings, and truck court striping for industrial and distribution properties in SoDo, Georgetown, and along the Duwamish."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long until cars can park on new lines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In good weather, lines are typically dry in 30 to 60 minutes. We keep traffic off fresh paint until it's ready, then reopen the lot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should a Seattle parking lot be restriped?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most commercial lots need restriping every 2 to 3 years. Busy entrances, delivery areas, and shaded, damp spots where moss grows can wear faster."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What paint do you use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We use undiluted Sherwin-Williams PROMAR traffic marking paint for our parking lot line work, applied to a clean, dry surface for the best bond."
           }
         }
       ]
@@ -318,12 +349,83 @@
         </div>
     </section>
 
+    <!-- What Seattle Lots Are Up Against -->
+    <section style="padding: 70px 20px; background: #f9f9f9;">
+        <div class="container" style="max-width: 1100px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 40px;">What Seattle Lots Are Up Against</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                <div style="background: #fff; padding: 28px; border-radius: 8px; border-top: 4px solid #f4d03f;">
+                    <h3 style="margin-top: 0;">Rain, Moss &amp; Wet Pavement</h3>
+                    <p style="line-height: 1.7;">Months of rain keep lots damp, and moss and algae creep over faded lines in shaded corners. Worn markings are hardest to see on wet, dark pavement, which is exactly when drivers need them most.</p>
+                </div>
+                <div style="background: #fff; padding: 28px; border-radius: 8px; border-top: 4px solid #f4d03f;">
+                    <h3 style="margin-top: 0;">Tight Lots &amp; Constant Turnover</h3>
+                    <p style="line-height: 1.7;">Seattle lots are small and busy. Delivery vans, rideshare pickups, and short-term parking wear down stalls, arrows, and crosswalks faster than a typical suburban lot.</p>
+                </div>
+                <div style="background: #fff; padding: 28px; border-radius: 8px; border-top: 4px solid #f4d03f;">
+                    <h3 style="margin-top: 0;">Compliance You Can't Let Slide</h3>
+                    <p style="line-height: 1.7;">Faded <a href="ada-compliance.html" style="color: #333; text-decoration: underline;">ADA stalls</a>, access aisles, and <a href="fire-lanes.html" style="color: #333; text-decoration: underline;">fire lanes</a> are more than cosmetic. Missing or unreadable markings can leave a property out of ADA and fire code compliance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Work Near Seattle -->
+    <section style="padding: 70px 20px; background: #fff;">
+        <div class="container" style="max-width: 900px; margin: 0 auto;">
+            <h2 style="color: #1a1a1a; border-left: 5px solid #f4d03f; padding-left: 15px;">Recent Work: Full Lot Restripe in Tukwila</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-top: 20px;">
+                In July 2026 we restriped the entire parking lot at an office building in <strong>Tukwila</strong>, just south of Seattle. The job covered every existing stall, the ADA-accessible spaces and their cross-hatched access aisles, and the fire lanes, all repainted over the original layout with undiluted Sherwin-Williams PROMAR traffic marking paint. The lot went from faded and hard to read to crisp, compliant markings in a single day.
+            </p>
+        </div>
+    </section>
+
+    <!-- How a Seattle Striping Job Works -->
+    <section style="padding: 70px 20px; background: #1a1a1a; color: white;">
+        <div class="container" style="max-width: 1100px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 40px;">How a Seattle Striping Job Works</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px;">
+                <div style="background: #2d2d2d; padding: 26px; border-radius: 8px;">
+                    <h4 style="color: #f4d03f; margin-top: 0;">1. Quote</h4>
+                    <p>Send photos or an address, or we walk the lot. You get a clear written quote that notes any layout changes, ADA updates, or added stencils.</p>
+                </div>
+                <div style="background: #2d2d2d; padding: 26px; border-radius: 8px;">
+                    <h4 style="color: #f4d03f; margin-top: 0;">2. Schedule</h4>
+                    <p>We book a dry-weather window, and can work early mornings or after hours so your business stays open.</p>
+                </div>
+                <div style="background: #2d2d2d; padding: 26px; border-radius: 8px;">
+                    <h4 style="color: #f4d03f; margin-top: 0;">3. Prep</h4>
+                    <p>The lot needs to be clear of vehicles, with about 3 feet of space around every line. Paint bonds best to a clean, dry surface, and we can quote sweeping or pressure washing if the lot needs it.</p>
+                </div>
+                <div style="background: #2d2d2d; padding: 26px; border-radius: 8px;">
+                    <h4 style="color: #f4d03f; margin-top: 0;">4. Stripe &amp; Reopen</h4>
+                    <p>We repaint the lines and keep traffic off until they're dry, typically 30 to 60 minutes in good weather.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Greater Seattle Area -->
+    <section style="padding: 70px 20px; background: #fff;">
+        <div class="container" style="max-width: 1100px; margin: 0 auto; text-align: center;">
+            <h2>Serving the Greater Seattle Area</h2>
+            <p style="font-size: 1.05rem; line-height: 1.8; max-width: 800px; margin: 16px auto 32px;">The same crew and the same standards across King County and into Pierce County. See our local pages for more on each area.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <a href="bellevue-parking-lot-striping.html" style="display: block; background: #f9f9f9; padding: 22px; border-radius: 8px; color: #1a1a1a; text-decoration: none; border: 1px solid #eee;"><strong>Bellevue</strong><br><span style="color: #666; font-size: 0.92rem;">Office parks, retail &amp; medical</span></a>
+                <a href="kent-parking-lot-striping.html" style="display: block; background: #f9f9f9; padding: 22px; border-radius: 8px; color: #1a1a1a; text-decoration: none; border: 1px solid #eee;"><strong>Kent</strong><br><span style="color: #666; font-size: 0.92rem;">Warehouses &amp; truck courts</span></a>
+                <a href="renton-parking-lot-striping.html" style="display: block; background: #f9f9f9; padding: 22px; border-radius: 8px; color: #1a1a1a; text-decoration: none; border: 1px solid #eee;"><strong>Renton</strong><br><span style="color: #666; font-size: 0.92rem;">Retail, medical &amp; apartments</span></a>
+                <a href="tacoma-parking-lot-striping.html" style="display: block; background: #f9f9f9; padding: 22px; border-radius: 8px; color: #1a1a1a; text-decoration: none; border: 1px solid #eee;"><strong>Tacoma</strong><br><span style="color: #666; font-size: 0.92rem;">Port, industrial &amp; hospitals</span></a>
+            </div>
+            <p style="font-size: 0.98rem; line-height: 1.8; margin-top: 28px; color: #444;">We also serve Shoreline, <a href="edmonds-parking-lot-striping.html" style="color: #333; text-decoration: underline;">Edmonds</a>, <a href="lynnwood-parking-lot-striping.html" style="color: #333; text-decoration: underline;">Lynnwood</a>, Mountlake Terrace, Bothell, Kirkland, Redmond, Sammamish, Issaquah, Mercer Island, Tukwila, Burien, SeaTac, Auburn, and Federal Way.</p>
+        </div>
+    </section>
+
     <!-- Local Map -->
     <section style="padding: 80px 20px;">
         <div class="container" style="max-width: 1200px; margin: 0 auto;">
             <div style="text-align: center; margin-bottom: 50px;">
-                <h2>Serving Seattle &amp; North King County</h2>
-                <p>From SoDo to the north city limits and beyond. Serving Seattle (98101, 98103, 98107, 98108, 98119, 98125, 98133, 98134), Shoreline (98155), and Lake Forest Park.</p>
+                <h2>Serving Seattle &amp; the Greater Seattle Area</h2>
+                <p>From SoDo to the north city limits, across the Eastside, and south to Tacoma. Serving Seattle (98101, 98103, 98107, 98108, 98119, 98125, 98133, 98134), Shoreline (98155), and Lake Forest Park.</p>
             </div>
             <div class="map-container" style="width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                 <iframe
@@ -348,6 +450,15 @@
 
                 <h4 style="margin-bottom: 10px;">Can you mark warehouse floors and truck courts in SoDo and Georgetown?</h4>
                 <p style="margin-bottom: 20px;">Absolutely. We handle forklift lanes, pedestrian walkways, loading dock markings, and truck court striping, plus <a href="fire-lanes.html" style="color: #333; text-decoration: underline;">fire lane markings</a> to keep emergency access clear.</p>
+
+                <h4 style="margin-bottom: 10px;">How long until cars can park on new lines?</h4>
+                <p style="margin-bottom: 20px;">In good weather, lines are typically dry in 30 to 60 minutes. We keep traffic off fresh paint until it&#x27;s ready, then reopen the lot.</p>
+
+                <h4 style="margin-bottom: 10px;">How often should a Seattle parking lot be restriped?</h4>
+                <p style="margin-bottom: 20px;">Most commercial lots need restriping every 2 to 3 years. Busy entrances, delivery areas, and shaded, damp spots where moss grows can wear faster.</p>
+
+                <h4 style="margin-bottom: 10px;">What paint do you use?</h4>
+                <p style="margin-bottom: 20px;">We use undiluted Sherwin-Williams PROMAR traffic marking paint for our parking lot line work, applied to a clean, dry surface for the best bond.</p>
             </div>
 
             <div style="margin-top: 40px; padding: 20px; background: #fff; border-radius: 8px; text-align: center; border: 1px solid #eee;">
@@ -361,6 +472,10 @@
                 </p>
                 <p style="margin: 0; font-size: 0.9rem; color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Nearby Areas</p>
                 <p style="margin: 8px 0 0; font-size: 0.92rem;">
+                    <a href="bellevue-parking-lot-striping.html" style="color: #333; text-decoration: underline; margin: 0 8px;">Bellevue</a> |
+                    <a href="kent-parking-lot-striping.html" style="color: #333; text-decoration: underline; margin: 0 8px;">Kent</a> |
+                    <a href="renton-parking-lot-striping.html" style="color: #333; text-decoration: underline; margin: 0 8px;">Renton</a> |
+                    <a href="tacoma-parking-lot-striping.html" style="color: #333; text-decoration: underline; margin: 0 8px;">Tacoma</a> |
                     <a href="edmonds-parking-lot-striping.html" style="color: #333; text-decoration: underline; margin: 0 8px;">Edmonds</a> |
                     <a href="lynnwood-parking-lot-striping.html" style="color: #333; text-decoration: underline; margin: 0 8px;">Lynnwood</a> |
                     <a href="everett-parking-lot-striping.html" style="color: #333; text-decoration: underline; margin: 0 8px;">Everett</a> |
@@ -389,7 +504,7 @@
             Professional parking lot striping and line marking services in Seattle and across King, Snohomish, Skagit, Whatcom, Island, and San Juan Counties, Washington.
         </p>
         <p style="margin-bottom: 15px; font-size: 0.78rem; color: #444; letter-spacing: 0.04em;">
-            Serving: Seattle (98101, 98103, 98107, 98108, 98119, 98125, 98133, 98134) &middot; Shoreline (98155) &middot; Lake Forest Park &middot; Edmonds (98020) &middot; Lynnwood (98036)
+            Serving: Seattle (98101, 98103, 98107, 98108, 98119, 98125, 98133, 98134) &middot; Shoreline (98155) &middot; Lake Forest Park &middot; Edmonds (98020) &middot; Lynnwood (98036) &middot; Bellevue (98004) &middot; Kent (98032) &middot; Renton (98057) &middot; Tacoma (98402)
         </p>
         <p style="color: #888;">&copy; 2026 LineMark Striping. All rights reserved. | Lic. #LINEMS*750QM</p>
         <p style="margin-top: 10px;"><a href="parking-lot-striping.html" style="color: #f4d03f; text-decoration: none;">← Back to Parking Lot Striping Services</a></p>
