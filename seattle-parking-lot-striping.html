@@ -493,6 +493,43 @@
 
         .mobile-cta-bar { display: none; }
 
+        /* ---------- NW Washington callout (top of hero) ---------- */
+        .region-callout {
+            display: inline-flex; align-items: center; gap: 16px;
+            max-width: 580px; margin-bottom: 28px;
+            padding: 14px 20px 14px 14px;
+            background: rgba(17,17,17,0.82);
+            border: 1.5px solid var(--gold);
+            border-left-width: 6px;
+            border-radius: 8px;
+            text-decoration: none; color: var(--white);
+            transition: background var(--transition), transform var(--transition);
+        }
+        .region-callout:hover { background: rgba(244,208,63,0.14); transform: translateY(-2px); }
+        .region-callout-icon {
+            width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%;
+            background: var(--gold); color: var(--black);
+            display: flex; align-items: center; justify-content: center; font-size: 1.05rem;
+        }
+        .region-callout-text { display: flex; flex-direction: column; gap: 3px; }
+        .region-callout-title {
+            font-family: var(--font-display); font-size: 1.35rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.05; color: var(--white);
+        }
+        .region-callout-sub { font-size: 0.86rem; color: rgba(255,255,255,0.78); line-height: 1.45; }
+        .region-callout-link { font-weight: 700; color: var(--gold); white-space: nowrap; }
+        .region-callout-link i { font-size: 0.72rem; margin-left: 4px; transition: transform var(--transition); }
+        .region-callout:hover .region-callout-link i { transform: translateX(3px); }
+        @media (max-width: 768px) {
+            .region-callout { display: flex; gap: 12px; padding: 12px 14px 12px 12px; margin-bottom: 22px; }
+            .region-callout-icon { width: 38px; height: 38px; font-size: 0.95rem; }
+            .region-callout-title { font-size: 1.15rem; }
+            .region-callout-sub { font-size: 0.8rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .region-callout, .region-callout-link i { transition: none; }
+        }
+
         /* ---------- Responsive (same breakpoints as homepage) ---------- */
         @media (max-width: 1024px) {
             .services-grid { grid-template-columns: repeat(2, 1fr); }
@@ -599,6 +636,7 @@
                         <li class="menu-divider" role="presentation"></li>
                         <li><a href="snohomish-county-parking-lot-striping.html">Snohomish County</a></li>
                         <li><a href="whatcom-county-parking-lot-striping.html">Whatcom County</a></li>
+                        <li><a href="index.html">Northwest Washington</a></li>
                         <li><a href="index.html#service-areas">All Service Areas</a></li>
                     </ul>
                 </li>
@@ -634,6 +672,13 @@
             <nav class="hero-crumbs" aria-label="Breadcrumb">
                 <a href="index.html">Home</a><span aria-hidden="true">/</span><a href="parking-lot-striping.html">Parking Lot Striping</a><span aria-hidden="true">/</span>Seattle
             </nav>
+            <a href="index.html" class="region-callout" onclick="gtag('event','nw_callout_click',{'event_category':'navigation','event_label':'seattle_hero'})">
+                <span class="region-callout-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                <span class="region-callout-text">
+                    <span class="region-callout-title">Also Serving Northwest Washington</span>
+                    <span class="region-callout-sub">Bellingham, Lynden, Mount Vernon, Everett &amp; the San Juans &middot; <span class="region-callout-link">See NW Washington services<i class="fas fa-arrow-right" aria-hidden="true"></i></span></span>
+                </span>
+            </a>
             <div class="hero-eyebrow"><span>Seattle &amp; King County &middot; Licensed &amp; Insured</span></div>
             <h1 class="hero-headline">
                 Parking Lot<br>
