@@ -159,7 +159,7 @@
           "name": "What areas does LineMark Striping serve?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "LineMark Striping serves Whatcom County, Skagit County, Snohomish County, Island County, and San Juan County in Northwest Washingtonand including Bellingham, Lynden, Ferndale, Blaine, Mount Vernon, Burlington, Everett, Oak Harbor, and surrounding communities."
+            "text": "LineMark Striping serves Whatcom County, Skagit County, Snohomish County, Island County, and San Juan County in Northwest Washington, including Bellingham, Lynden, Ferndale, Blaine, Mount Vernon, Burlington, Everett, Oak Harbor, and surrounding communities."
           }
         },
         {
@@ -913,9 +913,7 @@
         .areas-image-wrap { border-radius: 12px; overflow: hidden; height: 280px; }
         .areas-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* âââââââââââââââââââââââââââââââââââââââ
-           GALLERYand EXPANDED 20-IMAGE LAYOUT
-        âââââââââââââââââââââââââââââââââââââââ */
+        /* GALLERY: expanded 20-image layout */
         .gallery-section { padding: 100px 24px; background: var(--white); }
         .gallery-inner { max-width: 1300px; margin: 0 auto; }
         .gallery-grid {
@@ -1191,6 +1189,41 @@
             .gallery-item.gallery-feature { grid-column: span 2; grid-row: span 2; }
             .gallery-item.gallery-wide { grid-column: span 3; aspect-ratio: 12 / 4; }
         }
+        /* ---------- Seattle callout (top of hero) ---------- */
+        .seattle-callout {
+            display: inline-flex; align-items: center; gap: 16px;
+            max-width: 560px; margin-bottom: 28px;
+            padding: 14px 20px 14px 14px;
+            background: rgba(17,17,17,0.82);
+            border: 1.5px solid var(--gold);
+            border-left-width: 6px;
+            border-radius: 8px;
+            text-decoration: none; color: var(--white);
+            transition: background var(--transition), transform var(--transition);
+        }
+        .seattle-callout:hover { background: rgba(244,208,63,0.14); transform: translateY(-2px); }
+        .seattle-callout:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+        .seattle-callout-icon {
+            width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%;
+            background: var(--gold); color: var(--black);
+            display: flex; align-items: center; justify-content: center; font-size: 1.05rem;
+        }
+        .seattle-callout-text { display: flex; flex-direction: column; gap: 3px; }
+        .seattle-callout-title {
+            font-family: var(--font-display); font-size: 1.35rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.05; color: var(--white);
+        }
+        .seattle-callout-sub { font-size: 0.86rem; color: rgba(255,255,255,0.78); line-height: 1.45; }
+        .seattle-callout-link { font-weight: 700; color: var(--gold); white-space: nowrap; }
+        .seattle-callout-link i { font-size: 0.72rem; margin-left: 4px; transition: transform var(--transition); }
+        .seattle-callout:hover .seattle-callout-link i { transform: translateX(3px); }
+        @media (max-width: 768px) {
+            .seattle-callout { display: flex; gap: 12px; padding: 12px 14px 12px 12px; margin-bottom: 22px; }
+            .seattle-callout-icon { width: 38px; height: 38px; font-size: 0.95rem; }
+            .seattle-callout-title { font-size: 1.15rem; }
+            .seattle-callout-sub { font-size: 0.8rem; }
+        }
+
         @media (max-width: 768px) {
             .tagline { display: none !important; }
             .hamburger { display: flex !important; flex-direction: column; justify-content: center; }
@@ -1253,7 +1286,7 @@
             <div class="nav-logo">
                 <a href="#home">
                     <div class="logo-container">
-                        <img src="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" alt="LineMark Striping Logoand Parking Lot Striping Northwest Washington" class="company-logo" width="192" height="192" loading="lazy" decoding="async">
+                        <img src="16ef4fd4-d333-48e9-aafc-f9af1d79f1b0.png" alt="LineMark Striping logo" class="company-logo" width="192" height="192" loading="lazy" decoding="async">
                         <div class="logo-text">
                             <h2>LineMark Striping</h2>
                             <span class="tagline">Professional Service. Professional Results.</span>
@@ -1289,6 +1322,7 @@
                         <li><a href="snohomish-county-parking-lot-striping.html">Snohomish County</a></li>
                         <li><a href="san-juan-county-parking-lot-striping.html">San Juan County</a></li>
                         <li><a href="island-county-parking-lot-striping.html">Island County</a></li>
+                        <li><a href="seattle-parking-lot-striping.html">Seattle &amp; King County</a></li>
                     </ul>
                 </li>
                 <li><a href="resources.html" class="nav-link">Resources</a></li>
@@ -1323,6 +1357,13 @@
         </div>
 
         <div class="hero-content-wrap">
+            <a href="seattle-parking-lot-striping.html" class="seattle-callout" onclick="gtag('event','seattle_callout_click',{'event_category':'navigation','event_label':'homepage_hero'})">
+                <span class="seattle-callout-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                <span class="seattle-callout-text">
+                    <span class="seattle-callout-title">Now Serving Seattle &amp; King County</span>
+                    <span class="seattle-callout-sub">Seattle, Bellevue, Kent, Renton &amp; Tacoma &middot; <span class="seattle-callout-link">See Seattle services<i class="fas fa-arrow-right" aria-hidden="true"></i></span></span>
+                </span>
+            </a>
             <div class="hero-eyebrow"><span><i class="fas fa-star" style="font-size:0.65rem; margin-right:4px;"></i> 5.0 on Google &middot; 19 reviews &middot; Licensed &amp; Insured</span></div>
             <h1 class="hero-headline">
                 Parking Lot<br>
@@ -1351,7 +1392,7 @@
     <div class="stats-strip">
         <div class="stats-inner">
             <div class="stat-item"><div class="stat-number">5</div><div class="stat-label">Counties Served</div></div>
-            <div class="stat-item"><div class="stat-number">5â</div><div class="stat-label">Google Rating</div></div>
+            <div class="stat-item"><div class="stat-number">5.0</div><div class="stat-label">Google Rating</div></div>
             <div class="stat-item"><div class="stat-number">24hr</div><div class="stat-label">Quote Turnaround</div></div>
             <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">Licensed &amp; Insured</div></div>
         </div>
@@ -1369,7 +1410,7 @@
             <div class="top-inquiry-intro">
                 <div class="section-tag">Get in Touch</div>
                 <h2>Ready to Enhance <span>Your Property?</span></h2>
-                <p>Tell us about your projectand we'll respond within one business day, usually the same day. Free, no-obligation estimates for projects across Whatcom, Skagit, Snohomish, Island, and San Juan Counties.</p>
+                <p>Tell us about your project and we'll respond within one business day, usually the same day. Free, no-obligation estimates for projects across Whatcom, Skagit, Snohomish, Island, and San Juan Counties.</p>
 
                 <div class="top-inquiry-quick">
                     <div class="contact-detail">
@@ -1407,7 +1448,7 @@
                 <h3>Get Your Free Quote</h3>
                 <p class="form-subtitle">Takes 30 seconds. We'll respond within one business day.</p>
                 <form id="quoteForm" action="https://formspree.io/f/mpqyelgb" method="POST">
-                    <input type="hidden" name="_subject" value="New Quote Requestand lmstriping.com">
+                    <input type="hidden" name="_subject" value="New Quote Request - lmstriping.com">
                     <div class="form-field">
                         <label for="name">Name *</label>
                         <input type="text" id="name" name="name" placeholder="Aaron Smith" autocomplete="name" required>
@@ -1418,14 +1459,14 @@
                     </div>
                     <div class="form-field">
                         <label for="address">Property Address *</label>
-                        <input type="text" id="address" name="property_address" placeholder="Street, Cityand e.g. 1234 Main St, Bellingham" autocomplete="street-address" required>
+                        <input type="text" id="address" name="property_address" placeholder="e.g. 1234 Main St, Bellingham" autocomplete="street-address" required>
                     </div>
                     <div class="form-field">
                         <label for="project">What do you need? *</label>
                         <textarea id="project" name="project_details" placeholder="e.g. Restripe ~80-stall lot, ADA spaces, fire lane refresh" required></textarea>
                     </div>
                     <div class="form-field">
-                        <label for="email">Email <span class="optional">(optionaland for written estimate)</span></label>
+                        <label for="email">Email <span class="optional">(optional, for a written estimate)</span></label>
                         <input type="email" id="email" name="email" placeholder="you@company.com" autocomplete="email">
                     </div>
                     <input type="text" name="_gotcha" style="display:none">
@@ -1436,7 +1477,7 @@
                 <div class="form-success" id="formSuccess">
                     <div class="success-icon"><i class="fas fa-check" style="color:#1a1a1a;"></i></div>
                     <h4>Request Received!</h4>
-                    <p>Thanks for reaching out. Aaron will review your project and be in touch within one business dayand usually the same day.</p>
+                    <p>Thanks for reaching out. Aaron will review your project and be in touch within one business day, usually the same day.</p>
                     <p style="margin-top:12px; font-size:0.85rem;">In a hurry? Call us at <a onclick="gtag('event','phone_call_click',{'event_category':'lead','event_label':'phone_click'})" href="tel:3607399927" style="color:var(--gold-dark); font-weight:600;">(360) 739-9927</a></p>
                 </div>
                 <p class="form-note"><i class="fas fa-lock" style="font-size:0.7rem;"></i> Your information is private and never shared.</p>
@@ -1448,8 +1489,8 @@
         <div class="trust-container">
             <p class="trust-text">Trusted by locals &amp; powered by industry leaders</p>
             <div class="logo-grid">
-                <img src="logo-sherwin.png" alt="Sherwin Williamsand Paint supplier for LineMark Striping" class="trust-logo" width="900" height="483" loading="lazy" decoding="async">
-                <img src="logo-graco.png" alt="Gracoand Professional striping equipment used by LineMark" class="trust-logo" width="880" height="235" loading="lazy" decoding="async">
+                <img src="logo-sherwin.png" alt="Sherwin-Williams, paint supplier for LineMark Striping" class="trust-logo" width="900" height="483" loading="lazy" decoding="async">
+                <img src="logo-graco.png" alt="Graco, professional striping equipment used by LineMark" class="trust-logo" width="880" height="235" loading="lazy" decoding="async">
                 <img src="logo-licensed.jpg" alt="Licensed Bonded Insured Contractor Washington State" class="trust-logo" width="360" height="360" loading="lazy" decoding="async">
             </div>
         </div>
@@ -1473,11 +1514,11 @@
                     <h3>Commercial Striping</h3>
                     <p>Comprehensive striping services for commercial and industrial facilities of all sizes across 5 counties.</p>
                     <span class="card-arrow">Learn more <i class="fas fa-arrow-right"></i></span>
-                
+                </a>
                 <a href="sealcoating.html" class="service-card">
                     <div class="service-icon-wrap"><i class="fas fa-road"></i></div>
                     <h3>Sealcoating</h3>
-                    <p>Protect your asphalt from PNW rain and freeze-thaw cycles. Sealcoat and restripe in one visit — maximum protection, minimum disruption.</p>
+                    <p>Protect your asphalt from PNW rain and freeze-thaw cycles. Sealcoat and restripe in one visit &mdash; maximum protection, minimum disruption.</p>
                     <span class="card-arrow">Learn more <i class="fas fa-arrow-right"></i></span>
                 </a>
                 <a href="ada-compliance.html" class="service-card">
@@ -1507,7 +1548,7 @@
             </div>
 
             <div class="seo-content-block">
-                <h2>Professional Line Striping &amp; Parking Lot Marking Servicesand Washington State</h2>
+                <h2>Professional Line Striping &amp; Parking Lot Marking Services in Washington State</h2>
                 <p>LineMark specializes in professional parking lot striping, line painting, and pavement marking across Washington. From Bellingham to Everett to Skagit, we deliver high-quality striping solutions that enhance safety and property value.</p>
                 <h2>Fast, Reliable Parking Lot Striping Quotes for All WA Counties</h2>
                 <p>Get quotes for parking lot striping, fire lane markings, ADA compliance, and commercial striping. Our experienced crews work throughout Snohomish, Whatcom, Skagit, Island, San Juan, and surrounding counties with rapid turnaround times.</p>
@@ -1524,7 +1565,7 @@
             <div class="why-left">
                 <div class="section-tag">Why LineMark</div>
                 <h2 class="section-headline" style="color:var(--white); margin-bottom:20px;">The Dedicated<br>Striping Specialist</h2>
-                <p class="section-sub" style="color:rgba(255,255,255,0.5); margin-bottom:0;">Unlike asphalt companies that offer striping as a side service, striping is all we doand and that focus shows in every project.</p>
+                <p class="section-sub" style="color:rgba(255,255,255,0.5); margin-bottom:0;">Unlike asphalt companies that offer striping as a side service, striping is our core business, and that focus shows in every project.</p>
             </div>
             <div class="why-divider"></div>
             <div class="why-list">
@@ -1532,21 +1573,21 @@
                     <div class="why-num">01</div>
                     <div class="why-item-body">
                         <h4>Striping Is Our Specialty</h4>
-                        <p>We don't do asphalt or paving. We specialize in line striping and sealcoating. We do one thingand line stripingand and we do it at a level generalist contractors can't match.</p>
+                        <p>We don't do asphalt or paving. We specialize in line striping and sealcoating, and we do it at a level generalist contractors can't match.</p>
                     </div>
                 </div>
                 <div class="why-item">
                     <div class="why-num">02</div>
                     <div class="why-item-body">
                         <h4>Pacific Northwest Materials</h4>
-                        <p>We use commercial-grade traffic paint selected for <a href="thermoplastic-vs-paint-whatcom.html" style="color:rgba(255,255,255,0.6); text-decoration:underline;">Whatcom County's rain and freeze-thaw cycles</a>and not standard-issue paint that fades in one PNW winter.</p>
+                        <p>We use commercial-grade traffic paint selected for <a href="thermoplastic-vs-paint-whatcom.html" style="color:rgba(255,255,255,0.6); text-decoration:underline;">Whatcom County's rain and freeze-thaw cycles</a>, not standard-issue paint that fades in one PNW winter.</p>
                     </div>
                 </div>
                 <div class="why-item">
                     <div class="why-num">03</div>
                     <div class="why-item-body">
                         <h4>Code-Compliant Every Time</h4>
-                        <p>From <a href="ada-compliance.html" style="color:rgba(255,255,255,0.6); text-decoration:underline;">ADA stall ratios</a> to <a href="rcw-4619050-signage-ferndale.html" style="color:rgba(255,255,255,0.6); text-decoration:underline;">RCW signage requirements</a> to IFC fire lane standardsand we know what inspectors look for.</p>
+                        <p>From <a href="ada-compliance.html" style="color:rgba(255,255,255,0.6); text-decoration:underline;">ADA stall ratios</a> to <a href="rcw-4619050-signage-ferndale.html" style="color:rgba(255,255,255,0.6); text-decoration:underline;">RCW signage requirements</a> to IFC fire lane standards, we know what inspectors look for.</p>
                     </div>
                 </div>
                 <div class="why-item">
@@ -1583,7 +1624,7 @@
             </div>
             <div class="about-body">
                 <p>LineMark Striping is a <a href="restriping-frequency-pnw-mount-vernon.html">professional line striping company</a> based in Lynden, Washington. We specialize in <a href="parking-lot-striping.html">parking lot striping</a> and <a href="commercial-striping.html">commercial line painting services</a> throughout Northwest Washington.</p>
-                <p>At LineMark Striping, we don't just paint linesand we engineer parking solutions. We specialize in <a href="thermoplastic-vs-paint-whatcom.html">commercial line painting materials</a> that withstand the specific rain and freeze-thaw cycles of the Pacific Northwest. From <a href="rcw-4619050-signage-ferndale.html">ADA signage compliance</a> in Ferndale to <a href="parking-layout-efficiency-skagit.html">large-scale layouts</a> in Mount Vernon, we help property managers reduce liability and <a href="curb-appeal-roi-bellingham.html">improve curb appeal</a>.</p>
+                <p>At LineMark Striping, we don't just paint lines. We engineer parking solutions. We specialize in <a href="thermoplastic-vs-paint-whatcom.html">commercial line painting materials</a> that withstand the specific rain and freeze-thaw cycles of the Pacific Northwest. From <a href="rcw-4619050-signage-ferndale.html">ADA signage compliance</a> in Ferndale to <a href="parking-layout-efficiency-skagit.html">large-scale layouts</a> in Mount Vernon, we help property managers reduce liability and <a href="curb-appeal-roi-bellingham.html">improve curb appeal</a>.</p>
                 <p>We take pride in delivering clear, accurate, and professional results on every job. Using modern equipment and high-quality materials, we ensure each project is completed with care, durability, and attention to detail. Whether you manage a single retail location or a multi-property portfolio across Whatcom and Skagit counties, we offer the same level of precision and professionalism on every project.</p>
                 <p style="margin-top:24px;"><strong><i class="fas fa-check-circle" style="color: #d4a800; margin-right:6px;"></i>Licensed, Insured, and Bonded. Washington Contractor License #LINEMS*750QM.</strong></p>
             </div>
@@ -1633,9 +1674,7 @@
         </div>
     </section>
 
-    <!-- âââââââââââââââââââââââââââââââââââââââ
-         GALLERYand 20 IMAGES FROM GITHUB
-    âââââââââââââââââââââââââââââââââââââââ -->
+    <!-- GALLERY: 20 images -->
 <section id="gallery" class="gallery-section">
         <div class="gallery-inner">
             <div class="section-tag">Our Work</div>
@@ -1669,7 +1708,7 @@
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Fire Lanes</h4><p>IFC-compliant access</p></div></div>
                 </div>
 
-                <!-- Row 3 — Sports courts -->
+                <!-- Row 3 &mdash; Sports courts -->
                 <div class="gallery-item">
                     <img src="pickleball-court-photo.avif" alt="Pickleball court line striping Washington" loading="lazy" width="2264" height="1536">
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Pickleball Court</h4><p>Regulation lines</p></div></div>
@@ -1687,7 +1726,7 @@
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Multi-Sport Court</h4><p>Combined surfaces</p></div></div>
                 </div>
 
-                <!-- Row 4 — Mt. Vernon courts -->
+                <!-- Row 4 &mdash; Mt. Vernon courts -->
                 <div class="gallery-item">
                     <img src="mt-vernon-tennis-court.avif" alt="Mt Vernon tennis court striping Skagit County" loading="lazy" width="2628" height="1536">
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Mt. Vernon Tennis</h4><p>Skagit County</p></div></div>
@@ -1702,10 +1741,10 @@
                 </div>
                 <div class="gallery-item">
                     <img src="pickleballcourt-mt-vernon.avif" alt="Pickleball court Mt Vernon striping" loading="lazy" width="3024" height="4032">
-                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Pickleball — Mt. Vernon</h4><p>Fresh court lines</p></div></div>
+                    <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Pickleball &mdash; Mt. Vernon</h4><p>Fresh court lines</p></div></div>
                 </div>
 
-                <!-- Row 5 — Stencil & specialty work -->
+                <!-- Row 5 &mdash; Stencil & specialty work -->
                 <div class="gallery-item">
                     <img src="Stencil-work.avif" alt="Custom stencil pavement work Washington" loading="lazy" width="3024" height="4032">
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Stencil Work</h4><p>Custom pavement marking</p></div></div>
@@ -1719,7 +1758,7 @@
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Chevron</h4><p>Fuel station lot</p></div></div>
                 </div>
 
-                <!-- Row 6 — Branded retail clients -->
+                <!-- Row 6 &mdash; Branded retail clients -->
                 <div class="gallery-item">
                     <img src="Starbucks.avif" alt="Starbucks parking lot striping project" loading="lazy" width="4032" height="3024">
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Starbucks</h4><p>Drive-thru lot</p></div></div>
@@ -1737,7 +1776,7 @@
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Bellingham Pickleball</h4><p>Court conversion</p></div></div>
                 </div>
 
-                <!-- Row 7 — New city/location images -->
+                <!-- Row 7 &mdash; New city/location images -->
                 <div class="gallery-item">
                     <img src="Stripingbellingham.jpg" alt="Parking lot striping Bellingham Washington" loading="lazy" width="243" height="244">
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Bellingham</h4><p>Commercial lot striping</p></div></div>
@@ -1755,7 +1794,7 @@
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Anacortes</h4><p>Fresh restripe</p></div></div>
                 </div>
 
-                <!-- Row 8 — Anacortes + Blaine + Birch Bay + Gas Station -->
+                <!-- Row 8 &mdash; Anacortes + Blaine + Birch Bay + Gas Station -->
                 <div class="gallery-item">
                     <img src="stripinganacortes1.jpg" alt="Line striping Anacortes WA commercial property" loading="lazy" width="243" height="304">
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Anacortes II</h4><p>Commercial lot</p></div></div>
@@ -1773,7 +1812,7 @@
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Birch Bay</h4><p>Coastal property</p></div></div>
                 </div>
 
-                <!-- Row 9 — Jack in the Box + Gas Station -->
+                <!-- Row 9 &mdash; Jack in the Box + Gas Station -->
                 <div class="gallery-item gallery-wide">
                     <img src="stripingjackinthebox.jpg" alt="Jack in the Box parking lot striping Northwest Washington" loading="lazy" width="243" height="174">
                     <div class="gallery-overlay"><div class="gallery-overlay-text"><h4>Jack in the Box</h4><p>Drive-thru &amp; lot striping</p></div></div>
@@ -1807,7 +1846,7 @@
                 <div class="review-card">
                     <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     <p class="review-text">"LineMark striped 6 pickleball courts for me in Island County. We were dealing with weather, project requirements, and weekend work. Aaron was extremely responsive and worked to find a solution. Looking forward to my next project with Linemark!"</p>
-                    <div class="review-author"><h4>Project Manager</h4><span>Google Reviewand Island County</span></div>
+                    <div class="review-author"><h4>Project Manager</h4><span>Google Review &middot; Island County</span></div>
                 </div>
                 <div class="review-card">
                     <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
