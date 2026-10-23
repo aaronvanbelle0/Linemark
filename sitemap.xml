@@ -4,7 +4,7 @@
   <!-- HOMEPAGE -->
   <url>
     <loc>https://lmstriping.com/</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -80,7 +80,7 @@
   </url>
   <url>
     <loc>https://lmstriping.com/whatcom-county-parking-lot-striping.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -88,7 +88,7 @@
   <!-- CITY PAGES -->
   <url>
     <loc>https://lmstriping.com/lynden-parking-lot-striping.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -148,7 +148,7 @@
   </url>
   <url>
     <loc>https://lmstriping.com/ferndale-parking-lot-striping.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -185,6 +185,12 @@
   <url>
     <loc>https://lmstriping.com/mount-vernon-parking-lot-striping.html</loc>
     <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lmstriping.com/mt-vernon-parking-lot-striping.html</loc>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
